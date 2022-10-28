@@ -1,0 +1,320 @@
+---
+tags: blender
+title: "Course Plan"
+---
+
+# Blender Course
+
+---
+
+## some general ideas on how the course should go
+
+The general mantra of the course will be to learn blender by learning the underlying fundamentals of CG in narrow set across the pipeline so students can gain exposure to the wide set of ideas necessary to be successful. 
+
+In general the blender course should cover a lot of the things that aren't covered throughout the rest of the program and talk about why these things are important.
+Some of these things include:
+
+---
+## Lessons and assignments
+
+
+
+
+
+---
+## Things to learn during the course
+- How CG is used
+	- Games
+	- Film
+	- Advertising
+	- Motion Graphics
+	- Research
+	- Simulation
+	- general art
+- understanding [[notes/General/CG-Fundimentals/Lessons/Coordniate Systems| Coordinate Systems]] [[notes/General/CG-Fundimentals/Lessons/Coordinates and 3D modeling|Coordinates and 3D Modeling]]
+	-  global [[notes/General/CG-Fundimentals/Lessons/Coordniate Systems#Global Space]]
+	-  local [[notes/General/CG-Fundimentals/Lessons/Coordniate Systems#Local Space]]
+	-  tangent [[notes/General/CG-Fundimentals/Lessons/Coordniate Systems#Tangent Space]]
+- Understanding Geometry under the hood [[notes/General/CG-Fundimentals/Lessons/What is Geometry]]
+	-  [[notes/General/CG-Fundimentals/Lessons/Applied Mathematics]]
+		- it's *not* continuous, instead, in CG the math is **Discrete** [[notes/General/CG-Fundimentals/Lessons/Continuous vs Discrete Mathematics]]
+		- Types of maths
+			- linear algebra
+				- geometric algebra
+			- calculus
+			- *be aware* of some general computer science
+				- big **O**
+				- design patterns --- how those relate
+				- sorting
+				- data processing
+				- algorthms
+				- **geometry processing**
+	- The aspects of geometry
+		- points
+		- edges
+		- faces
+		- normals/surfaces
+			- winding
+- Modeling
+	- standard modeling practices *software agnostic*
+		- box modeling
+		- boolean
+		- procedural
+		- sculpting
+	- UVs
+		- talk about attributes or data attached to geometry
+		- another talk on coordinate spaces
+			- UVs are a 3d -> 2d coordinate transform per point relative to the ?tangent? *double check this*
+		- talk about planning modeling once you understand UVs
+	- Other general modeling concepts
+		- Speed & efficiency
+			- try not to repeat tasks
+			- plan ahead
+			- manage files
+				- version control
+				- naming conventions
+				- organization
+		- topology and why https://topologyguides.com/
+			- edge flow
+				- redirecting
+				- planning
+			- loops
+				- edge
+				- vertex/point
+				- face
+			- poles
+				- moving poles
+			- optimizing
+				- edge loop reduction
+			- bevels
+				- workflows from CAD like programs
+					- chamfer
+					- etc
+			- creating holes
+		- Subdiv workflow
+			- your mesh should look good before the subdiv
+			- games
+				- apply and optimize
+			- film
+				- apply subdiv on render
+		- Mesh Decals
+			- different per software
+				- attack objects to another object seamlessly
+		- Groups
+			- selection
+			- point/vertex/edge/face
+			- attribute
+		- Normals
+			- setting them
+				- procedurally setting them
+			- fixing normal glitches
+		- Separating meshes
+			- for less topology
+			- creating holes
+			- pros/cons
+				- edge loops
+				- UVs
+		- Joining meshes
+			- planning edge flow
+			- using merge tools
+		- Special modeling workflows
+			- start with plane
+				- curve it procedurally
+				- thickness procedurally
+		- A short introduction to curves in 3D
+			- photoshop vs illustrator analogy
+			- why they are still important tools
+			- what types of work are they often used for
+			- simple curves
+			- nurbs (curved surfaces)
+	- Blender Modeling
+		- Projects for learning
+			- hard surface
+			- organic
+		- modeling using modifiers
+- Geometry Nodes
+	- Houdini
+	- Proceduralism in CG
+	- Software development and procedural CG
+	- workflows
+	- data flow
+	- data types
+	- attributes
+- Animation
+	- Simple Animation
+		- object
+		- vertex
+		- coordinate space
+	- Rigging
+		- simple rig
+	- create an *animatic*
+- Surfacing
+	- Shading 
+		- shader fundimentals
+			- buffers
+			- object data
+			- scene data
+			- coordinate space review
+			- noises
+			- casting data
+				- vectors to color
+				- color as vectors
+	- Texturing
+		- UVs and how that relates to texturing
+		- Projecting UVs
+		- creating UVs
+		- manipulating UVs
+		- hooking up textures to shader
+		- File management
+	- PBR
+		- history
+		- why
+	- NPR
+		- why
+		- use cases
+		- fun
+- Lighting
+	- principles
+	- types of common CG lights
+	- relation to film/photography
+	- general ways of lighting scenes
+		- tri light studio lighting
+		- sun lighting
+		- space lighting
+		- custom
+			- NPR
+			- per scene needs
+		- mesh lights/emission 
+		- HDR
+			- procedural
+			- texture based
+			- differences between to touch on in rendering
+				- raster
+					- often need to place a sun light where the sun is in the HDR
+				- path traced
+- Cameras
+	- Real cameras
+		- iso
+		- focal length
+		- etc
+	- How CG cameras often emulate real cameras
+		- what that means for us
+		- how to get to look you want
+		- framing your scene
+		- how CG cameras work
+			- coordinate space
+			- important part of going from 3D modeling to an image on your screen
+			- buffers
+			- rays
+- Lookdev
+	- Industry pipelines
+		- how it's done
+		- why it's done
+		- lookdev panel
+			- reflective
+			- mat
+			- colorstrip
+	- How we can do it in blender
+		- World shading
+			- HDR
+			- procedural sky
+		- lookdev panel
+- Rendering
+	- This is where it all comes together
+	- industry film pipeline
+		- render times
+		- render budgets
+		- the future of rendering
+			- good old path tracing isn't going anywhere soon for many reasons
+	- Types of renderers
+		- General Rendering theory
+			- buffers
+			- pixels
+			- drawing a triangle
+			- touch on technologies
+				- opengle
+				- directx
+				- vulcan
+				- etc
+		- Path traced
+			- tries to be a true as possible to how light works
+				- light transport research, physics and computer science have come together to make these renderers possible.
+				- these renderers will get you as close as possible to real life images if that's what you want.
+				- how they work
+					- lights
+					- cameras
+					- ray bounces
+		- Raster
+			- raytraced raster
+				- new technology
+				- still not as good as pathtracing
+			- realism has to be faked
+				- many effects like reflection are only calculated in screen space unless reflection maps are used
+				- small details often need to be offloaded to normal maps
+					- in film workflows much of the small details is allowed to be geometry
+		- CG rendering theory
+			- things to keep in mind
+				- not all render engines are the same
+					- actually they are all a little different
+				- some settings may be named differently
+				- **the underlying theory is the same
+			- samples
+				- what are they
+				- why do we need to understand them
+				- samples per types of rendering
+					- reflection
+					- diffuse
+					- etc
+			- CPU x GPU
+				- general differences and why GPUs are cool
+			- Tiles/buckets
+				- tiles that are rendered
+			- progressive rendering
+			- raster rendering
+			- Denoising
+				- saving time
+				- *touch on compositing*
+				- new tech
+			- motion blur
+			- color management
+				- ACES
+					- https://chrisbrejon.com/cg-cinematography/chapter-1-5-academy-color-encoding-system-aces/
+					- OCIO
+						- Lego Movie
+					- filmic
+			- Renderer post effects
+				- bloom
+				- color
+				- etc
+				- A quick solution mostly for look-dev
+			- Rendering in VFX
+				- matching source film
+					- motion blur - camera
+				- matching film color space
+- Compositing
+	- what is compositing?
+	- why is important?
+	- Compositing in film
+		- nuke as industry standard
+	- planning your shot with compositing in mind from the beginning
+		- how that can save time
+	- Compositing for CG
+		- render passes
+		- cryptomates
+		- piecing separate renders together
+			- background
+			- character
+			- VFX
+- Tooling
+	- python scripting
+	- addon creation
+	- plugins
+	- Blender under the hood
+- A few last things
+	- audio
+		- audio reactive work
+		- film work has audio
+		- it may be helpful in some cases to keep audio in mind when working.
+
+
+---

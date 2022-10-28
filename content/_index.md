@@ -1,27 +1,55 @@
 ---
-title: 🪴 Quartz 3.
-enableToc: false
+title: "CG-Courses"
+tags:
+- index
 ---
 
-Host your second brain and [digital garden](https://jzhao.xyz/posts/networked-thought) for free. Quartz features
+# Courses
+This website contains resources and helpful information for anyone taking DGM 2210 and 1610 at UVU. You don't need to be part of those classes to find this helpful though.
 
-1. Extremely fast natural-language [[notes/search]]
-2. Customizable and hackable design based on [Hugo](https://gohugo.io/)
-3. Automatically generated backlinks, link previews, and local graph
-4. Built-in [[notes/CJK + Latex Support (测试) | CJK + Latex Support]] and [[notes/callouts | Admonition-style callouts]]
-5. Support for both Markdown Links and Wikilinks
+## How to use this website
+This website was created in [Obsidian](https://obsidian.md/), a [markdown](https://www.markdownguide.org/) editor focused around knowledge management. This website contains a knowledge graph similar to what Obsidian uses in order to help you navigate and find the resources you need.
 
-Check out some of the [amazing gardens that community members](notes/showcase.md) have published with Quartz or read about [why I made Quartz](notes/philosophy.md) to begin with.
 
-## Get Started
-> 📚 Step 1: [Setup your own digital garden using Quartz](notes/setup.md)
+---
 
-Returning user? Figure out how to [[notes/updating|update]] your existing Quartz garden.
+### Start here for the Course Info
 
-If you prefer browsing the contents of this site through a list instead of a graph, you see a list of all [setup-related notes](/tags/setup).
 
-### Troubleshooting
-- 🚧 [Troubleshooting and FAQ](notes/troubleshooting.md)
-- 🐛 [Submit an Issue](https://github.com/jackyzha0/quartz/issues)
-- 👀 [Discord Community](https://discord.gg/cRFFHYye7t)
+[[notes/3D-Modeling/3D-Modeling|DGM2210 / 3D Modeling]]
 
+[[notes/Unity/Game-Development|DGM 1610 / Game dev with Unity]]
+
+[[notes/3D-Modeling/blender/blender-course-home]]
+
+### Other Info
+
+[[notes/3D-Modeling/Houdini/Houdini|Houdini]]
+[[notes/3D-Modeling/Houdini/Houdini Scratchpad]]
+[[notes/Programming/Programming Home|Programming]]
+[[notes/3D-Modeling/Substance/Substance Home]]
+[[notes/General/Productivity/Productivity]]
+[[notes/3D-Modeling/blender/Notes/sept 19 notes]]
+
+
+---
+
+# My Work
+
+[[notes/Other/My work]]
+
+
+---
+
+>[!NOTE] regular callout
+>
+>callout text
+>
+
+>[!BUG]- collapsable
+>
+>read this text
+>test
+>tes
+>tes
+>d
