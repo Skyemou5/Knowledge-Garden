@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>rust programming resources on</title><link>https://benshurts.com/tags/rust-programming-resources/</link><description>Recent content in rust programming resources on</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://benshurts.com/tags/rust-programming-resources/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust graphics resources</title><link>https://benshurts.com/notes/Programming/RUST/RUST-graphics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://benshurts.com/notes/Programming/RUST/RUST-graphics/</guid><description>Vector Graphics https://www.youtube.com/watch?v=2Ng5kpDirDI
+https://www.youtube.com/watch?v=AI7SLCubTnk rasterization
+https://smallcultfollowing.com/babysteps/blog/2015/04/06/modeling-graphs-in-rust-using-vector-indices/
+https://github.com/nrc/r4cppp/blob/master/graphs/README.md
+https://github.com/Lakret/gir/blob/graphs/graphs/src/graph.rs#L47-L145
+https://www.youtube.com/watch?v=QkuNmL7tz08
+https://www.youtube.com/watch?v=2q1AzGUwL7M smart pointers</description></item></channel></rss>
