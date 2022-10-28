@@ -1,10 +1,8 @@
 ---
-tags: [lessons, notes]
+tags: [lessons, notes, grease-pencil]
 title: "Blender Grease Pencil Lesson Notes"
 ---
-```toc
-style: bullet | number | inline (default: bullet) min_depth: number (default: 2) max_depth: number (default: 6) title: string (default: undefined) allow_inconsistent_headings: boolean (default: false) delimiter: string (default: |) varied_style: boolean (default: false) 
-```
+
 
 
 ---
@@ -55,9 +53,9 @@ style: bullet | number | inline (default: bullet) min_depth: number (default: 2)
 ### Things to keep in mind
 
 - Object vs edit mode
-- shift + drawing => stabilizer toggle (like smoothing in sculpt mode)
-- F -> Brush size
-- shift+F -> Brush opacity
+- ![[notes/attachments/keys-color/shift-key-col.png|70]] + drawing => stabilizer toggle (like smoothing in sculpt mode)
+- ![[notes/attachments/keys-color/f-key-col.png|50]] -> Brush size
+- ![[notes/attachments/keys-color/shift-key-col.png|70]]+![[notes/attachments/keys-color/f-key-col.png|50]] -> Brush opacity
 - extract palette from image
 	- load image into image viewer
 	- extract palette
@@ -79,7 +77,10 @@ When you are using materials for all your colors
 ### Sketching
 
 
-## Illustrationmask
+## Illustration
+
+
+## Masking
 
 
 ### Sculpt Mode
@@ -104,10 +105,17 @@ When you are using materials for all your colors
 >[!NOTE] Some of these tutorials are breaking some modeling rules that you should be following.
 
 [Grease Pencil #1: Basics of Interface | Blender 2.82 | Tutorial - YouTube](https://www.youtube.com/watch?v=w3O-t_dkoBU)
+
 [Grease Pencil New Mask Features | Blender Grease Pencil - YouTube](https://www.youtube.com/watch?v=lI0V-0UuhmE)
+
 [Blender Quick Tip: Exploring the Grease Pencil color palette - YouTube](https://www.youtube.com/watch?v=4VpvaSbh8KA)
+
 [Blender Quick Tip: Create and Import Custom GP Brushes - YouTube](https://www.youtube.com/watch?v=6lk9Y2s6bQw)
+
 [Blender Quick Tip: Create and Import Custom GP Brushes - YouTube](https://www.youtube.com/watch?v=6lk9Y2s6bQw)
+
 [Blender 2D/3D for beginners, drawing and animating with greasepencil (blender 2.8) - Part 1/2 - YouTube](https://www.youtube.com/watch?v=c57qq2nE3B0)
+
 [Grease pencil beginner tutorial | TOTORO | Blender 3.2 - YouTube](https://www.youtube.com/watch?v=SpFwrQOpQ0M)
+
 [Basic Blender Toon / Cel Shader Tutorial 2D Grease Pencil + 3D Modelling - YouTube](https://www.youtube.com/watch?v=hBztmFHkNQo)
