@@ -1,5 +1,5 @@
 ---
-tags: [lessons, notes, grease-pencil]
+tags: [lessons, notes, grease-pencil, blender]
 title: "Blender Grease Pencil Lesson Notes"
 ---
 
