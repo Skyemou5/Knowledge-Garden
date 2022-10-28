@@ -3,11 +3,13 @@ tags: [houdini, vfx, simulation, pop]
 title: "Houdini Squib Setup"
 ---
 
+# Simple Squib Setup in Houdini
+
 Squibs are used in VFX for small explosions like gun shots and things. In practical effects squibs are small explosives that are rigged to blow at the right time. In VFX we often have to recreate these.
 
 
 ---
-# Geo setup
+## Geo setup
 ![[notes/attachments/Pasted image 20221018183521.png]]
 1. Initial Geo -> In this case we are using a sphere and clip node to only get the top part of the sphere. This is because squibs typically explode from the ground.
 	- ![[notes/attachments/Pasted image 20221018183701.png]] -> We have turned the scale of the sphere down so that it makes sense in the real world.
@@ -26,8 +28,8 @@ Squibs are used in VFX for small explosions like gun shots and things. In practi
 	- We will tune the scatter values later
 	- In the [Attribute Delete](https://www.sidefx.com/docs/houdini/nodes/sop/attribdelete.html) node made sure in the points section you have *Cd* for color written. ![[notes/attachments/Pasted image 20221018212934.png]]
 4. Make sure you feed the stream into some sort of DOP network. This could be a plain DOP net or a configured POP network. The next section goes over the Pop solver setup.
----
-# Pop solver setup
+
+## Pop solver setup
 
 The POP network is technically in a [DOP Network](https://www.sidefx.com/docs/houdini/nodes/sop/dopnet.html) node. This type of node can contain any type of simulation system. For the squib, we will build a POP system in the DOPnet. 
 
@@ -45,28 +47,39 @@ The POP network is technically in a [DOP Network](https://www.sidefx.com/docs/ho
 
 >[!IMPORTANT] There a million and one ways to do things, *Especially* in Houdini! Just use this guide as a starting point!
 
-Add variance to the Pop source -> ![[notes/attachments/Pasted image 20221020122628.png]]
+Add variance to the Pop source -> 
+
+![[notes/attachments/Pasted image 20221020122628.png]]
+
 In the *attributes* tab set the *Initial Velocity* to *Add to inherited Velocity*. Then you can change the *Variance* vector
 
 The *pscale* attribute needs some tweaking. In order to create a more realistic simulation each particle needs a different scale, just like in real life dirt particles are different sizes and masses.  There are two simple ways to accomplish this.
-![[notes/attachments/Pasted image 20221020125517.png]] -> Two wrangles, one before and one after the DOP network.
+![[notes/attachments/Pasted image 20221020125517.png]] 
+
+-> Two wrangles, one before and one after the DOP network.
 In the first one do the following.
+
 ![[notes/attachments/Pasted image 20221020125635.png]]
+
 This way we can use a *ramp* to have more control over the *pscale* change.
 
 In the second wrangle we can increase the pscale if we need to after the simulation.
+
 ![[notes/attachments/Pasted image 20221020125740.png]]
 
 The second way to do this is with an [Attribute Adjust Float](https://www.sidefx.com/docs/houdini/nodes/sop/attribadjustfloat.html)
 node. This can accomplish the same thing as the first wrangle.
 
 ![[notes/attachments/Pasted image 20221020130052.png]]
+
 In the *Attribute Adjust Float* node made sure the attribute is *pscale*, and attribute type is *Float*. Then change *Pattern Type* to *Random*. Then set the *Value Distribution* to *Uniform with Remapping*. Once you do this you will have a ramp just like the one we set up in the wrange which will do the same thing.
 
 >[!NOTE]- Expanding the ramp
+>
 > If you click this button -> ![[notes/attachments/Pasted image 20221020130402.png]] the ramp will expand and look like this -> ![[notes/attachments/Pasted image 20221020130440.png]]
 
 >[!NOTE]- Expanding the ramp parameters
+>
 > If you don't see the options for point on the ramp click the little white triangle -> ![[notes/attachments/Pasted image 20221020130739.png]] 
 > It will then expand like this -> ![[notes/attachments/Pasted image 20221020130755.png]]
 

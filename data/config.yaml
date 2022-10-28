@@ -1,6 +1,6 @@
 name: Ben Shurts
 enableToc: true
-openToc: false
+openToc: true
 enableLinkPreview: true
 enableLatex: true
 enableCodeBlockTitle: true
@@ -15,8 +15,7 @@ GitHubLink: https://github.com/benshurts/Knowledge-Garden
 enableSemanticSearch: false
 operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
 description:
-  Host your second brain and digital garden for free. Quartz features extremely fast full-text search,
-  Wikilink support, backlinks, local graph, tags, and link previews.
+  This is a place to host my personal wiki so others can benifit from it! Enjoy!
 page_title:
   "Knowledge Garden"
 links:
