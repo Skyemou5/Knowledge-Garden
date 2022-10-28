@@ -58,7 +58,7 @@ tags: [blender, index, lessons, cg, 3d, 3d-modeling]
 
 ---
 # Assignments
-[[notes/3D-Modeling/blender/assignments/Topo assignment notes and grading]]
+
 
 [[notes/3D-Modeling/blender/assignments/UV assignment]]
 
