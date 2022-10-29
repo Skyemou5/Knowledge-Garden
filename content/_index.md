@@ -8,6 +8,15 @@ This website was created in [Obsidian](https://obsidian.md/), a [markdown](https
 
 This is mostly for me to share my knowledge with anyone who wants to learn the same things I have learned.
 
+```mermaid
+stateDiagram-v2
+	[*] --> Still
+	Still --> [*]
+	Still --> Moving
+	Moving --> Still
+	Moving --> Crash
+	Crash --> [*]
+```
 
 ## How to use this website
 To easily use this website do a few things:
