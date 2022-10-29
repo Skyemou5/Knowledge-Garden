@@ -8,15 +8,7 @@ This website was created in [Obsidian](https://obsidian.md/), a [markdown](https
 
 This is mostly for me to share my knowledge with anyone who wants to learn the same things I have learned.
 
-```mermaid
-stateDiagram-v2
-	[*] --> Still
-	Still --> [*]
-	Still --> Moving
-	Moving --> Still
-	Moving --> Crash
-	Crash --> [*]
-```
+
 
 ## How to use this website
 To easily use this website do a few things:
@@ -44,6 +36,19 @@ This website contains resources and helpful information for anyone taking DGM 22
 
 I will be continuously updating this site with all the technical information that I think is helpful and 
 
+Below are links to hubs of the different topics I will have on this site.
+
+![[notes/attachments/blender-icon.png|30]] [[notes/3D-Modeling/blender/Blender 3D Home|Blender]]
+
+![[notes/attachments/houdini-icon.png|30]] [[notes/3D-Modeling/Houdini/Houdini Hub|Houdini Hub]]
+
+![[notes/attachments/maya-icon.png|30]] [[notes/3D-Modeling/Maya/Maya Hub|Maya]]
+
+
+
+![[notes/attachments/unity-icon.png|40]] [[notes/Unity/Unity Hub]]
+
+
 
 
 ---
@@ -54,7 +59,7 @@ I will be continuously updating this site with all the technical information tha
 
 [[notes/General/faq/faq|FAQ]]
 
-[[notes/3D-Modeling/Houdini/Houdini|Houdini]]
+[[notes/3D-Modeling/Houdini/Houdini Hub|Houdini]]
 
 [[notes/3D-Modeling/Houdini/Houdini Scratchpad]]
 
