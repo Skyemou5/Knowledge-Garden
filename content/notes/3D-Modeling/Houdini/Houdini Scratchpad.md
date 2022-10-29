@@ -16,7 +16,7 @@ tags: [private, houdini, scratchpad]
 
 
 ---
-[[notes/3D-Modeling/Houdini/Curve Vectors]]
+[[notes/3D-Modeling/Houdini/Banking Curves in Houdini]]
 
 
 

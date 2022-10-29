@@ -5,7 +5,7 @@
         {
           "source": "content/",
           "target": "/notes/3D-Modeling/DGM-2210-3D-for-2D-Pipelines",
-          "text": "DGM2210 / 3D Modeling"
+          "text": "DGM2210 / 3D for 2D Pipelines"
         },
         {
           "source": "content/",
@@ -87,34 +87,29 @@
           "text": "notes/3D-Modeling/blender/Blender 3D Home"
         }
       ],
-      "content/notes/3D-Modeling/Houdini/Curve-Vectors": [
+      "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini": [
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/node-presets",
           "text": "node-presets"
         },
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/houdini-visualizers",
           "text": "houdini visualizers"
         },
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/remapping-values-in-houdini",
           "text": "remapping values in houdini"
         },
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
-          "target": "/node-presets",
-          "text": "node-presets"
-        },
-        {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/houdini-visualizers",
           "text": "houdini visualizers"
         },
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/remapping-values-in-houdini",
           "text": "remapping values in houdini"
         }
@@ -139,8 +134,8 @@
         },
         {
           "source": "content/notes/3D-Modeling/Houdini/Houdini-Scratchpad",
-          "target": "/notes/3D-Modeling/Houdini/Curve-Vectors",
-          "text": "notes/3D-Modeling/Houdini/Curve Vectors"
+          "target": "/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
+          "text": "notes/3D-Modeling/Houdini/Banking Curves in Houdini"
         },
         {
           "source": "content/notes/3D-Modeling/Houdini/Houdini-Scratchpad",
@@ -337,11 +332,6 @@
           "source": "content/notes/3D-Modeling/blender/Lessons/Blender-Lessons-Home",
           "target": "/notes/3D-Modeling/blender/Course-Planning-last-year",
           "text": "notes/3D-Modeling/blender/Course Planning last year"
-        },
-        {
-          "source": "content/notes/3D-Modeling/blender/Lessons/Blender-Lessons-Home",
-          "target": "/notes/3D-Modeling/blender/assignments/Topo-assignment-notes-and-grading",
-          "text": "notes/3D-Modeling/blender/assignments/Topo assignment notes and grading"
         },
         {
           "source": "content/notes/3D-Modeling/blender/Lessons/Blender-Lessons-Home",
@@ -784,24 +774,19 @@
       ],
       "/houdini-visualizers": [
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/houdini-visualizers",
           "text": "houdini visualizers"
         },
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/houdini-visualizers",
           "text": "houdini visualizers"
         }
       ],
       "/node-presets": [
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
-          "target": "/node-presets",
-          "text": "node-presets"
-        },
-        {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/node-presets",
           "text": "node-presets"
         }
@@ -831,7 +816,7 @@
         {
           "source": "content/",
           "target": "/notes/3D-Modeling/DGM-2210-3D-for-2D-Pipelines",
-          "text": "DGM2210 / 3D Modeling"
+          "text": "DGM2210 / 3D for 2D Pipelines"
         }
       ],
       "/notes/3D-Modeling/Final-Project": [
@@ -848,11 +833,11 @@
           "text": "notes/3D-Modeling/Houdini/Accessing Iterations in a node loop - Houdini"
         }
       ],
-      "/notes/3D-Modeling/Houdini/Curve-Vectors": [
+      "/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini": [
         {
           "source": "content/notes/3D-Modeling/Houdini/Houdini-Scratchpad",
-          "target": "/notes/3D-Modeling/Houdini/Curve-Vectors",
-          "text": "notes/3D-Modeling/Houdini/Curve Vectors"
+          "target": "/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
+          "text": "notes/3D-Modeling/Houdini/Banking Curves in Houdini"
         }
       ],
       "/notes/3D-Modeling/Houdini/Fundimentals/Houdini-UI": [
@@ -1203,13 +1188,6 @@
           "source": "content/notes/3D-Modeling/blender/Lessons/Blender-Lessons-Home",
           "target": "/notes/3D-Modeling/blender/assignments/Texturing/Blender-Texturing-Exercise",
           "text": "notes/3D-Modeling/blender/assignments/Texturing/Blender Texturing Exercise"
-        }
-      ],
-      "/notes/3D-Modeling/blender/assignments/Topo-assignment-notes-and-grading": [
-        {
-          "source": "content/notes/3D-Modeling/blender/Lessons/Blender-Lessons-Home",
-          "target": "/notes/3D-Modeling/blender/assignments/Topo-assignment-notes-and-grading",
-          "text": "notes/3D-Modeling/blender/assignments/Topo assignment notes and grading"
         }
       ],
       "/notes/3D-Modeling/blender/assignments/UV-assignment": [
@@ -1745,12 +1723,12 @@
       ],
       "/remapping-values-in-houdini": [
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/remapping-values-in-houdini",
           "text": "remapping values in houdini"
         },
         {
-          "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+          "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
           "target": "/remapping-values-in-houdini",
           "text": "remapping values in houdini"
         }
@@ -1761,7 +1739,7 @@
     {
       "source": "content/",
       "target": "/notes/3D-Modeling/DGM-2210-3D-for-2D-Pipelines",
-      "text": "DGM2210 / 3D Modeling"
+      "text": "DGM2210 / 3D for 2D Pipelines"
     },
     {
       "source": "content/",
@@ -1839,32 +1817,27 @@
       "text": "notes/3D-Modeling/blender/Blender 3D Home"
     },
     {
-      "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+      "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
       "target": "/node-presets",
       "text": "node-presets"
     },
     {
-      "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+      "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
       "target": "/houdini-visualizers",
       "text": "houdini visualizers"
     },
     {
-      "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+      "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
       "target": "/remapping-values-in-houdini",
       "text": "remapping values in houdini"
     },
     {
-      "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
-      "target": "/node-presets",
-      "text": "node-presets"
-    },
-    {
-      "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+      "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
       "target": "/houdini-visualizers",
       "text": "houdini visualizers"
     },
     {
-      "source": "content/notes/3D-Modeling/Houdini/Curve-Vectors",
+      "source": "content/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
       "target": "/remapping-values-in-houdini",
       "text": "remapping values in houdini"
     },
@@ -1880,8 +1853,8 @@
     },
     {
       "source": "content/notes/3D-Modeling/Houdini/Houdini-Scratchpad",
-      "target": "/notes/3D-Modeling/Houdini/Curve-Vectors",
-      "text": "notes/3D-Modeling/Houdini/Curve Vectors"
+      "target": "/notes/3D-Modeling/Houdini/Banking-Curves-in-Houdini",
+      "text": "notes/3D-Modeling/Houdini/Banking Curves in Houdini"
     },
     {
       "source": "content/notes/3D-Modeling/Houdini/Houdini-Scratchpad",
@@ -2077,11 +2050,6 @@
       "source": "content/notes/3D-Modeling/blender/Lessons/Blender-Lessons-Home",
       "target": "/notes/3D-Modeling/blender/Course-Planning-last-year",
       "text": "notes/3D-Modeling/blender/Course Planning last year"
-    },
-    {
-      "source": "content/notes/3D-Modeling/blender/Lessons/Blender-Lessons-Home",
-      "target": "/notes/3D-Modeling/blender/assignments/Topo-assignment-notes-and-grading",
-      "text": "notes/3D-Modeling/blender/assignments/Topo assignment notes and grading"
     },
     {
       "source": "content/notes/3D-Modeling/blender/Lessons/Blender-Lessons-Home",

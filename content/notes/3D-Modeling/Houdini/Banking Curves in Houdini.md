@@ -1,7 +1,14 @@
-# Curve Vectors
-#procedural-modeling #houdini #curves
+---
+title: "Setting Up Banking Curves in Houdini"
+tags: [houdini, math, linear-algebra, setups, step-by-step]
+---
+
+# The Problem
 A common problem you may encounter is adding the correct vector data to a curve to get the *up* and *banking* directions per point.
 There are many ways to do this, this is one way I've solved it.
+
+## Getting Started
+
 Start with some sort of curve or line. 
 ![[notes/attachments/Pasted image 20221021175618.png]]
 
@@ -10,7 +17,7 @@ Once you have a curve drop down a [Resample](https://www.sidefx.com/docs/houdini
 
 ![[notes/attachments/Pasted image 20221021180749.png]]
 In the resample node there are two things we need to do.
-1. Tread polygons as *Subdivision Curves*
+1. Treat polygons as *Subdivision Curves*
 2. Change the tangent attribute from *tangentu* to *N* (Normal)
 ![[notes/attachments/Pasted image 20221021180949.png]]
 Now that that is setup. Drop down an [Attribute Wrangle](https://www.sidefx.com/docs/houdini/nodes/sop/attribwrangle) node.
@@ -32,6 +39,8 @@ v@N = v@right;
 >We are saving the *oldnormal* to use it later
 
 >[!NOTE] You could add this as a preset -> [[node-presets]]
+
+## Linear Algebra
 
 This is some standard linear algebra. Here's what's going on.
 We make a new vector variable that's the same as the *normals* on the points. Then set the *Y* part of the vector to 0, then [normalize](https://www.sidefx.com/docs/houdini/vex/functions/normalize.html) our vector. Then we create two new vector attributes. this is done with `v@something` syntax. The first is a [Cross product](https://en.wikipedia.org/wiki/Cross_product) of our first variable and a simple '{0,1,0}' vector. The second is a cross product of our *normal* and the last attribute we just made.
@@ -352,6 +361,8 @@ We will remap *bankratio* to -1-1 and then use the *detail* function to get the 
 
 Now the *bankratio* is in usable values
 
+
+
 ![[notes/attachments/Pasted image 20221021210058.png]]
 
 Next we will drop down a wrangle to do the rotation.
@@ -386,4 +397,7 @@ Then drop down a [Sweep](https://www.sidefx.com/docs/houdini/nodes/sop/sweep.htm
 set it to *ribbon* to see the banking.
 
 ![[notes/attachments/Pasted image 20221021213658.png]]
+
+## Result
+
 ![[notes/attachments/Pasted image 20221021213715.png]]
