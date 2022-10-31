@@ -1,6 +1,6 @@
 ---
 title: "Random Rust Notes"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 converting a string to number

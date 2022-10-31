@@ -14,7 +14,21 @@ Students will learn basics of the underlying mathematic principals used in CG, w
 - [[notes/3D-Modeling/blender/Course Planning last year|Course Overview]]
 - [[notes/3D-Modeling/blender/assignments/3D-Assignments|Assignments]]
 
-[[notes/3D-Modeling/blender/Blender 3D Home]]
+[[notes/3D-Modeling/blender/Blender Hub]]
 
 --
+
+## Start Here
+[[notes/3D-Modeling/slides/Syllabus]]
+
+
+[[notes/3D-Modeling/Course Timeline/_Course-Timeline]]
+
+
+[[notes/3D-Modeling/Course Outline]]
+
+
+[[notes/3D-Modeling/blender/Lessons/Blender Lessons Home|Blender Lessons]]
+
+[Outline and Plans](blendercourse/coursevault/_index.md)
 

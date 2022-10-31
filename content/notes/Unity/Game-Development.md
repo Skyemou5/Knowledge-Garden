@@ -10,4 +10,4 @@ tags: [unity game-dev programming]
 
 [[notes/Unity/1610 Notes]]
 
-[[notes/Programming/RUST/Rust Home]]
+[[notes/Programming/RUST/Rust Hub]]

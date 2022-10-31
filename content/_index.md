@@ -3,6 +3,9 @@ title: "CG-Courses"
 tags: [index]
 ---
 
+>[!IMPORTANT] This site is under active development. Expect some inconsistencies while I work out the bugs. Feel free to contact me if you have questions.
+
+
 # About This Site
 This website was created in [Obsidian](https://obsidian.md/), a [markdown](https://www.markdownguide.org/) editor focused around knowledge management. This website contains a knowledge graph similar to what Obsidian uses in order to help you navigate and find the resources you need.
 
@@ -28,7 +31,7 @@ This website contains resources and helpful information for anyone taking DGM 22
 
 [[notes/Unity/Game-Development|DGM 1610 / Game dev with Unity]]
 
-
+[[java]]
 
 
 
@@ -38,16 +41,29 @@ I will be continuously updating this site with all the technical information tha
 
 Below are links to hubs of the different topics I will have on this site.
 
-![[notes/attachments/blender-icon.png|30]] [[notes/3D-Modeling/blender/Blender 3D Home|Blender]]
+### General Hubs
+
+[[notes/Programming/Programming Hub]]
+
+[[notes/3D-Modeling/3D Modeling Hub]]
+
+[[notes/course specific stuff/2D for 3D/2D for 3D Hub]]
+
+[[notes/Music Production/Music Production Hub]]
+
+[[notes/Music Production/Sound Design Hub]]
+
+### Software Specific Hubs
+
+![[notes/attachments/blender-icon.png|30]] [[notes/3D-Modeling/blender/Blender Hub|Blender]]
 
 ![[notes/attachments/houdini-icon.png|30]] [[notes/3D-Modeling/Houdini/Houdini Hub|Houdini Hub]]
 
 ![[notes/attachments/maya-icon.png|30]] [[notes/3D-Modeling/Maya/Maya Hub|Maya]]
 
-
-
 ![[notes/attachments/unity-icon.png|40]] [[notes/Unity/Unity Hub]]
 
+![[notes/attachments/toonboom-harmony-icon.png|50]][[notes/toonboom/ToonBoom Hub]]
 
 
 
@@ -55,7 +71,7 @@ Below are links to hubs of the different topics I will have on this site.
 
 ## Other Info
 
-[[notes/3D-Modeling/blender/Blender 3D Home]]
+[[notes/3D-Modeling/blender/Blender Hub]]
 
 [[notes/General/faq/faq|FAQ]]
 
@@ -63,7 +79,7 @@ Below are links to hubs of the different topics I will have on this site.
 
 [[notes/3D-Modeling/Houdini/Houdini Scratchpad]]
 
-[[notes/Programming/Programming Home|Programming]]
+[[notes/Programming/Programming Hub|Programming]]
 
 [[notes/3D-Modeling/Substance/Substance Home]]
 
@@ -78,6 +94,8 @@ Below are links to hubs of the different topics I will have on this site.
 # My Work
 
 I'm planning on adding my portfolio to this website.
+
+[[notes/Other/My Portfolio Stuff/Portfolio Hub]]
 
 [[notes/Other/My work|My Work]]
 

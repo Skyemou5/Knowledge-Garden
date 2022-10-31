@@ -1,6 +1,6 @@
 ---
 title: "Memory Safety in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 ## Memory Safety

@@ -1,6 +1,6 @@
 ---
 title: "Functions in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 
