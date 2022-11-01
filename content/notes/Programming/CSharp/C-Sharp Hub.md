@@ -1,6 +1,6 @@
 ---
 title: "C-Sharp Hub"
-tags: [programming, csharp, c#, index]
+tags: [programming, csharp, index]
 ---
 
 [[notes/Programming/CSharp/C Sharp Async]]

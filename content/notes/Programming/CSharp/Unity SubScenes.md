@@ -1,6 +1,6 @@
 ---
 title: "Unity SubScenes"
-tags: [unity, game-development, programming, c#, csharp]
+tags: [unity, game-development, programming, csharp]
 ---
 # Unity Subscenes
 

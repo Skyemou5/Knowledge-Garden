@@ -31,7 +31,7 @@ This website contains resources and helpful information for anyone taking DGM 22
 
 [[notes/Unity/Game-Development|DGM 1610 / Game dev with Unity]]
 
-[[java]]
+[[notes/Programming/Javascript/Javascript Hub]]
 
 
 
