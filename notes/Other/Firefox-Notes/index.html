@@ -1,0 +1,282 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Firefox customize tabs  To hide the native tabs, you&rsquo;ll have to add a new file called userChrome.css and the css property visibility: collapse."><title>Firefox Notes</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://benshurts.com//icon.png><link href=https://benshurts.com/styles.708c2658f93e3a9d323a1f9fded8f4b2.min.css rel=stylesheet><link href=https://benshurts.com/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://benshurts.com/js/darkmode.df27f8644ed9c6ebf6dd5e0c7265fc1e.min.js></script>
+<script src=https://benshurts.com/js/util.9825137f5e7825e8553c68ce39ac9e44.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script src=https://benshurts.com/js/popover.9b72b70bd35617d0635e9d15463662b2.min.js></script>
+<script src=https://benshurts.com/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
+<script src=https://benshurts.com/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
+<script src=https://benshurts.com/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const BASE_URL="https://benshurts.com/",fetchData=Promise.all([fetch("https://benshurts.com/indices/linkIndex.81e889c866a8da48d25db762587be8f0.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://benshurts.com/indices/contentIndex.5df07b36641e871ee5c7d707635fd96f.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://benshurts.com",!0,!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://benshurts.com",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/benshurts.com\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
+    attachSPARouting(init, render)
+  </script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-XYFD95KB4J",{anonymize_ip:!1})}</script><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://benshurts.com/js/full-text-search.24827f874defbbc6d529926cbfcfb493.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://benshurts.com/>Knowledge Garden</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>Firefox Notes</h1><p class=meta>Last updated
+Nov 2, 2022
+<a href=https://github.com/benshurts/Knowledge-Garden/notes/Other/Firefox%20Notes.md rel=noopener>Edit Source</a></p><ul class=tags><li><a href=https://benshurts.com/tags/firefox/>Firefox</a></li></ul><aside class=mainTOC><details open><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#re-enable-custom-css>Re-enable Custom CSS</a></li><li><a href=#create-userchromecss>Create userChrome.css</a></li><li><a href=#set-the-styling-in-userchromecss>Set the styling in userChrome.css</a><ol><li><a href=#with-titlebar>With Titlebar</a></li><li><a href=#without-titlebar>Without Titlebar</a></li></ol></li><li><a href=#alternative-styling>Alternative Styling</a><ol><li><a href=#without-titlebar-mini-bar>Without Titlebar: Mini bar</a></li><li><a href=#without-titlebar-drag-space-only-no-window-buttons>Without Titlebar: Drag Space Only (No Window Buttons)</a></li><li><a href=#without-titlebar-inline-window-buttons-with-drag-box>Without Titlebar: Inline Window Buttons (With Drag Box)</a></li><li><a href=#step-1-enable-css>Step 1: Enable CSS</a></li><li><a href=#step-2-find-css>Step 2: Find CSS</a></li><li><a href=#step-3-edit-css>Step 3: Edit CSS</a></li><li><a href=#step-4-enable-title-bar-and-restart>Step 4: Enable title Bar and restart</a></li></ol></li></ol></nav></details></aside><a href=#firefox-customize-tabs><h1 id=firefox-customize-tabs><span class=hanchor arialabel=Anchor># </span>Firefox customize tabs</h1></a><hr><p>To hide the native tabs, you&rsquo;ll have to add a new file called <code>userChrome.css</code> and the css property <code>visibility: collapse</code>.</p><p>To do this, in Firefox click on Click on <code>Menu -> Help -> Troubleshooting Information</code> or navigate to <code>about:support</code> in the address bar.</p><p>Under the <code>Application Basics</code> section, there will be a section called <code>Profile Directory</code> with a button to <code>Open Directory</code>.</p><p>In the <code>Profile Directory</code> create a new folder called <code>chrome</code>. In the <code>chrome</code> folder create or edit the file <code>userChrome.css</code> if it already exists.</p><p>The contents of <code>userChrome.css</code> should be the following.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl><span class=c>/* hides the native tabs */</span>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>TabsToolbar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>visibility</span><span class=p>:</span> <span class=kc>collapse</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Some optional further modifications to put in <code>userChrome.css</code> are:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl><span class=c>/* hides the title bar */</span>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>titlebar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>visibility</span><span class=p>:</span> <span class=kc>collapse</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>/* hides the sidebar */</span>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>sidebar-header</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>visibility</span><span class=p>:</span> <span class=kc>collapse</span> <span class=cp>!important</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> 
+</span></span></code></pre></td></tr></table></div></div><p>A configuration that
+<a href=https://medium.com/@Aenon/firefox-hide-native-tabs-and-titlebar-f0b00bdbb88b rel=noopener>Xilin Sun</a> uses is:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl><span class=c>/* hides the native tabs */</span>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>TabsToolbar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>visibility</span><span class=p>:</span> <span class=kc>collapse</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c>/* leaves space for the window buttons */</span>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>nav-bar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>margin-top</span><span class=p>:</span> <span class=mi>-8</span><span class=kt>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>margin-right</span><span class=p>:</span> <span class=mi>74</span><span class=kt>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>margin-bottom</span><span class=p>:</span> <span class=mi>-4</span><span class=kt>px</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Try these out and see what you think looks best.</p><p>To answer your question in the comment, you may like this option better. I tried using visibility, but it was extremely flashy and jittery with the hover.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl><span class=c>/* Option 1 */</span>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>TabsToolbar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>opacity</span><span class=p>:</span> <span class=mf>0.0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>TabsToolbar</span><span class=p>:</span><span class=nd>hover</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>opacity</span><span class=p>:</span> <span class=mf>1.0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c>/* Option 2 */</span>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>TabsToolbar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>visibility</span><span class=p>:</span> <span class=kc>collapse</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>navigator-toolbox</span><span class=p>:</span><span class=nd>hover</span> <span class=p>#</span><span class=nn>TabsToolbar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>visibility</span><span class=p>:</span> <span class=kc>visible</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><p>If you&rsquo;re running Windows 10, I&rsquo;ve found the following gives the best integration:</p><p><img src=https://i.stack.imgur.com/ME8Ae.png width=auto alt="screenshot of windows 10 tab integration"></p><ol><li>Enable &ldquo;Title Bar&rdquo; mode by going to the hamburger menu (☰) → Customize → Check the &ldquo;Title Bar&rdquo; checkbox at the bottom of the screen.</li><li>Apply the following
+<a href=https://www.userchrome.org/how-create-userchrome-css.html rel=noopener>userChrome.css</a>:</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl><span class=p>#</span><span class=nn>main-window</span><span class=o>[</span><span class=nt>tabsintitlebar</span><span class=o>=</span><span class=s2>&#34;true&#34;</span><span class=o>]</span><span class=p>:</span><span class=nd>not</span><span class=o>([</span><span class=nt>extradragspace</span><span class=o>=</span><span class=s2>&#34;true&#34;</span><span class=o>])</span> <span class=p>#</span><span class=nn>TabsToolbar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>opacity</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>pointer-events</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>#</span><span class=nn>main-window</span><span class=p>:</span><span class=nd>not</span><span class=o>([</span><span class=nt>tabsintitlebar</span><span class=o>=</span><span class=s2>&#34;true&#34;</span><span class=o>])</span> <span class=p>#</span><span class=nn>TabsToolbar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>visibility</span><span class=p>:</span> <span class=kc>collapse</span> <span class=cp>!important</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#re-enable-custom-css><h2 id=re-enable-custom-css><span class=hanchor arialabel=Anchor># </span>Re-enable Custom CSS</h2></a><ol><li>Visit <code>about:config</code></li><li>Search <code>toolkit.legacyUserProfileCustomizations.stylesheets</code></li><li>Toggle it, making the value <code>true</code></li></ol><a href=#create-userchromecss><h2 id=create-userchromecss><span class=hanchor arialabel=Anchor># </span>Create userChrome.css</h2></a><ol><li>Visit <code>about:support</code></li><li>To the right of &ldquo;Profile Directory&rdquo;, press the button <code>Open Directory</code></li><li>Create a new folder named <code>chrome</code></li><li>Open the <code>chrome</code> folder and create a new file named <code>userChrome.css</code></li></ol><a href=#set-the-styling-in-userchromecss><h2 id=set-the-styling-in-userchromecss><span class=hanchor arialabel=Anchor># </span>Set the styling in userChrome.css</h2></a><p>Different CSS needs to be used depending on whether you have the titlebar enabled.</p><a href=#with-titlebar><h3 id=with-titlebar><span class=hanchor arialabel=Anchor># </span>With Titlebar</h3></a><p>Titlebar visible <em>(Hamburger menu at top-right -> More Tools -> Customize Toolbar..)</em>
+<a href=https://i.stack.imgur.com/Vldct.png rel=noopener><img src=https://i.stack.imgur.com/Vldct.png width=auto alt="enter image description here"></a></p><p>Result <em>(Ubuntu screenshot)</em>
+<a href=https://i.stack.imgur.com/9ag6d.png rel=noopener><img src=https://i.stack.imgur.com/9ag6d.png width=auto alt="enter image description here"></a></p><ol><li>Inside the <code>userChrome.css</code> file, insert the code below to hide tabs:</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#TabsToolbar {
+</span></span><span class=line><span class=cl>  visibility: collapse;
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>Close and reopen Firefox to see the changes.</li></ol><a href=#without-titlebar><h3 id=without-titlebar><span class=hanchor arialabel=Anchor># </span>Without Titlebar</h3></a><p>Titlebar not visible <em>(Hamburger menu at top-right -> More Tools -> Customize Toolbar..)</em>
+<a href=https://i.stack.imgur.com/1bSRm.png rel=noopener><img src=https://i.stack.imgur.com/1bSRm.png width=auto alt="enter image description here"></a></p><p>Result <em>(Ubuntu screenshot)</em>
+<a href=https://i.stack.imgur.com/kEyGF.png rel=noopener><img src=https://i.stack.imgur.com/kEyGF.png width=auto alt="enter image description here"></a></p><ol><li>Inside the <code>userChrome.css</code> file, insert the code below to hide tabs:</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#tabbrowser-tabs {
+</span></span><span class=line><span class=cl>    visibility: collapse;
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>Close and reopen Firefox to see the changes.</li></ol><hr><a href=#alternative-styling><h2 id=alternative-styling><span class=hanchor arialabel=Anchor># </span>Alternative Styling</h2></a><a href=#without-titlebar-mini-bar><h3 id=without-titlebar-mini-bar><span class=hanchor arialabel=Anchor># </span>Without Titlebar: Mini bar</h3></a><p><em>Result (Ubuntu)</em>
+<a href=https://i.stack.imgur.com/iNlI5.png rel=noopener><img src=https://i.stack.imgur.com/iNlI5.png width=auto alt="enter image description here"></a></p><p><em>Styling</em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#tabbrowser-tabs {
+</span></span><span class=line><span class=cl>    visibility: collapse;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#titlebar {
+</span></span><span class=line><span class=cl>    max-height: 16px;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#TabsToolbar .titlebar-buttonbox-container {
+</span></span><span class=line><span class=cl>    transform: scale(.55) translateY(-10px) translateX(38px);
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><a href=#without-titlebar-drag-space-only-no-window-buttons><h3 id=without-titlebar-drag-space-only-no-window-buttons><span class=hanchor arialabel=Anchor># </span>Without Titlebar: Drag Space Only (No Window Buttons)</h3></a><p><em>Result (Ubuntu)</em>
+<a href=https://i.stack.imgur.com/eivaA.png rel=noopener><img src=https://i.stack.imgur.com/eivaA.png width=auto alt="enter image description here"></a></p><p><em>Styling</em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#tabbrowser-tabs {
+</span></span><span class=line><span class=cl>    visibility: collapse;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#titlebar {
+</span></span><span class=line><span class=cl>    max-height: 5px;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#TabsToolbar .titlebar-buttonbox-container {
+</span></span><span class=line><span class=cl>    display: none;
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><a href=#without-titlebar-inline-window-buttons-with-drag-box><h3 id=without-titlebar-inline-window-buttons-with-drag-box><span class=hanchor arialabel=Anchor># </span>Without Titlebar: Inline Window Buttons (With Drag Box)</h3></a><p><em>Result (Ubuntu)</em>
+<a href=https://i.stack.imgur.com/y8rmQ.png rel=noopener><img src=https://i.stack.imgur.com/y8rmQ.png width=auto alt="enter image description here"></a>
+<a href=https://i.stack.imgur.com/6CWZ4.png rel=noopener><img src=https://i.stack.imgur.com/6CWZ4.png width=auto alt="enter image description here"></a></p><p><em>Styling</em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#tabbrowser-tabs {
+</span></span><span class=line><span class=cl>    visibility: collapse;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#navigator-toolbox {
+</span></span><span class=line><span class=cl>    display: flex;
+</span></span><span class=line><span class=cl>    flex-flow: row wrap;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#titlebar {
+</span></span><span class=line><span class=cl>    order: 1;
+</span></span><span class=line><span class=cl>    max-width: 146px;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#titlebar #TabsToolbar {
+</span></span><span class=line><span class=cl>    background-color: var(--toolbar-bgcolor);
+</span></span><span class=line><span class=cl>    background-image: var(--toolbar-bgimage)
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#titlebar #TabsToolbar .titlebar-spacer {
+</span></span><span class=line><span class=cl>    background-color: rgba(0,0,0,0.05);
+</span></span><span class=line><span class=cl>    margin: 3px;
+</span></span><span class=line><span class=cl>    border-radius: 25%;
+</span></span><span class=line><span class=cl>    cursor: grab;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#titlebar #TabsToolbar .titlebar-spacer[type=&#34;pre-tabs&#34;] {
+</span></span><span class=line><span class=cl>    display: none;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#nav-bar {
+</span></span><span class=line><span class=cl>    order: 0;
+</span></span><span class=line><span class=cl>    width: calc(100% - 146px);
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>#PersonalToolbar {
+</span></span><span class=line><span class=cl>    order: 2;
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><p>For MacOS, you can also set</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl><span class=p>#</span><span class=nn>nav-bar</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>order</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>%</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>This will move the window buttons on the bookmarks tab, making the top bar look more complete.</p><hr><p>This css removes tabs, but preserves menu and minimize/maximize/close buttons.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#tabbrowser-tabs {  visibility: collapse;}
+</span></span></code></pre></td></tr></table></div></div><p>Works in FF version 83</p><hr><p>Having gone through most of the solutions in this thread, here is my personal recommendation if you want to achieve following:</p><ul><li>Use Tree Style Tab and want to hide horizontal tabs</li><li>Show a window handler because you need to move a lot</li><li>Across macOS and Windows 10</li></ul><blockquote><p><img src=https://i.stack.imgur.com/XTwtQ.jpg width=auto alt=macOS></p><p>macOS</p></blockquote><blockquote><p><img src=https://i.stack.imgur.com/1OPZg.png width=auto alt="Windows 10"></p><p>Windows 10</p></blockquote><hr><a href=#step-1-enable-css><h3 id=step-1-enable-css><span class=hanchor arialabel=Anchor># </span>Step 1: Enable CSS</h3></a><ol><li>Visit <code>about:config</code> → Click <code>Accept the Risk and Continue</code></li><li>Search <code>toolkit.legacyUserProfileCustomizations.stylesheets</code></li><li>Toggle it, making the value <code>true</code></li></ol><a href=#step-2-find-css><h3 id=step-2-find-css><span class=hanchor arialabel=Anchor># </span>Step 2: Find CSS</h3></a><ol><li>Visit <code>about:support</code> in the address bar</li><li>Find table <code>Application Basics</code> → find row <code>Profile Folder</code> → click button <code>Show in Folder</code> or <code>Open Folder</code>. It usually points to<ul><li><code>/Users/your-alias/Library/Application Support/Firefox/Profiles/your-id.Default User</code> for macOS</li><li><em>Or</em> <code>C:\Users\your-alias\AppData\Roaming\Mozilla\Firefox\Profiles\your-id.Default User</code> for Windows</li></ul></li><li>In this Profile Folder create a new folder called <code>chrome</code> or open it if it already exsits.</li><li>In the <code>chrome</code> folder create <code>userChrome.css</code> or edit it if it already exists.</li></ol><a href=#step-3-edit-css><h3 id=step-3-edit-css><span class=hanchor arialabel=Anchor># </span>Step 3: Edit CSS</h3></a><ol><li>Edit <code>userChrome.css</code> and please add:</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>/* To hide horizontal bars */
+</span></span><span class=line><span class=cl>#main-window[tabsintitlebar=&#34;true&#34;]:not([extradragspace=&#34;true&#34;]) #TabsToolbar {
+</span></span><span class=line><span class=cl>    opacity: 0;
+</span></span><span class=line><span class=cl>    pointer-events: none;
+</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>#main-window:not([tabsintitlebar=&#34;true&#34;]) #TabsToolbar {
+</span></span><span class=line><span class=cl>    visibility: collapse !important;
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><ol start=2><li>(<em>Optional</em>) If you want to have a smaller header of <code>Tree Style Tab</code> on the sidebar, please add:</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>/* For Tree Style Tab */
+</span></span><span class=line><span class=cl>#sidebar-header{
+</span></span><span class=line><span class=cl>  font-size: 1em !important;
+</span></span><span class=line><span class=cl>  padding: 5px 2px 5px 13px !important;
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><a href=#step-4-enable-title-bar-and-restart><h3 id=step-4-enable-title-bar-and-restart><span class=hanchor arialabel=Anchor># </span>Step 4: Enable title Bar and restart</h3></a><ol><li><p>Enable &ldquo;Title Bar&rdquo; mode</p><ul><li>Right click on Toolbar → select <code>Customize Toolbar...</code></li><li><em>Or</em> by Click the menu (☰) → <code>More tools</code> → <code>Customize Toolbar...</code></li></ul></li><li><p>At the left bottom of the screen, check the &ldquo;Title Bar&rdquo; checkbox → Submit right bottom button <code>Done</code></p></li><li><p>Restart.</p></li></ol><hr><a href=#todoist><h1 id=todoist><span class=hanchor arialabel=Anchor># </span>Todoist</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>{
+</span></span><span class=line><span class=cl>&#34;name&#34;: &#34;My Tasks&#34;,
+</span></span><span class=line><span class=cl>&#34;filter&#34;: &#34;today | overdue&#34;
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#firefox-tabs><h1 id=firefox-tabs><span class=hanchor arialabel=Anchor># </span>firefox tabs</h1></a><p><a class="internal-link broken">firefox tabs</a></p><p><a href=https://superuser.com/questions/1424478/can-i-hide-native-tabs-at-the-top-of-firefox rel=noopener>https://superuser.com/questions/1424478/can-i-hide-native-tabs-at-the-top-of-firefox</a></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-css data-lang=css></code></pre></td></tr></table></div></div><p>about:config</p><p>Ensure the config <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> is set to <code>true</code></p><p><a href=https://github.com/piroor/treestyletab/issues/1525#issuecomment-344372874 rel=noopener>https://github.com/piroor/treestyletab/issues/1525#issuecomment-344372874</a></p><p><a href=https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data rel=noopener>https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data</a> get to directory</p></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://benshurts.com/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><p>Made by Ben Shurts using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p><ul><li><a href=https://benshurts.com/>Home</a></li><li><a href=https://twitter.com/artofbenshurts>Twitter</a></li><li><a href=https://github.com/benshurts>Github</a></li></ul></footer></div></div></body></html>
