@@ -73,12 +73,17 @@ Below are links to hubs of the different topics I will have on this site.
 
 ![[notes/attachments/toonboom-harmony-icon.png|50]][[notes/toonboom/ToonBoom Hub]]
 
-[[notes/Obsidian/Obsidian Hub]]
+![[notes/attachments/Pasted image 20221102203700.png|50]] [[notes/Obsidian/Obsidian Hub]]
+
+[[notes/git/Git Hub]]
+
 
 
 ---
 
 ## Other Info
+
+[[notes/3D-Modeling/CG Resources]]
 
 [[notes/3D-Modeling/blender/Blender Hub]]
 

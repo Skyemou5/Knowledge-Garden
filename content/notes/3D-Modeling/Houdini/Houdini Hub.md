@@ -12,3 +12,11 @@ Houdini is a procedural 3D Development Enviornment.
 # Vex
 
 [[notes/3D-Modeling/Houdini/houdini-vex/Houdini Vex Hub]]
+
+
+[[notes/3D-Modeling/Houdini/Setting Up Houdini for the Commandline]]
+
+
+---
+
+[[notes/3D-Modeling/Houdini/Houdini Bash]]
