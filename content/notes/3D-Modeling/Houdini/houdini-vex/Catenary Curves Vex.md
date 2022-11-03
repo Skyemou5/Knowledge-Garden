@@ -1,6 +1,6 @@
 ---
 title: "Catenary Curves Houdini Vex"
-tags:[houdini,math,curve, vex]
+tags: [houdini,math,curve, vex]
 ---
 
 
