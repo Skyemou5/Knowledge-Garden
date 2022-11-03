@@ -43,6 +43,8 @@ Below are links to hubs of the different topics I will have on this site.
 
 ### General Hubs
 
+[[notes/General/CG-Fundimentals/CG Fundimentals]]
+
 [[notes/Programming/Programming Hub]]
 
 [[notes/3D-Modeling/3D Modeling Hub]]
@@ -52,6 +54,12 @@ Below are links to hubs of the different topics I will have on this site.
 [[notes/Music Production/Music Production Hub]]
 
 [[notes/Music Production/Sound Design Hub]]
+
+[[notes/Mathematics/Mathematics Hub]]
+
+[[notes/General/post-production/Post Production Hub]]
+
+
 
 ### Software Specific Hubs
 
@@ -65,6 +73,7 @@ Below are links to hubs of the different topics I will have on this site.
 
 ![[notes/attachments/toonboom-harmony-icon.png|50]][[notes/toonboom/ToonBoom Hub]]
 
+[[notes/Obsidian/Obsidian Hub]]
 
 
 ---
@@ -87,7 +96,7 @@ Below are links to hubs of the different topics I will have on this site.
 
 [[notes/3D-Modeling/blender/Notes/sept 19 notes]]
 
-[[notes/Unix/Unix Home|Unix-Linux Hub]]
+[[notes/Unix/Unix Hub|Unix-Linux Hub]]
 
 ---
 

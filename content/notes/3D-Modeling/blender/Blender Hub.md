@@ -36,3 +36,11 @@ Before you begin this course browse the resources page. There is a link to the b
 
 # Blender Development
 
+
+
+
+---
+
+# Other
+
+[[notes/3D-Modeling/blender/Lessons/Blender Navigation]]

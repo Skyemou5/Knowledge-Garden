@@ -1,4 +1,4 @@
 ---
-title: "Dev Ops Home"
+title: "Dev Ops Hub"
 tags: [devops, programming, development]
 ---
