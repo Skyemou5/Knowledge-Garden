@@ -12,6 +12,7 @@ tags: [hub, index, post-production]
 
 # Color Management
 
+[[notes/General/Color-Management/Color Management Hub]]
 
 
 
@@ -29,6 +30,4 @@ tags: [hub, index, post-production]
 
 [[houdini compositing]]
 
-
 [[notes/Deadline/Deadline Hub]]
-

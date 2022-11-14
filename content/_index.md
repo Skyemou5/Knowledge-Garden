@@ -1,6 +1,6 @@
 ---
-title: "CG-Courses"
-tags: [index]
+title: "My Second Brain"
+tags: [index,hub]
 ---
 
 >[!IMPORTANT] This site is under active development. Expect some inconsistencies while I work out the bugs. Feel free to contact me if you have questions.
@@ -10,7 +10,6 @@ tags: [index]
 This website was created in [Obsidian](https://obsidian.md/), a [markdown](https://www.markdownguide.org/) editor focused around knowledge management. This website contains a knowledge graph similar to what Obsidian uses in order to help you navigate and find the resources you need.
 
 This is mostly for me to share my knowledge with anyone who wants to learn the same things I have learned.
-
 
 
 ## How to use this website
