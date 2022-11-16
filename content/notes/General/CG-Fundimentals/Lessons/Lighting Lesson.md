@@ -36,6 +36,8 @@ Aperture =>  This is the size of iris in the camera and is adjusted to let in di
 ![[notes/attachments/Pasted image 20221116091448.png]]
 
 ![[notes/attachments/Pasted image 20221116091456.png]]
+![[notes/attachments/Pasted image 20221116114001.png]]
+
 
 Shutter Speed => The amount of time the shutter is open and lets in light while taking a photo.
 
@@ -101,13 +103,6 @@ How to achieve this:
 - Wider Aperture
 - Closer to subject
 - Narrower lense
-
-
-
-
-
-
-
 
 
 ## Resources

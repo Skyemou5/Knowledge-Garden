@@ -11,3 +11,4 @@ tags: [3d, 3d-modeling, hub, index]
 
 [[notes/3D-Modeling/Houdini/Houdini Hub]]
 
+[[notes/General/Hardsurface Modeling Resources]]
