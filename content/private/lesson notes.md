@@ -73,6 +73,13 @@ OCIO uses the ACES standards.
 4. 
 
 
+# Color Grading
+
+[Color Grading Basics: Understanding LIFT, GAMMA, & GAIN - YouTube](https://www.youtube.com/watch?v=Gz_QzBdHDYc)
+
+
+
+
 # Exercise
 
 - render passes
@@ -82,10 +89,8 @@ OCIO uses the ACES standards.
 
 
 
----
 
-## Hardsurface resources
-[Is TOPOLOGY Important - Blender Tutorial for Hard Surface - YouTube](https://www.youtube.com/watch?v=K32w9kfVNkc)
 
+[Compositing in Blender for Beginners (Tutorial) - YouTube](https://www.youtube.com/watch?v=xEpVyEi1Hts)
 
 
