@@ -60,6 +60,9 @@ Below are links to hubs of the different topics I will have on this site.
 
 [[notes/General/Lighting Hub]]
 
+[[notes/VFX/VFX Hub]]
+
+
 
 ### Software Specific Hubs
 
