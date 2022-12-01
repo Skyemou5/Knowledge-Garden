@@ -27,3 +27,11 @@ tags: [private, houdini, scratchpad]
 
 # Vex
 [[notes/3D-Modeling/Houdini/Vex]]
+
+
+---
+# Small Setups
+
+[[notes/3D-Modeling/Houdini/Follow Curve Copy to Points]]
+
+
