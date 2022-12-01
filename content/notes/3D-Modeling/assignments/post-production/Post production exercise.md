@@ -1,3 +1,8 @@
+---
+title: "Post Production Exercise"
+tags: [homework, post-production, exercise, compositing, blender, fusion, resolve]
+---
+
 # What to Turn In?
 
 1. Blender Section
