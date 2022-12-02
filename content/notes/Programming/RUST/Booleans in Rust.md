@@ -1,6 +1,6 @@
 ---
 title: "Booleans in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 ## Boolean

@@ -1,5 +1,5 @@
 ---
-tags: [rust development webclipper article]
+tags: [rust, development, webclipper, article]
 title: "rust modules and project structure"
 ---
 

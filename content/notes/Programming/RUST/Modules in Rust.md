@@ -1,6 +1,6 @@
 ---
 title: "Modules in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 

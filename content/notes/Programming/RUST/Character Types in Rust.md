@@ -1,6 +1,6 @@
 ---
 title: "Character Types in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 ## Character type

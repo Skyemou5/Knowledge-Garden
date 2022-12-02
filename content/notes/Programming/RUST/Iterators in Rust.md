@@ -1,6 +1,6 @@
 ---
 title: "Iterators in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 

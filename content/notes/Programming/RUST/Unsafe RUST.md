@@ -1,4 +1,4 @@
 ---
-tags: [programming rust]
+tags: [programming, rust]
 title: "Unsafe Rust"
 ---

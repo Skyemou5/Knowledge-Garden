@@ -1,6 +1,6 @@
 ---
 title: "References and Borrowing in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 # References and Borrowing

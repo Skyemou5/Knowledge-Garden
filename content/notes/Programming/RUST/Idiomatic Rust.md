@@ -1,6 +1,6 @@
 ---
 title: "Idiomatic Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 # Idiomatic Rust

@@ -1,5 +1,5 @@
 ---
-tags: [rust programming data-structures]
+tags: [rust, programming, data-structures]
 title: "Data Structures in Rust"
 ---
 

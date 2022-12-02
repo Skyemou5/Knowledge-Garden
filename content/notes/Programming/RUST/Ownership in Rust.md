@@ -1,6 +1,6 @@
 ---
 title: "Ownership in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 # Ownership

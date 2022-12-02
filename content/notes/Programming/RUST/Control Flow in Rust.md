@@ -1,6 +1,6 @@
 ---
 title: "Control Flow in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 # Control Flow

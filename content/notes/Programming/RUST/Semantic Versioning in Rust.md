@@ -1,6 +1,6 @@
 ---
 title: "Semantic Versioning in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 # semantic versioning

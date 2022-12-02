@@ -1,5 +1,5 @@
 ---
-tags: [rust programming graph-theory]
+tags: [rust, programming, graph-theory]
 title: "Graphs in Rust"
 ---
 

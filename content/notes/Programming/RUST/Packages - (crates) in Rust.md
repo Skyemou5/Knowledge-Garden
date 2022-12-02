@@ -1,6 +1,6 @@
 ---
 title: "Packages-Crates in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 

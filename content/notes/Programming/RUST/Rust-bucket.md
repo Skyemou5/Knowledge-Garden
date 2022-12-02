@@ -1,5 +1,5 @@
 ---
-tags: [rust scratchpad programming]
+tags: [rust, scratchpad, programming]
 title: RUST Bucket
 ---
 

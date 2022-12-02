@@ -1,6 +1,6 @@
 ---
 title: "Strings in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Traits in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 # Traits

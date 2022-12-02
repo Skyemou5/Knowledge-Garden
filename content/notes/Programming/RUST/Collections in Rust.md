@@ -1,6 +1,6 @@
 ---
 title: "Collections in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 # Collections

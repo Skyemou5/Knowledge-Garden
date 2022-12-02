@@ -1,6 +1,6 @@
 ---
 title: "FLoats in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 ## Floats

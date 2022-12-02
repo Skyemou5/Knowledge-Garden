@@ -1,6 +1,6 @@
 ---
 title: "Closures in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 

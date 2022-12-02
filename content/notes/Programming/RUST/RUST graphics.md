@@ -1,5 +1,5 @@
 ---
-tags: [rust programming resources]
+tags: [rust, programming, resources]
 title: "Rust graphics resources"
 ---
 

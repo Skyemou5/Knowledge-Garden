@@ -1,5 +1,5 @@
 ---
-tags: [webclipper rust programming article]
+tags: [webclipper, rust programming, article]
 title: "Rust project structure step by step"
 ---
 

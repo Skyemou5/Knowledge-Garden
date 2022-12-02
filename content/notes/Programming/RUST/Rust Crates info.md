@@ -1,6 +1,6 @@
 ---
 title: "Rust Crates Info"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 # Crates

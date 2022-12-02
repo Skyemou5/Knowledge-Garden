@@ -1,5 +1,5 @@
 ---
-tags: [rust programming]
+tags: [rust, programming]
 title: "Integer Literals in Rust"
 ---
 

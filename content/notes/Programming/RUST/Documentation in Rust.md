@@ -1,6 +1,6 @@
 ---
 title: "Documentation in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 

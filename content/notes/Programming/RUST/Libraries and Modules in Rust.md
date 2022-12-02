@@ -1,6 +1,6 @@
 ---
 title: "Libraries and Modules in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 # Libraries and modules

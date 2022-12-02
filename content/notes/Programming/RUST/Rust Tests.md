@@ -1,6 +1,6 @@
 ---
 title: "Unit Testing in Rust"
-tags: [programming rust unit-testing]
+tags: [programming, rust, unit-testing]
 ---
 
 # Testing In Rust

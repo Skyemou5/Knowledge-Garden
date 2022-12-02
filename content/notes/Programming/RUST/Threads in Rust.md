@@ -1,6 +1,6 @@
 ---
 title: "Threads in Rust"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 # Threads

@@ -1,6 +1,6 @@
 ---
 title: "Rust Modules"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 modules can be separate files

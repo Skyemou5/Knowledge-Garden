@@ -1,6 +1,6 @@
 ---
 title: "Cargo Clippy for Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 ## Cargo Clippy

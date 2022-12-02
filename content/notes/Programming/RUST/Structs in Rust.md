@@ -1,6 +1,6 @@
 ---
 title: "Structs in Rust"
-tags: [programming rust]
+tags: [programming, rust]
 ---
 
 

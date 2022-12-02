@@ -1,5 +1,5 @@
 ---
-tags: [rust terminal applications linux unix]
+tags: [rust, terminal, applications, linux, unix]
 title: "Rust Terminal Apps"
 ---
 

@@ -1,5 +1,5 @@
 ---
-tags: [rust resources programming]
+tags: [rust, resources, programming]
 title: "Rust Resources"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Rust gitignore"
-tags: [rust programming]
+tags: [rust, programming]
 ---
 
 # rust gitignore
