@@ -6,7 +6,11 @@ frame buffer capture for fast screen recording</description></item><item><title>
 [[notes/Unix/Linux/Check if Env Var Exists]]
 [[notes/Unix/Linux/Drop Down Terminals]]
 [[notes/3D-Modeling/Houdini/Redshift3d Linux]]
-[[notes/Unix/Linux/Add to PATH linux]]</description></item><item><title>Setting up houdini for the command line</title><link>https://notes.benshurts.com/notes/3D-Modeling/Houdini/Setting-Up-Houdini-for-the-Commandline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.benshurts.com/notes/3D-Modeling/Houdini/Setting-Up-Houdini-for-the-Commandline/</guid><description>![[notes/attachments/Pasted image 20220303193021.png]]
+[[notes/Unix/Linux/Add to PATH linux]]</description></item><item><title>Rust Terminal Apps</title><link>https://notes.benshurts.com/notes/Programming/RUST/Rust-terminal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.benshurts.com/notes/Programming/RUST/Rust-terminal/</guid><description>Rust Terminal Apps https://github.com/fdehau/tui-rs https://github.com/crossterm-rs/crossterm
+https://www.joshmcguigan.com/blog/build-your-own-shell-rust/
+https://www.reddit.com/r/rust/comments/7hog3u/how_do_i_tell_cargo_to_run_some_other_file_not/
+https://www.reddit.com/r/rust/comments/4nrldm/opengl_in_rust/
+sdl2 = { git = &amp;ldquo; https://github.com/Rust-SDL2/rust-sdl2.git" }</description></item><item><title>Setting up houdini for the command line</title><link>https://notes.benshurts.com/notes/3D-Modeling/Houdini/Setting-Up-Houdini-for-the-Commandline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.benshurts.com/notes/3D-Modeling/Houdini/Setting-Up-Houdini-for-the-Commandline/</guid><description>![[notes/attachments/Pasted image 20220303193021.png]]
 set up project paths cd into houdini install dir source terminal command pull in vars from setup save to env file set up aliases launch new shell with vars from env file https://towardsdatascience.</description></item><item><title>Unix Hub</title><link>https://notes.benshurts.com/notes/Unix/Unix-Hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.benshurts.com/notes/Unix/Unix-Hub/</guid><description>What is Unix? The UNIX® Standard | The Open Group Website
 Unix - Wikipedia
 The UNIX® Standard | The Open Group Website</description></item></channel></rss>
