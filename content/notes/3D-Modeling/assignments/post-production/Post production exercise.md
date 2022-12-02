@@ -105,7 +105,37 @@ This way your preview will always show up in that window.
 >[!IMPORTANT] To save the final image click the *Image* menu in the *Image Editor* window and click *Save As*
 
 
-#### General Compositing Info
+#### General Compositing in Blender
+
+The Blender compositor is relatively powerful and simple compared to industry standard compositors like *Nuke* and *Fusion*. So we'll start by learning our way around it first.
+
+To get started you want to setup your workspace a bit.  See [[#Blender compositing setup]].
+
+##### Image Source
+
+By default blender will use the *Render layers* node as the incoming source. This may or may not be what you need. This node will grab the image or image sequence that was just rendered and use that as the incoming image.
+
+![[notes/attachments/Pasted image 20221201145731.png]]
+
+You may also use an *Image* node.
+
+![[notes/attachments/Pasted image 20221201145911.png]]
+
+Here you can ether use an image already loaded in your project or open a new one.
+
+>[!NOTE] On large projects, project management is very important.
+>
+>See [[Project Management]]
+
+![[notes/attachments/Pasted image 20221201150041.png]]
+
+Above is an example of a *Multilayer EXR* loaded in the image node.
+
+##### Exporting Files
+
+ One of the main beginner questions is how to export or save images or sequences. I've seen it many times where people just re-render their stuff. This is unnecessary. 
+ 
+
 
 
 
