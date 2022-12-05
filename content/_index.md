@@ -82,6 +82,7 @@ Below are links to hubs of the different topics I will have on this site.
 
 [[notes/Nuke/Nuke Hub]]
 
+[[notes/Godot/Godot Hub]]
 
 ---
 

@@ -135,13 +135,52 @@ Above is an example of a *Multilayer EXR* loaded in the image node.
 
  One of the main beginner questions is how to export or save images or sequences. I've seen it many times where people just re-render their stuff. This is unnecessary. 
  
+The easiest way is using the *Image Editor* image menu.
 
+![[notes/attachments/Pasted image 20221205091859.png]]
 
 
 
 #### Changing Light Colors In Post
 
+There are so many things you can do with post-production. In CG it can really help us save time especially in a production environment.
 
+Before jumping into the compositing please at least read through how to set up the render for this to work.
+
+[[#Render layers]]
+
+In this exercise each of the three lights is on it's own render layer. This allows us to use some simple compositing tricks to re-light our scene.
+
+First, drop-down three *Image* nodes and load the same EXR into each one.
+
+You should notice a *layer* section at the bottom of the node once it's loaded.
+
+![[notes/attachments/Pasted image 20221205100529.png]]
+
+Set each one to a different layer.
+
+In our case it should be:
+- red
+- blue
+- green
+
+Then do the following after each node:
+- Add an RGB node
+- Add a *Mix* node
+	- Set it to *Multiply*
+- Connect the *Image* and *RGB* nodes to *Image* inputs of the *Mix* node.
+
+![[notes/attachments/Pasted image 20221205100844.png]]
+
+Once you've done that your setup should look something like this:
+
+![[notes/attachments/Pasted image 20221205100944.png]]
+
+Now you can change the color of each light separately.
+
+![[notes/attachments/Pasted image 20221205101017.png]]
+
+But we are not done yet.
 
 
 ### Setting up fusion
@@ -259,8 +298,6 @@ To see render passes in your viewport, make sure you are in rendered mode and th
 [Compositing 3D Models into Photos Using Fspy and Blender - YouTube](https://www.youtube.com/watch?v=LLZmgAjxaIQ)
 
 [Simple Compositing | Blender Compositor | After Effects | Davinci Fusion | Natron - YouTube](https://www.youtube.com/watch?v=D-hFcC-at9Q)
-
-[Color Key Node Blender Compositing - YouTube](https://www.youtube.com/watch?v=OgI_h2h9Qg8)
 
 [Color Key Node Blender Compositing - YouTube](https://www.youtube.com/watch?v=OgI_h2h9Qg8)
 
