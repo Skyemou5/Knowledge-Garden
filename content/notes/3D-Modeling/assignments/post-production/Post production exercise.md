@@ -104,93 +104,6 @@ This way your preview will always show up in that window.
 
 >[!IMPORTANT] To save the final image click the *Image* menu in the *Image Editor* window and click *Save As*
 
-
-#### General Compositing in Blender
-
-The Blender compositor is relatively powerful and simple compared to industry standard compositors like *Nuke* and *Fusion*. So we'll start by learning our way around it first.
-
-To get started you want to setup your workspace a bit.  See [[#Blender compositing setup]].
-
-##### Image Source
-
-By default blender will use the *Render layers* node as the incoming source. This may or may not be what you need. This node will grab the image or image sequence that was just rendered and use that as the incoming image.
-
-![[notes/attachments/Pasted image 20221201145731.png]]
-
-You may also use an *Image* node.
-
-![[notes/attachments/Pasted image 20221201145911.png]]
-
-Here you can ether use an image already loaded in your project or open a new one.
-
->[!NOTE] On large projects, project management is very important.
->
->See [[Project Management]]
-
-![[notes/attachments/Pasted image 20221201150041.png]]
-
-Above is an example of a *Multilayer EXR* loaded in the image node.
-
-##### Exporting Files
-
- One of the main beginner questions is how to export or save images or sequences. I've seen it many times where people just re-render their stuff. This is unnecessary. 
- 
-The easiest way is using the *Image Editor* image menu.
-
-![[notes/attachments/Pasted image 20221205091859.png]]
-
-
-
-#### Changing Light Colors In Post
-
-There are so many things you can do with post-production. In CG it can really help us save time especially in a production environment.
-
-Before jumping into the compositing please at least read through how to set up the render for this to work.
-
-[[#Render layers]]
-
-In this exercise each of the three lights is on it's own render layer. This allows us to use some simple compositing tricks to re-light our scene.
-
-First, drop-down three *Image* nodes and load the same EXR into each one.
-
-You should notice a *layer* section at the bottom of the node once it's loaded.
-
-![[notes/attachments/Pasted image 20221205100529.png]]
-
-Set each one to a different layer.
-
-In our case it should be:
-- red
-- blue
-- green
-
-Then do the following after each node:
-- Add an RGB node
-- Add a *Mix* node
-	- Set it to *Multiply*
-- Connect the *Image* and *RGB* nodes to *Image* inputs of the *Mix* node.
-
-![[notes/attachments/Pasted image 20221205100844.png]]
-
-Once you've done that your setup should look something like this:
-
-![[notes/attachments/Pasted image 20221205100944.png]]
-
-Now you can change the color of each light separately.
-
-![[notes/attachments/Pasted image 20221205101017.png]]
-
-But we are not done yet.
-
-
-### Setting up fusion
-
-
-#### General Compositing Info
-
-
-#### Changing Light Colors In Post
-
 ---
 
 ## Render Layers vs Render Passes
@@ -280,6 +193,235 @@ To see render passes in your viewport, make sure you are in rendered mode and th
 
 ![[notes/attachments/Pasted image 20221130182042.png]]
 
+
+---
+
+#### General Compositing in Blender
+
+The Blender compositor is relatively powerful and simple compared to industry standard compositors like *Nuke* and *Fusion*. So we'll start by learning our way around it first.
+
+To get started you want to setup your workspace a bit.  See [[#Blender compositing setup]].
+
+##### Image Source
+
+By default blender will use the *Render layers* node as the incoming source. This may or may not be what you need. This node will grab the image or image sequence that was just rendered and use that as the incoming image.
+
+![[notes/attachments/Pasted image 20221201145731.png]]
+
+You may also use an *Image* node.
+
+![[notes/attachments/Pasted image 20221201145911.png]]
+
+Here you can ether use an image already loaded in your project or open a new one.
+
+>[!NOTE] On large projects, project management is very important.
+>
+>See [[Project Management]]
+
+![[notes/attachments/Pasted image 20221201150041.png]]
+
+Above is an example of a *Multilayer EXR* loaded in the image node.
+
+##### Exporting Files
+
+ One of the main beginner questions is how to export or save images or sequences. I've seen it many times where people just re-render their stuff. This is unnecessary. 
+ 
+The easiest way is using the *Image Editor* image menu.
+
+![[notes/attachments/Pasted image 20221205091859.png]]
+
+
+
+#### Changing Light Colors In Post
+
+There are so many things you can do with post-production. In CG it can really help us save time especially in a production environment.
+
+Before jumping into the compositing please at least read through how to set up the render for this to work.
+
+[[#Render layers]]
+
+In this exercise each of the three lights is on it's own render layer. This allows us to use some simple compositing tricks to re-light our scene.
+
+First, drop-down three *Image* nodes and load the same EXR into each one.
+
+You should notice a *layer* section at the bottom of the node once it's loaded.
+
+![[notes/attachments/Pasted image 20221205100529.png]]
+
+Set each one to a different layer.
+
+In our case it should be:
+- red
+- blue
+- green
+
+Then do the following after each node:
+- Add an RGB node
+- Add a *Mix* node
+	- Set it to *Multiply*
+- Connect the *Image* and *RGB* nodes to *Image* inputs of the *Mix* node.
+
+![[notes/attachments/Pasted image 20221205100844.png]]
+
+Once you've done that your setup should look something like this:
+
+![[notes/attachments/Pasted image 20221205100944.png]]
+
+Now you can change the color of each light separately.
+
+![[notes/attachments/Pasted image 20221205101017.png]]
+
+But we are not done yet.
+
+Next we need to drop down three more *mix RGB* nodes and switch both to *Add*.
+
+Then connect them up like so:
+
+![[notes/attachments/Pasted image 20221206163727.png]]
+
+We use *Add* for these nodes because it works best with combining lights.
+
+> See [Blend modes - Wikipedia](https://en.wikipedia.org/wiki/Blend_modes)
+
+At this point we can recolor all the lights separately in post without having to re-render.
+
+
+### Setting up fusion
+
+#fusion
+
+First, download *Davinci Resolve* from [here](https://www.blackmagicdesign.com/products/davinciresolve).
+
+Once you have it installed open it. You'll be greeted with a window like this:
+
+![[notes/attachments/Pasted image 20221206170105.png]]
+
+Then, open a new project. Once Resolve opens at the bottom of the window you'll a set of icons.
+
+![[notes/attachments/Pasted image 20221206171017.png]]
+
+These are the different "apps" or *Contexts* you can use in Resolve.
+
+#### Importing Media into Resolve
+
+The simplest way to add files to a project is change to the *Media* context and simply drag and drop files here.
+
+#### Creating a new clip
+
+In resolve we need to create clips in order to process anything.
+
+The easiest way to do this is to switch to the *Cut* context and then drag our file down to the timeline. This will automatically create a clip.
+
+#### Opening Fusion
+
+Once we have a clip we can switch to the *fusion* context. It will automatically create a fusion clip based on whatever the *playhead* over.
+
+>![[notes/attachments/Pasted image 20221206171703.png]]
+>*playhead*
+
+Once Fusion is open we should see something like this:
+
+
+![[notes/attachments/Pasted image 20221206171916.png]]
+
+1. Preview window *A*
+2. Preview window *B*
+3. Inspector
+4. Node editor
+
+The purpose of the two preview windows is you can see *before and after*. on whatever you are doing. This can really help improve your workflow.
+
+To toggle the preview windows you can do two things.
+1. click on one of the two dots on any node and it will enable the preview on the respective windows.
+2. Click *1* or *2* when you have any node selected and it will toggle the respective dots.
+
+![[notes/attachments/Pasted image 20221206172701.png]]
+
+The inspector will show the options for any node that is currently selected.
+
+##### Navigating the node editor
+
+###### Adding Nodes
+
+To add nodes you can do two things.
+1. Right click in the node editor and select *Add tool*
+
+![[notes/attachments/Pasted image 20221206173309.png]]
+
+2. Click *Shift*+*Space* and a search box will pop up in which you can start to type and the list will update in real-time. You can also use the arrow keys to navigate up and down the list then press enter to drop-down the node you want.
+
+![[notes/attachments/Pasted image 20221206173624.png]]
+
+In Fusion your nodes can go in any direction. This is very similar to how [[notes/Nuke/Nuke Hub|Nuke]] lets you layout your nodes.
+
+![[notes/attachments/Pasted image 20221206173909.png]]
+
+![[notes/attachments/Pasted image 20221206173913.png]]
+
+##### Anatomy of a Fusion node
+
+[How inputs work in Fusion - YouTube](https://www.youtube.com/watch?v=aKV-2C2qMro)
+
+Inputs => Triangles
+Outputs => Squares
+
+Think of the colors as category of input.
+
+Yellow => Main input
+Green => Secondary input
+Blue => Effect Mask
+White => anything else
+
+Color Corrector Node Example:
+
+![[notes/attachments/Pasted image 20221206174156.png]]
+
+1. Main Input
+2. Secondary Input (Match Reference)
+3. Match Mask input
+4. Output
+5. Effect Mask
+
+##### Connecting Nodes
+
+There are few ways to connect nodes in fusion.
+1. Click and drag from one output then:
+	1. Drop it onto another node. By default it will connect to the next open input.
+	2. Drop it directly onto an input of one of the nodes.
+2. Right-click and drag from an output onto another node. A menu will pop up and let you choose which input to use.
+
+![[notes/attachments/Pasted image 20221206180614.png]]
+
+##### Saving Images
+
+You can right click on the preview pane and save the image.
+
+![[notes/attachments/Pasted image 20221206181216.png]]
+
+
+
+
+#### Color Correction in Resolve
+
+Davinci Resolve is industry standard in color grading for film. It even has it's own context for it.
+
+![[notes/attachments/Pasted image 20221206180923.png]]
+
+1. Stills
+2. Viewport
+3. Color grading node graph
+4. Toolshelf
+5. Color correcting tool wheels
+6. Tools (Correlate with toolshelf)
+7. Keyframes for animation
+
+I'm not going to get into depth here, but you can do some really advanced things with color grading, keying and more in this context.
+
+[How To Color Grade ANY IMAGE - DaVinci Resolve Color Correction Tutorial - YouTube](https://www.youtube.com/watch?v=xK9x-S5eUYk)
+
+#### Exporting Footage
+
+Use the *Export* context and select a file-type to render out to.
 
 
 ---
