@@ -29,6 +29,12 @@ tags: [homework, post-production, exercise, compositing, blender, fusion, resolv
 
 ---
 
+For color-management see [[notes/General/Color-Management/Color Management Hub]]
+
+
+
+---
+
 ## Blender
 
 >[!IMPORTANT] I have two EXR files for blender.
@@ -397,8 +403,6 @@ There are few ways to connect nodes in fusion.
 You can right click on the preview pane and save the image.
 
 ![[notes/attachments/Pasted image 20221206181216.png]]
-
-
 
 
 #### Color Correction in Resolve
