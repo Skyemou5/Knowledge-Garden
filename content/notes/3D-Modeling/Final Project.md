@@ -47,7 +47,9 @@ Please name your files like this => *yourname_projectname_projectfile*
 for example:
 
 benShurts_airship_blenderSceneScreenshot.png
+
 benshurts_airship_mainScene.blend
+
 etc.
 
 
