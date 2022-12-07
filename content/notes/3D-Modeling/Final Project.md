@@ -27,9 +27,10 @@ Total => 100 points
 
 | Criteria        | Points |
 | --------------- | ------ |
-| modeling        | 50     |
+| modeling        | 40     |
 | surfacing       | 30     |
-| post production | 20     |
+| Scene Setup     | 20     |
+| Post Production | 10     |
 
 >10 extra credit points for presenting on Wednesday
 
