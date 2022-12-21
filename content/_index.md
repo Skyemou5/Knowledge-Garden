@@ -84,6 +84,9 @@ Below are links to hubs of the different topics I will have on this site.
 
 [[notes/Godot/Godot Hub]]
 
+[[bitwig hub]]
+
+
 ---
 
 ## Other Info
@@ -117,5 +120,4 @@ I'm planning on adding my portfolio to this website.
 [[notes/Other/My Portfolio Stuff/Portfolio Hub]]
 
 [[notes/Other/My work|My Work]]
-
 
