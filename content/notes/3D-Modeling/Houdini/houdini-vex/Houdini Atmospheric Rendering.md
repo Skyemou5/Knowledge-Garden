@@ -9,6 +9,11 @@ https://www.britannica.com/science/Rayleigh-scattering
 https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/simulating-sky
 https://www.alanzucconi.com/2017/10/10/atmospheric-scattering-1/
 
+#todo 
+
+- [x] THING1
+- [x] THING2
+	- [x] THING3
 
 
 orientation

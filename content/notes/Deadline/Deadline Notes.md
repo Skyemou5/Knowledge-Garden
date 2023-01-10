@@ -72,10 +72,10 @@ https://www.awsthinkbox.com/blog/deadline-auto-upgrade-system
 https://www.youtube.com/watch?v=v083eMXSwXw
 
 IT Tasks
-- [ ] install Houdini 18.5 on TC-render
-- [ ] update blender on all machines
-- [ ] ACES on all machines
-- [ ] Fusion/Davinci resolve installed
+- [x] install Houdini 18.5 on TC-render
+- [x] update blender on all machines
+- [x] ACES on all machines
+- [x] Fusion/Davinci resolve installed
 - [ ] Houdini env file entry for deadline plugin
 
 

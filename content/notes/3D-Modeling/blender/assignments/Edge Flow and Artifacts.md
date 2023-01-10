@@ -38,7 +38,7 @@ tags: "blender-assignments"
 
 ---
 ## Videos
-- [ ] 
+- [x] 
 
 ---
 

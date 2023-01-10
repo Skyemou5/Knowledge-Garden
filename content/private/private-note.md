@@ -61,11 +61,11 @@ next semester -> semester
 - [x] matias navarrete lamas
 - [x] sophie nicholson
 - [x] aidan powell
-- [ ] taylor roach
-- [ ] lauren smith
+- [x] taylor roach
+- [x] lauren smith
 - [x] samuel stallings
 - [x] joshua takke
 - [x] caleb terrasas
-- [ ] zachary young
+- [x] zachary young
 
 ---

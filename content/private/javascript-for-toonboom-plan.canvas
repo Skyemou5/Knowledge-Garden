@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"142ba6bd20f40b4a","x":-209,"y":-1239,"width":423,"height":83,"type":"text","text":"Programming fundiments"},
+		{"id":"705f7e6fbe2524e9","x":-886,"y":-1239,"width":556,"height":83,"type":"text","text":"Javascript for Toonboom course"},
+		{"id":"405a1a6db484d2f3","x":-209,"y":-1053,"width":559,"height":96,"type":"text","text":"why learn technical things as an artist?"}
+	],
+	"edges":[
+		{"id":"ca2ab39a43777ef4","fromNode":"705f7e6fbe2524e9","fromSide":"right","toNode":"142ba6bd20f40b4a","toSide":"left"},
+		{"id":"d4fb72d0f999d944","fromNode":"705f7e6fbe2524e9","fromSide":"bottom","toNode":"405a1a6db484d2f3","toSide":"left"}
+	]
+}
