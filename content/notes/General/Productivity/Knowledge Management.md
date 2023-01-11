@@ -1,27 +1,31 @@
-Knowledge management and learning systems go hand in hand. This page contains resources to help you get started.
 
-# Learning Systems
+>[!IMPORTANT] Before you jump into KMS it may be helpful to review [[notes/General/Productivity/Meta Learning|meta learning]].
 
-In addition to knowledge management, learning systems are just as important. After all, we don't just want to collect information, we want to make sure we understand it and apply to our lives, or at least to a project we are working on.
+Personal knowledge management (PKM) is the process of actively and systematically collecting, organizing, and retrieving information to support personal learning and goal achievement. There are many methods for personal knowledge management, but some common ones include:
 
+1.  The Zettelkasten method, as described above, which uses index cards or digital notes to organize and cross-reference information.
+2.  The Cornell Method, which involves taking notes on a page divided into two columns: one for keywords and phrases, and another for explanations and elaborations.
+3.  Mind Mapping, which uses a visual diagram to organize and connect related ideas and information.
+4.  The GTD (Getting Things Done) method, which emphasizes the importance of capturing tasks, goals, and ideas as soon as they arise, and then organizing and prioritizing them.
+5.  The Eisenhower Matrix, which categorizes tasks into four categories based on their urgency and importance.
+6.  The PARA method, which separates tasks into Projects, Areas, Resources and Archives.
+7.  The Personal Wiki method, which uses a digital personal wiki to collect, organize and cross-reference information, notes and ideas.
+8.  The Memory Palace technique, which uses mental imagery to organize and recall information.
 
->[!NOTE] Learning Resources
+All of these methods can be adapted and combined depending on individual preference and need. The key is to find a system that works for you and to be consistent in using it.
+
+One of the most popular is the *Zettelkasten method*:
+
+>The Zettelkasten method is a system for note-taking and personal knowledge management developed by German sociologist and philosopher Niklas Luhmann. It is a method that helps to organize, cross-reference and retrieve information effectively.
 >
->[How to Learn ANYTHING - YouTube](https://www.youtube.com/watch?v=brffDCE5hXs)
+>The method is based on the use of index cards, or "slips," on which notes and ideas are written. Each card contains a single thought or piece of information and is assigned a unique identification number. The cards are then stored in a physical container called a "slip box" or "Zettelkasten."
 >
->[The Art and Science of Learning Anything Faster (#191) - The Blog of Author Tim Ferriss](https://tim.blog/2016/10/06/the-art-and-science-of-learning-anything-faster/)
+>The key idea behind the method is to create many small notes, each with a specific and well-defined topic, and link them together using hyperlinks and cross-references. This allows for creating a web of interconnected ideas, where each note is related to many others, and helps to build connections between different thoughts and concepts.
+>
+>The Zettelkasten method can be adapted to digital form, such as plain text file, note-taking software, etc.
+>
+>The method is often used by scholars, writers, and researchers as a way to organize and retrieve information quickly, while also encouraging creative thinking and idea generation.
 
-
-Important points:
-- be deliberate with your learning
-- Do it in stages
-	1. First time through just listen or watch
-	2. Second time through follow along
-	3. Third time through record what you learned
-
-# Knowledge Management
-
-Knowledge management is a personal system you develop in order to record and recall the information you need to.
 
 >[!NOTE] PKM Resources
 >
@@ -32,8 +36,12 @@ Knowledge management is a personal system you develop in order to record and rec
 >[Knowledge Management For Software Developers - YouTube](https://www.youtube.com/watch?v=C5ycVOMaiwU)
 >
 >[Workflowy for Zettelkasten Personal Knowledge Management system - YouTube](https://www.youtube.com/watch?v=5ReeIrqvEAo)
+>
+>[Getting Started • Zettelkasten Method](https://zettelkasten.de/posts/overview/)
 
 There are many systems out there but you will have to create your own.
+
+## Tools for PKMs
 
 Often people end up creating what they call second brains in conjunction with their knowledge management systems. Below are some popular tools for the task:
 
@@ -57,11 +65,12 @@ Some related tools that are often used in conjunction with obsidian and should b
 
 In this course I highly suggest you start creating your own personal knowledge managment system.
 
+### Obsidian
+
 My suggestion is to start with Obsidian and either set it up with *git* or *google drive* or something similar.
 
 >[!NOTE] I may want some homework turned in with github at some point, if so, you could put your vaults in a git repo, don't worry we'll cover that too.
 
-### How To Use Obsidian
 
 Obsidian uses [Markdown](https://www.markdownguide.org/) and formats your text accordingly. One you learn it it's much faster than using traditional document editors because you do all the formatting in the same line, no need to click buttons and select text.
 

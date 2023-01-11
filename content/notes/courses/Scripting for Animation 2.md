@@ -18,7 +18,10 @@ todo:
 
 ## Knowledge Management
 
+[[notes/General/Productivity/Meta Learning|Meta Learning]]
+
 [[notes/General/Productivity/Knowledge Management|Knowledge Management]]
+
 
 ---
 
