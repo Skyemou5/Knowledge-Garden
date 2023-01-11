@@ -32,7 +32,7 @@ This website contains resources and helpful information for anyone taking DGM 22
 
 [[notes/Programming/Javascript/Javascript Hub]]
 
-
+[[Scripting for Animation 2]]
 
 ## Information on this Site
 
