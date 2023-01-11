@@ -56,7 +56,7 @@ Often people end up creating what they call second brains in conjunction with th
 
 Some related tools that are often used in conjunction with obsidian and should be noted:
 
-[[Git Hub |Version Control Notes]]
+[[notes/git/Git Hub|Version Control Notes]]
 
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
