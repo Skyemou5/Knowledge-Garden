@@ -18,7 +18,7 @@ todo:
 
 ## Knowledge Management
 
-[[Knowledge Management]]
+[[notes/General/Productivity/Knowledge Management|Knowledge Management]]
 
 ---
 

@@ -1,8 +1,8 @@
+Knowledge management and learning systems go hand in hand. This page contains resources to help you get started.
 
-Knowledge management is a personal system you develop in order to record and recall the information you need to.
+# Learning Systems
 
 In addition to knowledge management, learning systems are just as important. After all, we don't just want to collect information, we want to make sure we understand it and apply to our lives, or at least to a project we are working on.
-
 
 
 >[!NOTE] Learning Resources
@@ -12,7 +12,6 @@ In addition to knowledge management, learning systems are just as important. Aft
 >[The Art and Science of Learning Anything Faster (#191) - The Blog of Author Tim Ferriss](https://tim.blog/2016/10/06/the-art-and-science-of-learning-anything-faster/)
 
 
-
 Important points:
 - be deliberate with your learning
 - Do it in stages
@@ -20,7 +19,9 @@ Important points:
 	2. Second time through follow along
 	3. Third time through record what you learned
 
+# Knowledge Management
 
+Knowledge management is a personal system you develop in order to record and recall the information you need to.
 
 >[!NOTE] PKM Resources
 >
@@ -80,9 +81,15 @@ Obsidian uses [Markdown](https://www.markdownguide.org/) and formats your text a
 >
 >[Obsidian Markdown Reference | Markdown Guide](https://www.markdownguide.org/tools/obsidian/)
 
-### Assigment
+---
+
+# Assignment
 
 - download obsidian
+- watch at least one video from each resource section on this page
 - create a blank vault
 - go through the [Markdown Tutorial](https://www.markdowntutorial.com/) 
 - turn in screenshot of completed markdown tutorial
+- Write a short paragraph about what you learned and what you might implement for yourself
+
+
