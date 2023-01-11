@@ -1,7 +1,17 @@
 
 Knowledge management is a personal system you develop in order to record and recall the information you need to.
 
-[How to Learn ANYTHING - YouTube](https://www.youtube.com/watch?v=brffDCE5hXs)
+In addition to knowledge management, learning systems are just as important. After all, we don't just want to collect information, we want to make sure we understand it and apply to our lives, or at least to a project we are working on.
+
+
+
+>[!NOTE] Learning Resources
+>
+>[How to Learn ANYTHING - YouTube](https://www.youtube.com/watch?v=brffDCE5hXs)
+>
+>[The Art and Science of Learning Anything Faster (#191) - The Blog of Author Tim Ferriss](https://tim.blog/2016/10/06/the-art-and-science-of-learning-anything-faster/)
+
+
 
 Important points:
 - be deliberate with your learning
