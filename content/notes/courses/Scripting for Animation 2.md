@@ -10,6 +10,7 @@ todo:
 - [ ] finish setting up canvas
 - [ ] create general course plan
 - [x] plan tomorrows lesson
+- [ ] make slideshow
 
 ---
 
