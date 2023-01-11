@@ -38,6 +38,8 @@ One of the most popular is the *Zettelkasten method*:
 >[Workflowy for Zettelkasten Personal Knowledge Management system - YouTube](https://www.youtube.com/watch?v=5ReeIrqvEAo)
 >
 >[Getting Started • Zettelkasten Method](https://zettelkasten.de/posts/overview/)
+>[BUILDING A SECOND BRAIN by Tiago Forte | Core Message - YouTube](https://www.youtube.com/watch?v=aEm72qlAtVc)
+>
 
 There are many systems out there but you will have to create your own.
 
@@ -56,12 +58,15 @@ Often people end up creating what they call second brains in conjunction with th
 
 Some related tools that are often used in conjunction with obsidian and should be noted:
 
+
+
 [[notes/git/Git Hub|Version Control Notes]]
 
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
 - [GitLab](https://about.gitlab.com/)
-- [Zotero](https://www.zotero.org/)
+
+A good tool for collecting sources is [Zotero](https://www.zotero.org/)
 
 In this course I highly suggest you start creating your own personal knowledge managment system.
 
@@ -79,6 +84,10 @@ Obsidian uses [Markdown](https://www.markdownguide.org/) and formats your text a
 >[Obsidian for Beginners: Start HERE — How to Use the Obsidian App for Notes - YouTube](https://www.youtube.com/watch?v=QgbLb6QCK88&t=1s)
 >
 >[How to get started with Obsidian in 2022 - from scratch! - YouTube](https://www.youtube.com/watch?v=OUrOfIqvGS4)
+>
+>[Obsidian for beginners: Building a second brain from scratch (2021) - YouTube](https://www.youtube.com/watch?v=njibNuFQwjw&t=21s)
+>
+>[How To Build Your Second Brain In Obsidian (Updated For 2023) - YouTube](https://www.youtube.com/watch?v=vEw8_9a8cGk)
 
 >[!NOTE] Markdown Resources
 >
