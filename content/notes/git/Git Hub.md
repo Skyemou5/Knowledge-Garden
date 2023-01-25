@@ -28,3 +28,7 @@ There is a lot to know about terminals and shells. More info [[notes/Unix/Linux/
 
 
 [[notes/git/remove git submodule]]
+
+
+[[notes/git/git branching and merging]]
+

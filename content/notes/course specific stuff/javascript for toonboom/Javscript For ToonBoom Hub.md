@@ -19,7 +19,7 @@ tags: [course, javascript, hub, index, programming, animation, 2d]
 
 ## Unit 1 - Project Management
 
-weeks 1-4:
+### Weeks 1-4:
 - Knowledge Management
 - Learning
 - Naming Conventions
@@ -28,7 +28,8 @@ weeks 1-4:
 - Version control
 
 ## Unit 2 - Scripting
-weeks 5:
+
+### Weeks 5:
 - Introduction to scripting
 - Fundamentals of programming
 	- variables
@@ -37,68 +38,121 @@ weeks 5:
 	- practice!
 	- debugging
 - Documentation
-Week 6:
-- Intermediate Concepts in Scripting
-- 
 
+### Week 6:
+
+- Intermediate Concepts in Scripting
+	- Inheritence
+		- classes
+		- closures
+	- Loops
+	- Higher-order functions
+	- Regular expressions
+	- Async
+
+### Week 7:
+
+- Toonboom extension
+	- setting up enviornment
+	- tool building overview
+	- QT as a framework
+	- the documentation
+	- building a basic tool
+
+## Unit 3 - 3D for 2D with Blender
+
+### Week 8: Introduction to 3D and final project introduction:
+
+- Final project proposal
+- 3D fundimentals
+	- History of 3D
+	- How 3D apps work under the hood
+	- Similarities between apps
+	- Types of 3D data
+	- Spacial problem solving
+	- Topology
+	- Blender introduction
+		- viewport
+		- basic modeling tools
+		- basic overview of workspaces
+		- SHORTCUTS!
+		- modifiers
+	- Attempt to model something
+
+### Week 9: Topology and modeling
+
+- topology
+- edge-flow
+- correcting bad geometry
+- Modeling techniques
+
+### Week 10: Surfacing
+
+- How 3D surfaces work
+	- normals
+	- tangents
+	- shading
+- UVs
+	- theory
+	- unwrapping
+	- tips and tricks
+- Textures
+	- surfaces + UVs make texturing possible
+- Shading
+	- What are shaders
+	- how to make a shader
+
+### Week 11: Spring Break
+
+### Week 12: Rendering
+
+- Rendering
+	- What is renderings
+	- What are renderers
+	- Types of renderers
+	- How are they used in production
+	- How can we use them
+
+
+### Week 13: 2D in Blender
+
+- Grease Pencil
+	- What is it?
+	- Why should you use it?
+	- How can we use it?
+- Cell shading
+	- What is cell shading
+	- NPR shading
+	- How is it used in production
+
+### Week 14: 3D in Toonboom
+
+- 3D -> 2D pipelines
+- exporting for toonboom
+- importing into toonboom
+- setup once in toonboom
+- shading and rendering
+
+### Week 15: Animation, rigging and effects
+
+- General overview of animation, rigging, and effects.
+- Some basic workflows for each in blender
+
+### Week 16: Compositing
+
+- What is compositing
+- Why should you learn it
+- What software is used in industry
+- Color management
+- Compositing in Blender
+- Compositing in fusion
+
+### Week 17: work week
+
+
+### Final Project Due 
 
 
 
 ---
 
-# Class Timeline
-
-Week 1-2: Introduction to Animation Production
-
--   Overview of the animation production process
--   Introduction to project management
--   Setting project goals and objectives
--   Basic animation principles and techniques
-
-Week 3-4: Project Management
-
--   Managing project timelines and schedules
--   Managing project budgets and resources
--   Collaboration and communication
--   Pre-production and planning
-
-Week 5-6: Toon Boom and JavaScript
-
--   Introduction to Toon Boom
--   Basic JavaScript for Toon Boom
--   Scripting for automation and customization
--   Creating interactive animations
-
-Week 7-8: 3D Modeling in Blender
-
--   Introduction to 3D modeling
--   Modeling techniques and best practices
--   Texturing and shading
--   Lighting and camera
-
-Week 9-10: Rigging and Animation
-
--   Introduction to rigging
--   Keyframe animation
--   Motion graphics
--   Character animation
-
-Week 11-12: Lighting and Rendering
-
--   Introduction to lighting and rendering
--   Setting up a scene for rendering
--   Camera animation
--   Effects and particle systems
-
-Week 13-14: Compositing and Post-Production
-
--   Introduction to compositing
--   Masking and keying
--   Color correction and grading
--   Sound design and editing
-
-Week 15-16: Final Project
-
--   Students will work on a final project that covers all aspects of the animation production process
--   Students will present their final project to the class
--   Final evaluations and feedback
