@@ -25,6 +25,7 @@ then you have to extract it and build it .</description></item><item><title>Rust
 https://www.joshmcguigan.com/blog/build-your-own-shell-rust/
 https://www.reddit.com/r/rust/comments/7hog3u/how_do_i_tell_cargo_to_run_some_other_file_not/
 https://www.reddit.com/r/rust/comments/4nrldm/opengl_in_rust/
-sdl2 = { git = &amp;ldquo; https://github.com/Rust-SDL2/rust-sdl2.git" }</description></item><item><title>Unix Hub</title><link>https://notes.benshurts.com/notes/Unix/Unix-Hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.benshurts.com/notes/Unix/Unix-Hub/</guid><description>What is Unix? The UNIX® Standard | The Open Group Website
+sdl2 = { git = &amp;ldquo; https://github.com/Rust-SDL2/rust-sdl2.git" }</description></item><item><title>Solaris with Redshift on Linux</title><link>https://notes.benshurts.com/notes/3D-Modeling/Houdini/Solaris-Redshift/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.benshurts.com/notes/3D-Modeling/Houdini/Solaris-Redshift/</guid><description>To get redshift solaris working on linux you need to source it on the system level before opening houdini.
+In your .</description></item><item><title>Unix Hub</title><link>https://notes.benshurts.com/notes/Unix/Unix-Hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.benshurts.com/notes/Unix/Unix-Hub/</guid><description>What is Unix? The UNIX® Standard | The Open Group Website
 Unix - Wikipedia
 The UNIX® Standard | The Open Group Website</description></item></channel></rss>
