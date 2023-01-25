@@ -170,8 +170,53 @@ If you want to change constraint properties *during* a simulation, you can use a
 You can now add keyframes on the properties inside this node.
 
 
+### Pinning
+
+Pinning is a way we can attach cloth to objects.
+
+![[notes/attachments/Pasted image 20230120181830.png]]
+
+![[notes/attachments/Pasted image 20230120181903.png]]
+
+In vellum constraints all you need to do is set the pin group and check *match animation*.
+
+# Final Sim
+
+Like with **RBD** we cam *Vellum Pack*
+
+![[notes/attachments/Pasted image 20230120182716.png]]
+
+Another Approach is to setup different vellum *sources*.
+
+![[notes/attachments/Pasted image 20230120183818.png]]
+
+In this case you set up different nulls for outputs of each simulation.
+
+Then in another *vellumsolver* add 3 *vellum source* nodes and set up the *geo* and *constraint* fields to the nulls.
+
+![[notes/attachments/Pasted image 20230120184057.png]]
+
+![[notes/attachments/Pasted image 20230120184108.png]]
+
+The nice thing about this method is that you can create groups for 
+
+### DOPnet method
+
+Start out with a simple vellum setup inside the dop.
+
+![[notes/attachments/Pasted image 20230120190455.png]]
+
+Next you will want to source all the vellum objects like before.
+
+![[notes/attachments/Pasted image 20230120190745.png]]
+
+Plug them into input 3 of the vellum solver.
+
+![[notes/attachments/Pasted image 20230120191732.png]]
+
+![[notes/attachments/Pasted image 20230120191859.png]]
+In DOPs the *objects* hold the simulation data.
 
 
-
-
+### Vellum Post-Process
 

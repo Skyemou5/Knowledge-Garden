@@ -68,7 +68,7 @@ Below are links to hubs of the different topics I will have on this site.
 
 ### Software Specific Hubs
 
-![[notes/attachments/blender-icon.png|30]] [[notes/3D-Modeling/blender/Blender Hub|Blender]]
+![[notes/attachments/icons/blender-icon.png|30]] [[notes/3D-Modeling/blender/Blender Hub|Blender]]
 
 ![[notes/attachments/houdini-icon.png|30]] [[notes/3D-Modeling/Houdini/Houdini Hub|Houdini Hub]]
 

@@ -8,6 +8,43 @@ tags: [course, javascript, hub, index, programming, animation, 2d]
 [[notes/Programming/Javascript/Javascript Hub]]
 
 ---
+# Syllabus
+
+
+
+
+
+---
+# Course Timeline
+
+## Unit 1 - Project Management
+
+weeks 1-4:
+- Knowledge Management
+- Learning
+- Naming Conventions
+- Style Guides
+- Team work
+- Version control
+
+## Unit 2 - Scripting
+weeks 5:
+- Introduction to scripting
+- Fundamentals of programming
+	- variables
+	- control flow
+	- data types
+	- practice!
+	- debugging
+- Documentation
+Week 6:
+- Intermediate Concepts in Scripting
+- 
+
+
+
+
+---
 
 # Class Timeline
 
