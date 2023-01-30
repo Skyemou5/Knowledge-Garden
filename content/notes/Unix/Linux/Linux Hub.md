@@ -3,6 +3,8 @@ title: "Linux Hub"
 tags: [linux, unix, index, hub, os]
 ---
 
+[[notes/Unix/Linux/Bash go to last dir]]
+
 [[notes/Unix/Linux/Emacs Notes]]
 
 [[notes/git/Git Hub]]

@@ -18,7 +18,10 @@ tags: [timeline,courses]
 
 ## Unit 2 - Scripting
 
-### Weeks 5:
+### Weeks 5: [[notes/courses/Introduction To Coding|Intro To Coding Lesson Notes]]
+
+[Slides](https://docs.google.com/presentation/d/1-DuAPn35VD9UUw8pFMfwZ39whKKpip4xvKNFVyx0--g/edit?usp=sharing)
+
 - Introduction to scripting
 - Fundamentals of programming
 	- variables

@@ -43,12 +43,18 @@ v@N = v@right;
 ## Linear Algebra
 
 This is some standard linear algebra. Here's what's going on.
+
 We make a new vector variable that's the same as the *normals* on the points. Then set the *Y* part of the vector to 0, then [normalize](https://www.sidefx.com/docs/houdini/vex/functions/normalize.html) our vector. Then we create two new vector attributes. this is done with `v@something` syntax. The first is a [Cross product](https://en.wikipedia.org/wiki/Cross_product) of our first variable and a simple '{0,1,0}' vector. The second is a cross product of our *normal* and the last attribute we just made.
 Now our normals look like this ->
+
 ![[notes/attachments/Pasted image 20221021190724.png]]
+
 ![[notes/attachments/Pasted image 20221021191325.png]]
+
 Now that our points have the correct data we can start to use that data.
+
 Drop down a [Convert Line](https://www.sidefx.com/docs/houdini/nodes/sop/convertline.html) SOP node.
+
 ![[notes/attachments/Pasted image 20221021193055.png]]
 
 Convert line will split the line into separate primitives.

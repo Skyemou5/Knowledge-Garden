@@ -104,4 +104,4 @@ rust needs to know the size of the thing on compile time, so recursion is a prob
 
 [[notes/Programming/RUST/Rust Modules and Project Structure  by Gian Lorenzetto, PhD  CodeX  Medium]]
 
-
+[[rust cli apps]]
