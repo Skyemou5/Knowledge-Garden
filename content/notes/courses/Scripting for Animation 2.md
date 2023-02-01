@@ -9,6 +9,13 @@ This course is a little different because it's for 2D animation students. Howeve
 
 ---
 
+# Resources
+
+
+
+
+---
+
 # Lessons
 
 ## Knowledge Management

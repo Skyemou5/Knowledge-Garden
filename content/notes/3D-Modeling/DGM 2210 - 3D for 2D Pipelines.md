@@ -11,10 +11,10 @@ Students will learn basics of the underlying mathematic principals used in CG, w
 
 --
 ### Start Here
-- [[notes/3D-Modeling/blender/Course Planning last year|Course Overview]]
+- [[notes/3D-Modeling/Course Timeline/_Course-Timeline]]
 - [[notes/3D-Modeling/blender/assignments/3D-Assignments|Assignments]]
 
-[[notes/courses/Coding Lesson 2]]
+[[notes/courses/Coding Lesson 2|Coding Lesson 2 - Javascript Guessing game]]
 
 
 [[notes/3D-Modeling/blender/Blender Hub]]

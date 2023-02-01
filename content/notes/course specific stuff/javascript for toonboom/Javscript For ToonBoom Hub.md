@@ -19,6 +19,10 @@ tags: [course, javascript, hub, index, programming, animation, 2d]
 
 ## Unit 1 - Project Management
 
+[[notes/General/Productivity/Project Management]]
+
+
+
 ### Weeks 1-4:
 - Knowledge Management
 - Learning

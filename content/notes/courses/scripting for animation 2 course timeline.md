@@ -4,6 +4,8 @@ tags: [timeline,courses]
 ---
 
 
+
+
 # Course Timeline
 
 ## Unit 1 - Project Management
@@ -18,11 +20,12 @@ tags: [timeline,courses]
 
 ## Unit 2 - Scripting
 
-### Weeks 5: [[notes/courses/Introduction To Coding|Intro To Coding Lesson Notes]]
+### Weeks 5: Intro To Coding
 
-[Slides](https://docs.google.com/presentation/d/1-DuAPn35VD9UUw8pFMfwZ39whKKpip4xvKNFVyx0--g/edit?usp=sharing)
 
-- Introduction to scripting
+
+- [[notes/courses/Introduction To Coding|Intro To Coding]]
+	- [Slides](https://docs.google.com/presentation/d/1-DuAPn35VD9UUw8pFMfwZ39whKKpip4xvKNFVyx0--g/edit?usp=sharing)
 - Fundamentals of programming
 	- variables
 	- control flow
@@ -30,6 +33,8 @@ tags: [timeline,courses]
 	- practice!
 	- debugging
 - Documentation
+
+[[notes/courses/Coding Lesson 2|Coding Lesson 2 - Guessing Game]]
 
 ### Week 6:
 
