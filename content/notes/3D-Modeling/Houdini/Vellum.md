@@ -182,7 +182,7 @@ In vellum constraints all you need to do is set the pin group and check *match a
 
 # Final Sim
 
-Like with **RBD** we cam *Vellum Pack*
+Like with **RBD** we can *Vellum Pack*
 
 ![[notes/attachments/Pasted image 20230120182716.png]]
 

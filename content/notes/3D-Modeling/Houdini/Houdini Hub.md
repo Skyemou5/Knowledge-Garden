@@ -33,3 +33,6 @@ Houdini is a procedural 3D Development Enviornment.
 # Vellum
 
 [[notes/3D-Modeling/Houdini/Vellum]]
+
+[[notes/3D-Modeling/Houdini/Vellum Interaction]]
+
