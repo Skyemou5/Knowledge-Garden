@@ -20,6 +20,12 @@ title: "Programming Hub"
 
 [[notes/Unity/Game-Development]]
 
+## Javascript
+
+[[notes/Programming/Javascript/Javascript Hub]]
+
+[[notes/Programming/hugo/Hugo Hub]]
+
 ---
 # Game Development
 
