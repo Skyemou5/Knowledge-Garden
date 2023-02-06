@@ -3,6 +3,8 @@ title: "Scripting for animation 2 course timeline"
 tags: [timeline,courses]
 ---
 
+[[notes/courses/Scripting for Animation 2]]
+
 
 
 
@@ -23,7 +25,6 @@ tags: [timeline,courses]
 ### Weeks 5: Intro To Coding
 
 
-
 - [[notes/courses/Introduction To Coding|Intro To Coding]]
 	- [Slides](https://docs.google.com/presentation/d/1-DuAPn35VD9UUw8pFMfwZ39whKKpip4xvKNFVyx0--g/edit?usp=sharing)
 - Fundamentals of programming
@@ -38,6 +39,10 @@ tags: [timeline,courses]
 
 ### Week 6:
 
+[[notes/courses/Javascript Loops and Arrays]]
+
+[[notes/courses/Classes and Constructors in Javascript]]
+
 - Intermediate Concepts in Scripting
 	- Inheritence
 		- classes
@@ -48,6 +53,8 @@ tags: [timeline,courses]
 	- Async
 
 ### Week 7:
+
+[[notes/courses/Javascript for Toonboom]]
 
 - Toonboom extension
 	- setting up enviornment
