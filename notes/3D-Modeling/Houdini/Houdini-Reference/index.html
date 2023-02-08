@@ -1,0 +1,1131 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Creating Groups in Vex You can create groups in vex in various ways.
+1  i@group_groupname = 1 //1 = include 0 = exclude   example:"><title>Houdini Reference</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://notes.benshurts.com//icon.png><link href=https://notes.benshurts.com/styles.708c2658f93e3a9d323a1f9fded8f4b2.min.css rel=stylesheet><link href=https://notes.benshurts.com/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://notes.benshurts.com/js/darkmode.7f1fd235efdec6a4bdcb4d8d99113082.min.js></script>
+<script src=https://notes.benshurts.com/js/util.9825137f5e7825e8553c68ce39ac9e44.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script src=https://notes.benshurts.com/js/popover.9b72b70bd35617d0635e9d15463662b2.min.js></script>
+<script src=https://notes.benshurts.com/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
+<script src=https://notes.benshurts.com/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
+<script src=https://notes.benshurts.com/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const BASE_URL="https://notes.benshurts.com/",fetchData=Promise.all([fetch("https://notes.benshurts.com/indices/linkIndex.699a73c6423830038e29989da16bcc36.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://notes.benshurts.com/indices/contentIndex.4677809ca7a36fd9c539827ca1fa1429.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://notes.benshurts.com",!0,!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://notes.benshurts.com",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/notes.benshurts.com\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
+    attachSPARouting(init, render)
+  </script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-XYFD95KB4J",{anonymize_ip:!1})}</script><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://notes.benshurts.com/js/full-text-search.24827f874defbbc6d529926cbfcfb493.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://notes.benshurts.com/>Knowledge Garden</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>Houdini Reference</h1><p class=meta>Last updated
+Feb 7, 2023
+<a href=https://github.com/benshurts/Knowledge-Garden/notes/3D-Modeling/Houdini/Houdini%20Reference.md rel=noopener>Edit Source</a></p><ul class=tags><li><a href=https://notes.benshurts.com/tags/houdini/>Houdini</a></li><li><a href=https://notes.benshurts.com/tags/vex/>Vex</a></li><li><a href=https://notes.benshurts.com/tags/reference/>Reference</a></li></ul><aside class=mainTOC><details open><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#attribute-falloff>Attribute Falloff</a></li></ol></nav></details></aside><a href=#creating-groups-in-vex><h1 id=creating-groups-in-vex><span class=hanchor arialabel=Anchor># </span>Creating Groups in Vex</h1></a><p>You can create groups in vex in various ways.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>i</span><span class=err>@</span><span class=n>group_groupname</span> <span class=o>=</span> <span class=mi>1</span> <span class=c1>//1 = include 0 = exclude
+</span></span></span></code></pre></td></tr></table></div></div><p>example:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>z</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=n>i</span><span class=err>@</span><span class=n>group_groupone</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#adding-second-to-last-point-to-a-group><h1 id=adding-second-to-last-point-to-a-group><span class=hanchor arialabel=Anchor># </span>Adding second to last point to a group</h1></a><p><code>setpointgroup(0,"controlPoint",npoints(0)-2,1,"set");</code></p><p>Here&rsquo;s what each part of the expression means:</p><ol><li><code>setpointgroup</code>: This is the function used to set the group of a point in Houdini.</li><li><code>0</code>: This is the index of the point cloud that contains the point you want to set the group for.</li><li><code>"controlPoint"</code>: This is the name of the attribute that defines the point&rsquo;s group. If this attribute doesn&rsquo;t exist, it will be created.</li><li><code>npoints(0)-2</code>: This is the index of the point you want to set the group for. In this case, it&rsquo;s the next to last point in the point cloud (<code>npoints(0)</code> is the number of points in the point cloud with index <code>0</code>, and <code>npoints(0)-2</code> is the index of the next to last point).</li><li><code>1</code>: This is the group number you want to set for the point. In this case, the point will be assigned to group <code>1</code>.</li><li><code>"set"</code>: This is an optional string argument that sets the mode for setting the group. In this case, <code>"set"</code> means that the existing group will be overwritten.</li></ol><p>This line of vex code sets the group of the next to last point in point cloud <code>0</code> to group <code>1</code>. The group is defined by the <code>"controlPoint"</code> attribute, which will be created if it doesn&rsquo;t already exist.</p><hr><a href=#houdini-vex-create-tunnel><h1 id=houdini-vex-create-tunnel><span class=hanchor arialabel=Anchor># </span>Houdini vex create tunnel</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>amt</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=s>&#34;amt&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>size</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;size&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>length</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;length&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>amt</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>sin</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=o>*</span> <span class=n>size</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>cos</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=o>*</span> <span class=n>size</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>sin</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=o>+</span> <span class=n>sqrt</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=o>*</span> <span class=n>length</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=n>set</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#houdini-vex-parabola><h1 id=houdini-vex-parabola><span class=hanchor arialabel=Anchor># </span>Houdini vex parabola</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>amt</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=s>&#34;amt&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>b</span><span class=p>,</span><span class=n>a</span><span class=p>,</span><span class=n>c</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>b</span> <span class=o>=</span> <span class=mi>4</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>c</span> <span class=o>=</span> <span class=mi>5</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>amt</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>x</span><span class=o>*</span><span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=n>set</span><span class=p>(</span><span class=n>z</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#houdini-vex-golden-ratio><h1 id=houdini-vex-golden-ratio><span class=hanchor arialabel=Anchor># </span>Houdini vex golden ratio</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>float</span> <span class=n>sweepAngle</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=err>&#39;</span><span class=n>Sweep_Angle</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>growthFactor</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=err>&#39;</span><span class=n>growth_factor</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>npoints</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=err>&#39;</span><span class=n>number_of_points</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>TWO_DIVIDED_BY_PI</span> <span class=o>=</span> <span class=mf>2.0</span> <span class=o>/</span> <span class=mf>3.14159</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>vector</span> <span class=n>pos</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>radius</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>step_angle</span> <span class=o>=</span> <span class=n>sweepAngle</span> <span class=o>/</span> <span class=kt>float</span><span class=p>(</span><span class=n>npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>curr_angle</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;</span><span class=n>npoints</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>curr_angle</span> <span class=o>=</span> <span class=n>step_angle</span> <span class=o>*</span> <span class=kt>float</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>radius</span> <span class=o>=</span> <span class=n>pow</span><span class=p>(</span><span class=n>growthFactor</span><span class=p>,</span> <span class=n>curr_angle</span> <span class=o>*</span> <span class=n>TWO_DIVIDED_BY_PI</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span><span class=p>.</span><span class=n>x</span> <span class=o>=</span> <span class=n>sin</span><span class=p>(</span><span class=n>curr_angle</span><span class=p>)</span> <span class=o>*</span> <span class=n>radius</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>pos</span><span class=p>.</span><span class=n>y</span> <span class=o>=</span> <span class=mf>0.0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>pos</span><span class=p>.</span><span class=n>z</span> <span class=o>=</span> <span class=n>cos</span><span class=p>(</span><span class=n>curr_angle</span><span class=p>)</span> <span class=o>*</span> <span class=n>radius</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#strange-attractor-vex-houdini><h1 id=strange-attractor-vex-houdini><span class=hanchor arialabel=Anchor># </span>Strange Attractor vex houdini</h1></a><p><img src="/notes/attachments/Pasted image 20230207155610.png" width=auto></p><p>The below code goes in the wrangle above.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>newprim</span> <span class=o>=</span> <span class=n>addprim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;polyline&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>newprim</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>The below should go in a wrangle inside of solver</p><p>There are several different attractors.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>inpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span><span class=n>c</span><span class=p>,</span><span class=n>d</span><span class=p>,</span><span class=n>e</span><span class=p>,</span><span class=n>k</span><span class=p>,</span><span class=n>f</span><span class=p>,</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>dt</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;dt&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>a</span> <span class=o>=</span> <span class=mi>40</span><span class=p>;</span>    
+</span></span><span class=line><span class=cl>    <span class=n>c</span> <span class=o>=</span> <span class=mf>1.833</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>d</span> <span class=o>=</span> <span class=mf>0.16</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>e</span> <span class=o>=</span> <span class=mf>0.65</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>k</span> <span class=o>=</span> <span class=mi>55</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>f</span> <span class=o>=</span> <span class=mi>20</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=err>@</span><span class=n>P</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>y</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>z</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>x</span> <span class=o>+</span> <span class=p>(</span><span class=n>a</span> <span class=o>*</span> <span class=p>(</span><span class=n>y</span><span class=o>-</span><span class=n>x</span><span class=p>)</span> <span class=o>+</span> <span class=n>d</span><span class=o>*</span><span class=n>x</span><span class=o>*</span><span class=n>z</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>y</span> <span class=o>+</span> <span class=p>(</span><span class=n>k</span><span class=o>*</span><span class=n>x</span> <span class=o>+</span> <span class=n>f</span><span class=o>*</span><span class=n>y</span> <span class=o>-</span> <span class=n>x</span><span class=o>*</span><span class=n>z</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>z</span> <span class=o>+</span> <span class=p>(</span><span class=n>c</span><span class=o>*</span><span class=n>z</span> <span class=o>+</span> <span class=n>x</span><span class=o>*</span><span class=n>y</span> <span class=o>-</span> <span class=n>e</span><span class=o>*</span><span class=n>x</span><span class=o>*</span><span class=n>x</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>newpt</span> <span class=o>=</span> <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=n>newpt</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>,</span> <span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=n>newpt</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>inpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span><span class=n>c</span><span class=p>,</span><span class=n>d</span><span class=p>,</span><span class=n>e</span><span class=p>,</span><span class=n>k</span><span class=p>,</span><span class=n>f</span><span class=p>,</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>dt</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;dt&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>a</span> <span class=o>=</span> <span class=mi>40</span><span class=p>;</span>    
+</span></span><span class=line><span class=cl>    <span class=n>c</span> <span class=o>=</span> <span class=mf>1.833</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>d</span> <span class=o>=</span> <span class=mf>0.16</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>e</span> <span class=o>=</span> <span class=mf>0.65</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>k</span> <span class=o>=</span> <span class=mi>55</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>f</span> <span class=o>=</span> <span class=mi>20</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=err>@</span><span class=n>P</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>y</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>z</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>x</span> <span class=o>+</span> <span class=p>(</span><span class=n>a</span> <span class=o>*</span> <span class=p>(</span><span class=n>y</span><span class=o>-</span><span class=n>x</span><span class=p>)</span> <span class=o>+</span> <span class=n>d</span><span class=o>*</span><span class=n>x</span><span class=o>*</span><span class=n>z</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>y</span> <span class=o>+</span> <span class=p>(</span><span class=n>k</span><span class=o>*</span><span class=n>x</span> <span class=o>+</span> <span class=n>f</span><span class=o>*</span><span class=n>y</span> <span class=o>-</span> <span class=n>x</span><span class=o>*</span><span class=n>z</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>z</span> <span class=o>+</span> <span class=p>(</span><span class=n>c</span><span class=o>*</span><span class=n>z</span> <span class=o>+</span> <span class=n>x</span><span class=o>*</span><span class=n>y</span> <span class=o>-</span> <span class=n>e</span><span class=o>*</span><span class=n>x</span><span class=o>*</span><span class=n>x</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>newpt</span> <span class=o>=</span> <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=n>newpt</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>,</span> <span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=n>newpt</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>inpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>,</span><span class=n>c</span><span class=p>,</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>dt</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;dt&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>a</span> <span class=o>=</span> <span class=mf>0.2</span><span class=p>;</span>    
+</span></span><span class=line><span class=cl>    <span class=n>b</span> <span class=o>=</span> <span class=mf>0.2</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>c</span> <span class=o>=</span> <span class=mf>5.7</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=err>@</span><span class=n>P</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>y</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>z</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>x</span> <span class=o>+</span> <span class=o>-</span><span class=p>(</span><span class=n>y</span> <span class=o>+</span> <span class=n>z</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>y</span> <span class=o>+</span> <span class=p>(</span><span class=n>x</span> <span class=o>+</span> <span class=n>a</span> <span class=o>*</span> <span class=n>y</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>z</span> <span class=o>+</span> <span class=p>(</span><span class=n>b</span> <span class=o>+</span> <span class=n>z</span> <span class=o>*</span> <span class=p>(</span><span class=n>x</span><span class=o>-</span><span class=n>c</span><span class=p>))</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>newpt</span> <span class=o>=</span> <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=n>newpt</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>,</span> <span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=n>newpt</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>inpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>,</span><span class=n>c</span><span class=p>,</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>dt</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;dt&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>a</span> <span class=o>=</span> <span class=mi>38</span><span class=p>;</span>    
+</span></span><span class=line><span class=cl>    <span class=n>b</span> <span class=o>=</span> <span class=mf>2.7</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>c</span> <span class=o>=</span> <span class=mi>28</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=err>@</span><span class=n>P</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>y</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>z</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>x</span> <span class=o>+</span> <span class=p>(</span><span class=n>a</span> <span class=o>*</span> <span class=p>(</span><span class=n>y</span> <span class=o>-</span> <span class=n>x</span><span class=p>))</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>y</span> <span class=o>+</span> <span class=p>((</span><span class=n>c</span> <span class=o>-</span> <span class=n>a</span><span class=p>)</span> <span class=o>*</span> <span class=n>x</span> <span class=o>-</span> <span class=n>x</span><span class=o>*</span><span class=n>y</span> <span class=o>+</span> <span class=n>c</span><span class=o>*</span><span class=n>y</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>z</span> <span class=o>+</span> <span class=p>(</span><span class=n>x</span><span class=o>*</span><span class=n>y</span> <span class=o>-</span> <span class=n>b</span><span class=o>*</span><span class=n>z</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>newpt</span> <span class=o>=</span> <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=n>newpt</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>,</span> <span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=n>newpt</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>inpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>,</span> <span class=n>a</span><span class=p>,</span><span class=n>b</span><span class=p>,</span><span class=n>c</span><span class=p>,</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>dt</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;dt&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>a</span> <span class=o>=</span> <span class=mi>29851</span><span class=p>;</span>    
+</span></span><span class=line><span class=cl>    <span class=n>b</span> <span class=o>=</span> <span class=mi>3</span><span class=p>;</span>        
+</span></span><span class=line><span class=cl>    <span class=n>c</span> <span class=o>=</span> <span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>   
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=err>@</span><span class=n>P</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>y</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>pos</span><span class=p>.</span><span class=n>z</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>x</span> <span class=o>+</span> <span class=p>(</span><span class=n>x</span> <span class=o>-</span> <span class=n>x</span><span class=o>*</span><span class=n>y</span> <span class=o>+</span> <span class=p>(</span><span class=n>c</span><span class=o>*</span><span class=n>y</span><span class=o>*</span><span class=p>((</span><span class=n>c</span><span class=o>*</span><span class=n>y</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>c</span><span class=o>*</span><span class=n>y</span><span class=p>))</span> <span class=o>-</span> <span class=p>(</span><span class=n>a</span><span class=o>*</span><span class=n>z</span><span class=o>*</span><span class=n>x</span><span class=o>*</span><span class=p>((</span><span class=n>a</span><span class=o>*</span><span class=n>z</span><span class=o>*</span><span class=n>x</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>a</span><span class=o>*</span><span class=n>z</span><span class=o>*</span><span class=n>x</span><span class=p>)))))</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>y</span> <span class=o>+</span> <span class=p>(</span><span class=o>-</span><span class=n>y</span> <span class=o>+</span> <span class=n>x</span><span class=o>*</span><span class=n>y</span><span class=p>)</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>z</span> <span class=o>+</span> <span class=p>(</span><span class=o>-</span><span class=n>b</span><span class=o>*</span><span class=n>z</span> <span class=o>+</span> <span class=p>(</span><span class=n>a</span><span class=o>*</span><span class=n>z</span><span class=o>*</span><span class=n>x</span><span class=o>*</span><span class=p>((</span><span class=n>a</span><span class=o>*</span><span class=n>z</span><span class=o>*</span><span class=n>x</span><span class=p>)</span><span class=o>*</span><span class=p>(</span><span class=n>a</span><span class=o>*</span><span class=n>z</span><span class=o>*</span><span class=n>x</span><span class=p>))))</span> <span class=o>*</span> <span class=n>dt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>newpt</span> <span class=o>=</span> <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=n>newpt</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;active&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>,</span> <span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=n>newpt</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#houdini-vex-rotate-object><h1 id=houdini-vex-rotate-object><span class=hanchor arialabel=Anchor># </span>Houdini vex rotate object</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=c1>//Calculate the angle, from no rotation (angle = 0) to one rotation (angle = 2 * PI).
+</span></span></span><span class=line><span class=cl><span class=c1>//I&#39;ve added ONE to the max frame so that the loop is seamless.
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kt>float</span> <span class=n>angle</span> <span class=o>=</span> <span class=n>fit</span><span class=p>(</span><span class=err>@</span><span class=n>Frame</span><span class=p>,</span> <span class=err>$</span><span class=n>RFSTART</span><span class=p>,</span> <span class=err>$</span><span class=n>RFEND</span> <span class=o>+</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>2</span> <span class=o>*</span> <span class=n>PI</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>lP</span> <span class=o>=</span> <span class=n>length</span><span class=p>(</span><span class=err>@</span><span class=n>P</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>x</span> <span class=o>=</span> <span class=n>sin</span><span class=p>(</span><span class=n>angle</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>z</span> <span class=o>=</span> <span class=n>cos</span><span class=p>(</span><span class=n>angle</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>//Restore the original offset.
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=err>@</span><span class=n>P</span> <span class=o>*=</span> <span class=n>lP</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#golden-ratio-tower><h1 id=golden-ratio-tower><span class=hanchor arialabel=Anchor># </span>Golden Ratio Tower</h1></a><p><img src="/notes/attachments/Pasted image 20230207155938.png" width=auto></p><p>Below is each wrangles code in order according to the screenshot:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>float</span> <span class=n>sweep_angle</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=err>&#39;</span><span class=n>Sweep_Angle</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>growth_factor</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=err>&#39;</span><span class=n>Growth_Factor</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>height</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=err>&#39;</span><span class=n>Height</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>npoints</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=err>&#39;</span><span class=n>Number_of_Points</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>addattrib</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;detail&#34;</span><span class=p>,</span> <span class=s>&#34;original_npoints&#34;</span><span class=p>,</span> <span class=n>npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>TWO_DIVIDED_BY_PI</span> <span class=o>=</span> <span class=mf>2.0</span><span class=o>/</span><span class=mf>3.14159265359</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>vector</span> <span class=n>pos</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>radius</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>step_angle</span> <span class=o>=</span> <span class=n>sweep_angle</span> <span class=o>/</span> <span class=kt>float</span><span class=p>(</span><span class=n>npoints</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>step_height</span> <span class=o>=</span> <span class=n>height</span> <span class=o>/</span> <span class=kt>float</span><span class=p>(</span><span class=n>npoints</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>curr_angle</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;</span><span class=n>npoints</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>curr_angle</span> <span class=o>=</span> <span class=n>step_angle</span> <span class=o>*</span> <span class=kt>float</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>radius</span> <span class=o>=</span> <span class=n>pow</span><span class=p>(</span><span class=n>growth_factor</span><span class=p>,</span> <span class=n>curr_angle</span> <span class=o>*</span> <span class=n>TWO_DIVIDED_BY_PI</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>pos</span><span class=p>.</span><span class=n>x</span> <span class=o>=</span> <span class=n>sin</span><span class=p>(</span><span class=n>curr_angle</span><span class=p>)</span> <span class=o>*</span> <span class=n>radius</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>pos</span><span class=p>.</span><span class=n>y</span> <span class=o>=</span> <span class=n>height</span> <span class=o>-</span> <span class=p>(</span><span class=n>step_height</span> <span class=o>*</span> <span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>pos</span><span class=p>.</span><span class=n>z</span> <span class=o>=</span> <span class=n>cos</span><span class=p>(</span><span class=n>curr_angle</span><span class=p>)</span> <span class=o>*</span> <span class=n>radius</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>vector</span> <span class=n>origin</span> <span class=o>=</span> <span class=p>{</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>origin</span><span class=p>.</span><span class=n>y</span> <span class=o>=</span> <span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>y</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>step_width</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;Step_Width&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=p>((</span><span class=mf>1.0</span> <span class=o>-</span> <span class=n>step_width</span><span class=p>)</span> <span class=o>*</span> <span class=err>@</span><span class=n>P</span><span class=p>)</span> <span class=o>+</span> <span class=p>(</span><span class=n>step_width</span> <span class=o>*</span> <span class=n>origin</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=err>@</span><span class=n>P</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>pos</span><span class=p>.</span><span class=n>y</span> <span class=o>=</span> <span class=mf>0.0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>success</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>original_npoints</span> <span class=o>=</span> <span class=n>getattrib</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;detail&#34;</span><span class=p>,</span> <span class=s>&#34;original_npoints&#34;</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=n>success</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>neighbor</span> <span class=o>=</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=p>(</span><span class=n>neighbor</span> <span class=o>&lt;</span> <span class=n>original_npoints</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>poly</span> <span class=o>=</span> <span class=n>addprim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=err>&#39;</span><span class=n>poly</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly</span><span class=p>,</span> <span class=n>neighbor</span> <span class=o>+</span> <span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly</span><span class=p>,</span> <span class=n>neighbor</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>poly_lside</span> <span class=o>=</span> <span class=n>addprim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=err>&#39;</span><span class=n>poly</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_lside</span><span class=p>,</span> <span class=n>neighbor</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_lside</span><span class=p>,</span> <span class=n>neighbor</span> <span class=o>+</span> <span class=mi>2</span><span class=o>*</span><span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_lside</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=mi>2</span><span class=o>*</span><span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_lside</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>poly_rside</span> <span class=o>=</span> <span class=n>addprim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=err>&#39;</span><span class=n>poly</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_rside</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_rside</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=mi>3</span><span class=o>*</span><span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_rside</span><span class=p>,</span> <span class=n>neighbor</span> <span class=o>+</span> <span class=mi>3</span><span class=o>*</span><span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_rside</span><span class=p>,</span> <span class=n>neighbor</span> <span class=o>+</span> <span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>poly_bside</span> <span class=o>=</span> <span class=n>addprim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=err>&#39;</span><span class=n>poly</span><span class=err>&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_bside</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=mi>3</span><span class=o>*</span><span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_bside</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=mi>2</span><span class=o>*</span><span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_bside</span><span class=p>,</span> <span class=n>neighbor</span> <span class=o>+</span> <span class=mi>2</span><span class=o>*</span><span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>poly_bside</span><span class=p>,</span> <span class=n>neighbor</span> <span class=o>+</span> <span class=mi>3</span><span class=o>*</span><span class=n>original_npoints</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#houdini-vex-prep-bricks><h1 id=houdini-vex-prep-bricks><span class=hanchor arialabel=Anchor># </span>Houdini vex prep bricks</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>float</span> <span class=n>wallHeight</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;heightmax&#34;</span><span class=p>)</span> <span class=o>-</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;heightmin&#34;</span><span class=p>);</span> <span class=c1>// total wall height
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kt>float</span> <span class=n>brickHeight</span> <span class=o>=</span> <span class=n>wallHeight</span> <span class=o>/</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;heightdiv&#34;</span><span class=p>);</span> <span class=c1>// how tall individual brick is
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kt>float</span> <span class=n>wallAdjustedHeight</span> <span class=o>=</span> <span class=n>wallHeight</span> <span class=o>-</span> <span class=n>brickHeight</span><span class=p>;</span> <span class=c1>// subtracting one brick from height
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>shiftHeight</span> <span class=o>=</span> <span class=n>v</span><span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>y</span> <span class=o>-</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;heightmin&#34;</span><span class=p>)</span> <span class=o>-</span> <span class=p>(</span><span class=n>brickHeight</span> <span class=o>/</span> <span class=mi>2</span><span class=p>);</span> <span class=c1>// Shifting height values to start at 0
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kt>float</span> <span class=n>normHeight</span> <span class=o>=</span> <span class=n>shiftHeight</span> <span class=o>/</span> <span class=n>wallAdjustedHeight</span><span class=p>;</span> <span class=c1>// Finding proportion of height
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>i</span><span class=err>@</span><span class=n>normHeight</span> <span class=o>=</span> <span class=kt>int</span><span class=p>(</span><span class=n>rint</span><span class=p>(</span><span class=n>fit</span><span class=p>(</span><span class=n>normHeight</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;heightdiv&#34;</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>)));</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#2d-fractal-on-a-grid><h1 id=2d-fractal-on-a-grid><span class=hanchor arialabel=Anchor># </span>2D fractal on a grid</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=c1>//--- function def ---//
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=n>function</span> <span class=kt>int</span> <span class=n>Mandel</span><span class=p>(</span><span class=kt>float</span> <span class=n>x0</span><span class=p>,</span><span class=n>y0</span><span class=p>,</span><span class=n>z0</span><span class=p>;</span> <span class=kt>int</span> <span class=n>imax</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>,</span> <span class=n>z</span><span class=p>,</span> <span class=n>xnew</span><span class=p>,</span> <span class=n>ynew</span><span class=p>,</span> <span class=n>znew</span><span class=p>,</span> <span class=n>n</span><span class=o>=</span><span class=mi>8</span><span class=p>,</span> <span class=n>r</span><span class=p>,</span> <span class=n>theta</span><span class=p>,</span> <span class=n>phi</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>x0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>y0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>z0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>for</span><span class=p>(</span><span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;</span><span class=n>imax</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=c1>//xnew = x*x - y*y + x0;
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=c1>//ynew = 2 * x * y + y0;
+</span></span></span><span class=line><span class=cl><span class=c1></span>        
+</span></span><span class=line><span class=cl>        <span class=n>r</span> <span class=o>=</span> <span class=n>sqrt</span><span class=p>(</span><span class=n>x</span><span class=o>*</span><span class=n>x</span> <span class=o>+</span> <span class=n>y</span><span class=o>*</span><span class=n>y</span> <span class=o>+</span> <span class=n>z</span><span class=o>*</span><span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>theta</span> <span class=o>=</span> <span class=n>atan2</span><span class=p>(</span><span class=n>sqrt</span><span class=p>(</span><span class=n>x</span><span class=o>*</span><span class=n>x</span> <span class=o>+</span> <span class=n>y</span><span class=o>*</span><span class=n>y</span><span class=p>)</span> <span class=p>,</span> <span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>phi</span> <span class=o>=</span> <span class=n>atan2</span><span class=p>(</span><span class=n>y</span><span class=p>,</span><span class=n>x</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=n>xnew</span> <span class=o>=</span> <span class=n>pow</span><span class=p>(</span><span class=n>r</span><span class=p>,</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>sin</span><span class=p>(</span><span class=n>theta</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>cos</span><span class=p>(</span><span class=n>phi</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>+</span> <span class=n>x0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>ynew</span> <span class=o>=</span> <span class=n>pow</span><span class=p>(</span><span class=n>r</span><span class=p>,</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>sin</span><span class=p>(</span><span class=n>theta</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>sin</span><span class=p>(</span><span class=n>phi</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>+</span> <span class=n>y0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>znew</span> <span class=o>=</span> <span class=n>pow</span><span class=p>(</span><span class=n>r</span><span class=p>,</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>cos</span><span class=p>(</span><span class=n>theta</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>+</span> <span class=n>z0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>xnew</span><span class=o>*</span><span class=n>xnew</span> <span class=o>+</span> <span class=n>ynew</span><span class=o>*</span><span class=n>ynew</span> <span class=o>+</span> <span class=n>znew</span><span class=o>*</span><span class=n>znew</span> <span class=o>&gt;</span> <span class=mi>8</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=n>x</span> <span class=o>=</span> <span class=n>xnew</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>y</span> <span class=o>=</span> <span class=n>ynew</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>z</span> <span class=o>=</span> <span class=n>znew</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span><span class=p>(</span><span class=n>imax</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>//--- Main ---//
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>maxiter</span> <span class=o>=</span> <span class=mi>6</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>Mandel</span><span class=p>(</span><span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>x</span><span class=p>,</span> <span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>y</span><span class=p>,</span> <span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>z</span><span class=p>,</span> <span class=n>maxiter</span><span class=p>)</span> <span class=o>&lt;</span> <span class=n>maxiter</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=n>v</span><span class=err>@</span><span class=n>Cd</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span><span class=mi>1</span><span class=p>,</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>v</span><span class=err>@</span><span class=n>Cd</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#3d-fractal-from-volume><h1 id=3d-fractal-from-volume><span class=hanchor arialabel=Anchor># </span>3D fractal from volume</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=c1>//--- function def ---//
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=n>function</span> <span class=kt>int</span> <span class=n>Mandel</span><span class=p>(</span><span class=kt>float</span> <span class=n>x0</span><span class=p>,</span><span class=n>y0</span><span class=p>,</span><span class=n>z0</span><span class=p>;</span> <span class=kt>int</span> <span class=n>imax</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>,</span> <span class=n>z</span><span class=p>,</span> <span class=n>xnew</span><span class=p>,</span> <span class=n>ynew</span><span class=p>,</span> <span class=n>znew</span><span class=p>,</span> <span class=n>n</span><span class=o>=</span><span class=mi>8</span><span class=p>,</span> <span class=n>r</span><span class=p>,</span> <span class=n>theta</span><span class=p>,</span> <span class=n>phi</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>x0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>y0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>z0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>for</span><span class=p>(</span><span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>i</span><span class=o>&lt;</span><span class=n>imax</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=c1>//xnew = x*x - y*y + x0;
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=c1>//ynew = 2 * x * y + y0;
+</span></span></span><span class=line><span class=cl><span class=c1></span>        
+</span></span><span class=line><span class=cl>        <span class=n>r</span> <span class=o>=</span> <span class=n>sqrt</span><span class=p>(</span><span class=n>x</span><span class=o>*</span><span class=n>x</span> <span class=o>+</span> <span class=n>y</span><span class=o>*</span><span class=n>y</span> <span class=o>+</span> <span class=n>z</span><span class=o>*</span><span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>theta</span> <span class=o>=</span> <span class=n>atan2</span><span class=p>(</span><span class=n>sqrt</span><span class=p>(</span><span class=n>x</span><span class=o>*</span><span class=n>x</span> <span class=o>+</span> <span class=n>y</span><span class=o>*</span><span class=n>y</span><span class=p>)</span> <span class=p>,</span> <span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>phi</span> <span class=o>=</span> <span class=n>atan2</span><span class=p>(</span><span class=n>y</span><span class=p>,</span><span class=n>x</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=n>xnew</span> <span class=o>=</span> <span class=n>pow</span><span class=p>(</span><span class=n>r</span><span class=p>,</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>sin</span><span class=p>(</span><span class=n>theta</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>cos</span><span class=p>(</span><span class=n>phi</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>+</span> <span class=n>x0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>ynew</span> <span class=o>=</span> <span class=n>pow</span><span class=p>(</span><span class=n>r</span><span class=p>,</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>sin</span><span class=p>(</span><span class=n>theta</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>sin</span><span class=p>(</span><span class=n>phi</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>+</span> <span class=n>y0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>znew</span> <span class=o>=</span> <span class=n>pow</span><span class=p>(</span><span class=n>r</span><span class=p>,</span><span class=n>n</span><span class=p>)</span> <span class=o>*</span> <span class=n>cos</span><span class=p>(</span><span class=n>theta</span><span class=o>*</span><span class=n>n</span><span class=p>)</span> <span class=o>+</span> <span class=n>z0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>xnew</span><span class=o>*</span><span class=n>xnew</span> <span class=o>+</span> <span class=n>ynew</span><span class=o>*</span><span class=n>ynew</span> <span class=o>+</span> <span class=n>znew</span><span class=o>*</span><span class=n>znew</span> <span class=o>&gt;</span> <span class=mi>8</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span><span class=p>(</span><span class=n>i</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=n>x</span> <span class=o>=</span> <span class=n>xnew</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>y</span> <span class=o>=</span> <span class=n>ynew</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>z</span> <span class=o>=</span> <span class=n>znew</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span><span class=p>(</span><span class=n>imax</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>//--- Main ---//
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>maxiter</span> <span class=o>=</span> <span class=mi>8</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>Mandel</span><span class=p>(</span><span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>x</span><span class=p>,</span> <span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>y</span><span class=p>,</span> <span class=err>@</span><span class=n>P</span><span class=p>.</span><span class=n>z</span><span class=p>,</span> <span class=n>maxiter</span><span class=p>)</span> <span class=o>&lt;</span> <span class=n>maxiter</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>density</span> <span class=o>=</span> <span class=mf>0.0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>v</span><span class=err>@</span><span class=n>Cd</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span><span class=mi>1</span><span class=p>,</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>density</span> <span class=o>=</span> <span class=mf>1.0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>v</span><span class=err>@</span><span class=n>Cd</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#copy-fractal><h1 id=copy-fractal><span class=hanchor arialabel=Anchor># </span>Copy Fractal</h1></a><p><img src="/notes/attachments/Pasted image 20230207161515.png" width=auto></p><p>in <em>transform1</em> put the following code in <em>universal transform</em></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>pow</span><span class=p>(</span><span class=mf>0.4</span><span class=p>,</span> <span class=p>(</span><span class=n>detail</span><span class=p>(</span><span class=s>&#34;../repeat_begin1_metadata1/&#34;</span><span class=p>,</span> <span class=s>&#34;iteration&#34;</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#calculating-light-angle-in-vex-wrangle><h1 id=calculating-light-angle-in-vex-wrangle><span class=hanchor arialabel=Anchor># </span>Calculating Light angle in vex wrangle</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>vector</span> <span class=n>dir</span> <span class=o>=</span> <span class=n>normalize</span><span class=p>(</span> <span class=n>point</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=sc>&#39;P&#39;</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span> <span class=o>-</span> <span class=n>v</span><span class=err>@</span><span class=n>P</span> <span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>angle</span> <span class=o>=</span> <span class=n>dot</span><span class=p>(</span><span class=n>dir</span><span class=p>,</span> <span class=n>v</span><span class=err>@</span><span class=n>N</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>angle</span> <span class=o>=</span> <span class=n>clamp</span><span class=p>(</span><span class=n>angle</span><span class=p>,</span> <span class=mf>0.0</span><span class=p>,</span> <span class=mf>1.0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>v</span><span class=err>@</span><span class=n>Cd</span> <span class=o>=</span> <span class=n>vector</span><span class=p>(</span><span class=n>angle</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#lsystem-snowflake><h1 id=lsystem-snowflake><span class=hanchor arialabel=Anchor># </span>Lsystem snowflake</h1></a><p><img src="/notes/attachments/Pasted image 20230207161820.png" width=auto></p><p><img src="/notes/attachments/Pasted image 20230207161840.png" width=auto></p><p><img src="/notes/attachments/Pasted image 20230207161927.png" width=auto></p><p><img src="/notes/attachments/Pasted image 20230207161941.png" width=auto></p><hr><a href=#modular-arithmatic-vex><h1 id=modular-arithmatic-vex><span class=hanchor arialabel=Anchor># </span>Modular Arithmatic Vex</h1></a><p><img src="/notes/attachments/Pasted image 20230207162053.png" width=auto></p><p><img src="/notes/attachments/Pasted image 20230207162149.png" width=auto></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>prim</span> <span class=o>=</span> <span class=n>addprim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;polyline&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>prim</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>prim</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>*</span> <span class=err>`</span><span class=n>chs</span><span class=p>(</span><span class=s>&#34;../mult&#34;</span><span class=p>)</span><span class=err>`</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>in the <em>copy to points</em> put the following in the <em>total copies</em> field:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>ch</span><span class=p>(</span><span class=s>&#34;../mult&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#golden-ration-sunflower-vex-houdini><h1 id=golden-ration-sunflower-vex-houdini><span class=hanchor arialabel=Anchor># </span>Golden Ration Sunflower Vex Houdini</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>total</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=s>&#34;total&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>pointiness</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;pointiness&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>angle</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;angle&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>eval</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;eval&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>total</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>x</span> <span class=o>=</span> <span class=n>eval</span> <span class=o>*</span> <span class=n>sqrt</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=o>*</span> <span class=n>sin</span><span class=p>(</span><span class=n>radians</span><span class=p>(</span><span class=mi>100</span><span class=o>*</span><span class=n>angle</span> <span class=o>*</span> <span class=n>i</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=n>y</span> <span class=o>=</span> <span class=n>eval</span> <span class=o>*</span> <span class=n>sqrt</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=o>*</span> <span class=n>cos</span><span class=p>(</span><span class=n>radians</span><span class=p>(</span><span class=mi>100</span><span class=o>*</span><span class=n>angle</span> <span class=o>*</span> <span class=n>i</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=n>z</span> <span class=o>=</span> <span class=n>eval</span> <span class=o>*</span> <span class=n>sqrt</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=o>*</span> <span class=n>sin</span><span class=p>(</span><span class=n>radians</span><span class=p>(</span><span class=n>pointiness</span> <span class=o>*</span> <span class=n>i</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>v</span><span class=err>@</span><span class=n>loc</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=n>x</span><span class=p>,</span><span class=n>y</span><span class=p>,</span><span class=n>z</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addpoint</span><span class=p>(</span><span class=n>geoself</span><span class=p>(),</span><span class=n>v</span><span class=err>@</span><span class=n>loc</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#find-borders-vex><h1 id=find-borders-vex><span class=hanchor arialabel=Anchor># </span>Find Borders Vex</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>neighs</span><span class=p>[]</span> <span class=o>=</span> <span class=n>neighbours</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>len</span><span class=p>(</span><span class=n>neighs</span><span class=p>)</span><span class=o>&lt;</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>setpointattrib</span><span class=p>(</span><span class=n>geoself</span><span class=p>(),</span> <span class=s>&#34;Cd&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>,</span> <span class=p>{</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>},</span> <span class=s>&#34;set&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//setpointgroup(0, &#34;border&#34;, @ptnum, 1, &#34;set&#34;);
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>![[notes/attachments/Pasted image 20230207163516.png]]</p><a href=#attribute-falloff><h2 id=attribute-falloff><span class=hanchor arialabel=Anchor># </span>Attribute Falloff</h2></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>handle</span> <span class=o>=</span> <span class=n>pcopen</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;P&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>P</span><span class=p>,</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;Radius&#34;</span><span class=p>),</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;MaxPoints&#34;</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>while</span><span class=p>(</span><span class=n>pciterate</span><span class=p>(</span><span class=n>handle</span><span class=p>)</span><span class=o>&gt;</span><span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>curPntNum</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>pcimport</span><span class=p>(</span><span class=n>handle</span><span class=p>,</span> <span class=s>&#34;point.number&#34;</span><span class=p>,</span> <span class=n>curPntNum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>setpointattrib</span><span class=p>(</span><span class=n>geoself</span><span class=p>(),</span> <span class=s>&#34;Cd&#34;</span><span class=p>,</span> <span class=n>curPntNum</span><span class=p>,</span> <span class=p>{</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>,</span><span class=mi>0</span><span class=p>},</span> <span class=s>&#34;set&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p><code>@P.y += @Cd.r;</code> => raise geo</p><p><img src="/notes/attachments/Pasted image 20230207163620.png" width=auto></p><hr><a href=#houdini-vex-spiral><h1 id=houdini-vex-spiral><span class=hanchor arialabel=Anchor># </span>Houdini Vex Spiral</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>pntcnt</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=s>&#34;pointcount&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>rad</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;radius&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>length</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;length&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>revolutions</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;revolutions&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>strandcount</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=s>&#34;strandcount&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>step</span> <span class=o>=</span> <span class=n>revolutions</span><span class=o>*</span><span class=mi>2</span><span class=o>*</span><span class=n>PI</span><span class=o>/</span><span class=n>pntcnt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>lenstep</span> <span class=o>=</span> <span class=n>length</span><span class=o>/</span><span class=p>(</span><span class=n>pntcnt</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>strandstep</span> <span class=o>=</span> <span class=mi>2</span><span class=o>*</span><span class=n>PI</span><span class=o>/</span><span class=n>strandcount</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>j</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>j</span> <span class=o>&lt;</span> <span class=n>strandcount</span><span class=p>;</span> <span class=n>j</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>nprim</span> <span class=o>=</span> <span class=n>addprim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=s>&#34;polyline&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>pntcnt</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=n>cos</span><span class=p>(</span><span class=n>i</span><span class=o>*</span><span class=n>step</span><span class=o>+</span><span class=n>j</span><span class=o>*</span><span class=n>strandstep</span><span class=p>)</span><span class=o>*</span><span class=n>rad</span><span class=p>,</span><span class=n>sin</span><span class=p>(</span><span class=n>i</span><span class=o>*</span><span class=n>step</span><span class=o>+</span><span class=n>j</span><span class=o>*</span><span class=n>strandstep</span><span class=p>)</span><span class=o>*</span><span class=n>rad</span><span class=p>,</span><span class=n>i</span><span class=o>*</span><span class=n>lenstep</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>npnt</span> <span class=o>=</span> <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>addvertex</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=n>nprim</span><span class=p>,</span><span class=n>npnt</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#houdini-vex-create-circle><h1 id=houdini-vex-create-circle><span class=hanchor arialabel=Anchor># </span>Houdini Vex Create Circle</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>pntcnt</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=s>&#34;pointcount&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>rad</span> <span class=o>=</span> <span class=n>ch</span><span class=p>(</span><span class=s>&#34;radius&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>float</span> <span class=n>step</span> <span class=o>=</span> <span class=mi>2</span><span class=o>*</span><span class=n>PI</span><span class=o>/</span><span class=n>pntcnt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>pntcnt</span><span class=p>;</span> <span class=n>i</span><span class=o>++</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>pos</span> <span class=o>=</span> <span class=n>set</span><span class=p>(</span><span class=n>cos</span><span class=p>(</span><span class=n>i</span><span class=o>*</span><span class=n>step</span><span class=p>)</span><span class=o>*</span><span class=n>rad</span><span class=p>,</span><span class=n>sin</span><span class=p>(</span><span class=n>i</span><span class=o>*</span><span class=n>step</span><span class=p>)</span><span class=o>*</span><span class=n>rad</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=n>pos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#houdini-labs-mapbox><h1 id=houdini-labs-mapbox><span class=hanchor arialabel=Anchor># </span>Houdini Labs mapbox</h1></a><p><img src="/notes/attachments/Pasted image 20230207165400.png" width=auto></p><p><img src="/notes/attachments/Pasted image 20230207165452.png" width=auto></p><hr><a href=#advect-on-surface><h1 id=advect-on-surface><span class=hanchor arialabel=Anchor># </span>Advect on surface</h1></a><p><img src="/notes/attachments/Pasted image 20230207165648.png" width=auto></p><p><img src="/notes/attachments/Pasted image 20230207165653.png" width=auto></p><p>atribvop1:</p><p><img src="/notes/attachments/Pasted image 20230207165724.png" width=auto></p><p>attribvop2</p><p><img src="/notes/attachments/Pasted image 20230207165746.png" width=auto></p><p>DOP:</p><p><img src="/notes/attachments/Pasted image 20230207165834.png" width=auto></p><p>wrangle1:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>v</span><span class=err>@</span><span class=n>oCd</span> <span class=o>=</span> <span class=n>point</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=s>&#34;Cd&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>f</span><span class=err>@</span><span class=n>oPscale</span> <span class=o>=</span> <span class=n>point</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=s>&#34;pscale&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>wrangle2:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>v</span><span class=err>@</span><span class=n>Cd</span> <span class=o>=</span> <span class=n>point</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=s>&#34;oCd&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>f</span><span class=err>@</span><span class=n>pscale</span> <span class=o>=</span> <span class=n>point</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=s>&#34;oPscale&#34;</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#vex-add-point-to-center-of-faces><h1 id=vex-add-point-to-center-of-faces><span class=hanchor arialabel=Anchor># </span>Vex add point to center of faces</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>newpt</span> <span class=o>=</span> <span class=n>addpoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=n>v</span><span class=err>@</span><span class=n>P</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>setpointgroup</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=s>&#34;new&#34;</span><span class=p>,</span><span class=n>newpt</span><span class=p>,</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>setpointattrib</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=s>&#34;N&#34;</span><span class=p>,</span><span class=n>newpt</span><span class=p>,</span><span class=n>v</span><span class=err>@</span><span class=n>N</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>npts</span><span class=p>[]</span> <span class=o>=</span> <span class=n>primpoints</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=err>@</span><span class=n>primnum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>pos1</span> <span class=o>=</span> <span class=n>point</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=s>&#34;P&#34;</span><span class=p>,</span> <span class=n>npts</span><span class=p>[</span><span class=mi>0</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>pos2</span> <span class=o>=</span> <span class=n>point</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=s>&#34;P&#34;</span><span class=p>,</span> <span class=n>npts</span><span class=p>[</span><span class=mi>1</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>vector</span> <span class=n>up</span> <span class=o>=</span> <span class=n>normalize</span><span class=p>(</span><span class=n>pos2</span> <span class=o>-</span> <span class=n>pos1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//setpointattrib(0,&#34;up&#34;,newpt,v@N);
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=n>setpointattrib</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=s>&#34;up&#34;</span><span class=p>,</span><span class=n>newpt</span><span class=p>,</span><span class=n>up</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>avgdist</span> <span class=o>=</span> <span class=mf>0.0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=c1>// loop through above list of points
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=n>foreach</span><span class=p>(</span><span class=kt>int</span> <span class=n>npt</span><span class=p>;</span> <span class=n>npts</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>vector</span> <span class=n>nppos</span> <span class=o>=</span> <span class=n>point</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;P&#34;</span><span class=p>,</span> <span class=n>npt</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>float</span> <span class=n>mydist</span> <span class=o>=</span> <span class=n>distance</span><span class=p>(</span><span class=n>v</span><span class=err>@</span><span class=n>P</span><span class=p>,</span> <span class=n>nppos</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>avgdist</span> <span class=o>+=</span> <span class=n>mydist</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>float</span> <span class=n>n</span> <span class=o>=</span> <span class=n>len</span><span class=p>(</span><span class=n>npts</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>avgdist</span> <span class=o>/=</span> <span class=n>n</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>f</span><span class=err>@</span><span class=n>pscale</span> <span class=o>=</span> <span class=n>avgdist</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>setpointattrib</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=s>&#34;N&#34;</span><span class=p>,</span><span class=n>newpt</span><span class=p>,</span><span class=n>v</span><span class=err>@</span><span class=n>N</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>setpointattrib</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=s>&#34;pscale&#34;</span><span class=p>,</span><span class=n>newpt</span><span class=p>,</span><span class=n>avgdist</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Lift points off surface</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>v</span><span class=err>@</span><span class=n>rest</span> <span class=o>=</span> <span class=n>v</span><span class=err>@</span><span class=n>P</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>v</span><span class=err>@</span><span class=n>P</span> <span class=o>+=</span> <span class=n>v</span><span class=err>@</span><span class=n>N</span> <span class=o>*</span> <span class=p>(</span><span class=n>f</span><span class=err>@</span><span class=n>pscale</span> <span class=o>*</span> <span class=mf>0.5</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>//v@P += v@N;
+</span></span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>float</span> <span class=n>rad</span> <span class=o>=</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;Search_Radius&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>//look for single point and check radius
+</span></span></span><span class=line><span class=cl><span class=c1>// this will stop overlapping geo
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>npts</span><span class=p>[]</span> <span class=o>=</span> <span class=n>nearpoints</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=n>v</span><span class=err>@</span><span class=n>P</span><span class=p>,</span><span class=n>rad</span><span class=p>,</span><span class=mi>2</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>removeindex</span><span class=p>(</span><span class=n>npts</span><span class=p>,</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>no</span> <span class=o>=</span> <span class=n>len</span><span class=p>(</span><span class=n>npts</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span><span class=p>(</span><span class=n>no</span> <span class=o>&gt;</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>&gt;</span> <span class=n>npts</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>v</span><span class=err>@</span><span class=n>P</span> <span class=o>=</span> <span class=n>v</span><span class=err>@</span><span class=n>rest</span> <span class=o>-</span> <span class=p>(</span><span class=n>v</span><span class=err>@</span><span class=n>N</span> <span class=o>*</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;Offset&#34;</span><span class=p>)</span> <span class=o>*</span> <span class=n>f</span><span class=err>@</span><span class=n>pscale</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>v</span><span class=err>@</span><span class=n>P</span> <span class=o>=</span> <span class=n>v</span><span class=err>@</span><span class=n>rest</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#vex-random-variants><h1 id=vex-random-variants><span class=hanchor arialabel=Anchor># </span>Vex random variants</h1></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>i</span><span class=err>@</span><span class=n>variant</span> <span class=o>=</span> <span class=n>rand</span><span class=p>(</span><span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=n>chf</span><span class=p>(</span><span class=s>&#34;Seed&#34;</span><span class=p>))</span> <span class=o>*</span> <span class=mi>2</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#houdini-scale-setup><h1 id=houdini-scale-setup><span class=hanchor arialabel=Anchor># </span>Houdini Scale Setup</h1></a><p><img src="/notes/attachments/Pasted image 20230207172259.png" width=auto></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>columns</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=s>&#34;../PARMS/columns&#34;</span><span class=p>)</span> <span class=o>*</span> <span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=n>i</span><span class=err>@</span><span class=n>group_center</span> <span class=o>=</span> <span class=err>@</span><span class=n>ptnum</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=p>((</span><span class=err>@</span><span class=n>ptnum</span> <span class=o>%</span> <span class=p>(</span><span class=n>columns</span> <span class=o>*</span> <span class=mi>2</span><span class=p>))</span> <span class=o>/</span> <span class=n>columns</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>columns</span> <span class=o>=</span> <span class=n>chi</span><span class=p>(</span><span class=s>&#34;../PARMS/columns&#34;</span><span class=p>)</span> <span class=o>*</span> <span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=n>prim</span> <span class=o>=</span> <span class=n>addprim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;poly&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=err>@</span><span class=n>ptnum</span> <span class=o>-</span> <span class=n>columns</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=mi>1</span> <span class=o>-</span> <span class=p>((</span><span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>%</span> <span class=n>columns</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span> <span class=o>*</span> <span class=n>columns</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=err>@</span><span class=n>ptnum</span> <span class=o>+</span> <span class=n>columns</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                    <span class=err>@</span><span class=n>ptnum</span> <span class=o>-</span> <span class=mi>1</span> <span class=o>+</span> <span class=p>(</span><span class=err>@</span><span class=n>ptnum</span> <span class=o>%</span> <span class=n>columns</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span> <span class=o>*</span> <span class=n>columns</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>setprimattrib</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;center&#34;</span><span class=p>,</span> <span class=n>prim</span><span class=p>,</span> <span class=err>@</span><span class=n>P</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>setprimattrib</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;tangentu&#34;</span><span class=p>,</span> <span class=n>prim</span><span class=p>,</span> <span class=n>v</span><span class=err>@</span><span class=n>tangentu</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl><span class=n>removepoint</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>vector</span> <span class=n>cross</span> <span class=o>=</span> <span class=n>cross</span><span class=p>(</span><span class=n>v</span><span class=err>@</span><span class=n>tangentu</span><span class=p>,</span> <span class=err>@</span><span class=n>N</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=mi>3</span><span class=err>@</span><span class=n>rot</span> <span class=o>=</span> <span class=n>ident</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=n>rotate</span><span class=p>(</span><span class=err>@</span><span class=n>rot</span><span class=p>,</span> <span class=n>radians</span><span class=p>(</span><span class=n>ch</span><span class=p>(</span><span class=s>&#34;amount&#34;</span><span class=p>)),</span> <span class=n>cross</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=kt>int</span> <span class=n>prim</span> <span class=o>=</span> <span class=n>pointprims</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=err>@</span><span class=n>ptnum</span><span class=p>)[</span><span class=mi>0</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=n>vector</span> <span class=n>center</span> <span class=o>=</span> <span class=n>prim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;center&#34;</span><span class=p>,</span> <span class=n>prim</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=n>matrix3</span> <span class=n>rotation</span> <span class=o>=</span> <span class=n>prim</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=s>&#34;rot&#34;</span><span class=p>,</span> <span class=n>prim</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=n>P</span> <span class=o>-=</span> <span class=n>center</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=n>P</span> <span class=o>*=</span> <span class=n>rotation</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=n>P</span> <span class=o>+=</span> <span class=n>center</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#orient-along-curves-polyframe><h1 id=orient-along-curves-polyframe><span class=hanchor arialabel=Anchor># </span>Orient Along Curves Polyframe</h1></a><p><img src="/notes/attachments/Pasted image 20230207180605.png" width=auto></p></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/notes/3D-Modeling/Houdini/Houdini-Hub/ data-ctx="notes/3D-Modeling/Houdini/Houdini Reference" data-src=/notes/3D-Modeling/Houdini/Houdini-Hub class=internal-link>Houdini Hub</a></li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://notes.benshurts.com/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><p>Made by Ben Shurts using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2023</p><ul><li><a href=https://notes.benshurts.com/>Home</a></li><li><a href=https://twitter.com/artofbenshurts>Twitter</a></li><li><a href=https://github.com/benshurts>Github</a></li></ul></footer></div></div></body></html>
