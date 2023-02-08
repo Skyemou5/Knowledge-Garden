@@ -1,6 +1,6 @@
 ---
 title: "Setting Up Banking Curves in Houdini"
-tags: [houdini, math, linear-algebra, setups, step-by-step]
+tags: [houdini, math, linear-algebra, setups, step-by-step,curves]
 ---
 
 # The Problem
@@ -10,17 +10,22 @@ There are many ways to do this, this is one way I've solved it.
 ## Getting Started
 
 Start with some sort of curve or line. 
+
 ![[notes/attachments/Pasted image 20221021175618.png]]
 
 
 Once you have a curve drop down a [Resample](https://www.sidefx.com/docs/houdini/nodes/sop/resample.html) node. 
 
 ![[notes/attachments/Pasted image 20221021180749.png]]
+
 In the resample node there are two things we need to do.
 1. Treat polygons as *Subdivision Curves*
 2. Change the tangent attribute from *tangentu* to *N* (Normal)
+
 ![[notes/attachments/Pasted image 20221021180949.png]]
+
 Now that that is setup. Drop down an [Attribute Wrangle](https://www.sidefx.com/docs/houdini/nodes/sop/attribwrangle) node.
+
 ![[notes/attachments/Pasted image 20221021183239.png]]
 Make sure the wrangle is running over *points*.
 ![[notes/attachments/Pasted image 20221021210701.png]]
@@ -88,6 +93,7 @@ Scale the distance value a bit.
 It should like this in the viewport:
 
  ![[notes/attachments/Pasted image 20221021194459.png]]
+
 ![[notes/attachments/Pasted image 20221021194734.png]]
 
 Next drop down another *Attribute wrangle* node.
@@ -163,6 +169,7 @@ Next we need to remap these values into a usable range. *-1-1* that way math wil
 
 >[!NOTE] -1-1 and 0-1 range is also very common programming, gamedev, and CG because it gives you a good starting point for other mathematics.
 
+
 >[!NOTE] Remapping Values
 >
 >there are many ways to remap values in houdini.
@@ -176,6 +183,7 @@ Let's drop down an *attribute promote* SOP.
 
 We'll take the *bankratio* attribute and promote it to a *detail* attribute. Then set the *promotion method* to *maximum*. This will get the highest value. Then create a new attribute called *maxratio* and make sure we don't delete the old one.
 Then copy that node and change it so we get the *minimum*.
+
 
 ![[notes/attachments/Pasted image 20221021203612.png]]
 

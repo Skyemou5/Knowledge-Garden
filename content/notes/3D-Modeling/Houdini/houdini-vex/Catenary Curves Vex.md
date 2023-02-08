@@ -5,7 +5,7 @@ tags: [houdini,math,curve, vex]
 
 
 
-```vex
+```c
 #include <math.h>
 
 void
@@ -85,5 +85,23 @@ springy(vector gravity={0,-1,0}; float stretch=1; float camp=0, cperiod=20;
     }
 }
 
+
+```
+
+
+---
+
+## More Catenary
+
+![[notes/attachments/Pasted image 20230207173035.png]]
+
+
+```c
+int iteration = detail(1,"iteration");
+int seed = chi("seed");
+float random = fit01(rand(iteration + seed),1,3);
+
+
+@P.y -= ch("amount") * @restlength *random;
 
 ```
