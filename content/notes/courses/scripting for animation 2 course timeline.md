@@ -42,7 +42,9 @@ tags: [timeline,courses]
 
 [[notes/courses/Javascript Loops and Arrays]]
 
-[[notes/courses/Classes and Constructors in Javascript]]
+[[notes/courses/Classes Constructors and objects in Javascript]]
+
+[[notes/courses/Iterators in Javascript]]
 
 - Intermediate Concepts in Scripting
 	- Inheritence
