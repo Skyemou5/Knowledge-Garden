@@ -5,6 +5,7 @@ tags: [timeline,courses]
 
 [[notes/courses/Scripting for Animation 2]]
 
+[[notes/courses/Project Management, JavaScript for ToonBoom, and 3D for 2D Syllabus|Syllabus]]
 
 
 
