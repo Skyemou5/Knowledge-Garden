@@ -1,0 +1,336 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="A class in programming is a blueprint for creating objects that defines a set of properties and methods. Classes provide a way to encapsulate data and behavior in a single entity, making it easier to reason about complex systems and to share code between objects with similar properties and methods."><title>Classes Constructors and objects in Javascript</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://notes.benshurts.com//icon.png><link href=https://notes.benshurts.com/styles.708c2658f93e3a9d323a1f9fded8f4b2.min.css rel=stylesheet><link href=https://notes.benshurts.com/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://notes.benshurts.com/js/darkmode.7f1fd235efdec6a4bdcb4d8d99113082.min.js></script>
+<script src=https://notes.benshurts.com/js/util.9825137f5e7825e8553c68ce39ac9e44.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script src=https://notes.benshurts.com/js/popover.9b72b70bd35617d0635e9d15463662b2.min.js></script>
+<script src=https://notes.benshurts.com/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
+<script src=https://notes.benshurts.com/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
+<script src=https://notes.benshurts.com/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const BASE_URL="https://notes.benshurts.com/",fetchData=Promise.all([fetch("https://notes.benshurts.com/indices/linkIndex.60370a2b769ecaf347988e315fc0e531.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://notes.benshurts.com/indices/contentIndex.e3a26524ac2dea651e4b2092e9e65a3a.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://notes.benshurts.com",!0,!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://notes.benshurts.com",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/notes.benshurts.com\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
+    attachSPARouting(init, render)
+  </script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-XYFD95KB4J",{anonymize_ip:!1})}</script><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://notes.benshurts.com/js/full-text-search.24827f874defbbc6d529926cbfcfb493.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://notes.benshurts.com/>Knowledge Garden</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>Classes Constructors and objects in Javascript</h1><p class=meta>Last updated
+Feb 8, 2023
+<a href=https://github.com/benshurts/Knowledge-Garden/notes/courses/Classes%20Constructors%20and%20objects%20in%20Javascript.md rel=noopener>Edit Source</a></p><ul class=tags><li><a href=https://notes.benshurts.com/tags/javascript/>Javascript</a></li><li><a href=https://notes.benshurts.com/tags/js/>Js</a></li><li><a href=https://notes.benshurts.com/tags/lesson/>Lesson</a></li><li><a href=https://notes.benshurts.com/tags/class/>Class</a></li><li><a href=https://notes.benshurts.com/tags/programming/>Programming</a></li><li><a href=https://notes.benshurts.com/tags/scripting/>Scripting</a></li></ul><aside class=mainTOC><details open><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#inheritance>Inheritance</a></li><li><a href=#getters-and-setters>Getters and Setters</a></li><li><a href=#static-methods>Static Methods</a></li></ol><ol><li><a href=#json>Json</a></li></ol></nav></details></aside><p>A class in programming is a blueprint for creating objects that defines a set of properties and methods. Classes provide a way to encapsulate data and behavior in a single entity, making it easier to reason about complex systems and to share code between objects with similar properties and methods.</p><p>Classes are used in object-oriented programming (OOP) and are a fundamental concept in many programming languages such as Java, Python, Ruby, and JavaScript (since ECMAScript 2015).</p><p>A class defines the structure and behavior of objects that are instances of the class. Objects created from a class are referred to as instances of the class and inherit the properties and methods defined in the class. You can think of a class as a blueprint for creating objects, and an object as an instance of that blueprint.</p><a href=#classes-in-javascript><h1 id=classes-in-javascript><span class=hanchor arialabel=Anchor># </span>Classes in Javascript</h1></a><p>A class is defined using the <code>class</code> keyword, followed by the name of the class, and a set of curly braces <code>{}</code> containing the properties and methods of the class.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>Car</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>make</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>model</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>year</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>startEngine</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=sb>`Vroom! The </span><span class=si>${</span><span class=k>this</span><span class=p>.</span><span class=nx>make</span><span class=si>}</span><span class=sb> </span><span class=si>${</span><span class=k>this</span><span class=p>.</span><span class=nx>model</span><span class=si>}</span><span class=sb>&#39;s engine is running.`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>In this example, the class <code>Car</code> has three properties <code>make</code>, <code>model</code>, and <code>year</code>, with default values. It also has a method <code>startEngine</code> that returns a string indicating that the engine is running.</p><p>To create an instance of the class, you use the <code>new</code> keyword followed by the name of the class. You can then assign values to the object&rsquo;s properties and call its methods</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>myCar</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Car</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=nx>myCar</span><span class=p>.</span><span class=nx>make</span> <span class=o>=</span> <span class=s2>&#34;Toyota&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>myCar</span><span class=p>.</span><span class=nx>model</span> <span class=o>=</span> <span class=s2>&#34;Camry&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>myCar</span><span class=p>.</span><span class=nx>year</span> <span class=o>=</span> <span class=mi>2020</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>myCar</span><span class=p>.</span><span class=nx>startEngine</span><span class=p>());</span>
+</span></span></code></pre></td></tr></table></div></div><p>In this example, we create a new instance of the <code>Car</code> class and assign values to its properties. We then call its <code>startEngine</code> method, which logs the output to the console.</p><a href=#constructors-in-javascript><h1 id=constructors-in-javascript><span class=hanchor arialabel=Anchor># </span>Constructors in Javascript</h1></a><p>A constructor is a special method in JavaScript classes that is automatically called when a new instance of the class is created. It is used to set up the initial state of the object. The constructor is defined using the <code>constructor</code> keyword followed by a function definition.</p><p>The <code>constructor</code> method takes in any arguments that are necessary to initialize the object&rsquo;s state, and these arguments can then be used within the constructor to set the object&rsquo;s properties.</p><p>Here&rsquo;s a simple example:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>Car</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>constructor</span><span class=p>(</span><span class=nx>make</span><span class=p>,</span> <span class=nx>model</span><span class=p>,</span> <span class=nx>year</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>make</span> <span class=o>=</span> <span class=nx>make</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>model</span> <span class=o>=</span> <span class=nx>model</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>year</span> <span class=o>=</span> <span class=nx>year</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>startEngine</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=sb>`Vroom! The </span><span class=si>${</span><span class=k>this</span><span class=p>.</span><span class=nx>make</span><span class=si>}</span><span class=sb> </span><span class=si>${</span><span class=k>this</span><span class=p>.</span><span class=nx>model</span><span class=si>}</span><span class=sb>&#39;s engine is running.`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>In this example, we define a class <code>Car</code> with a <code>constructor</code> method that takes in three arguments, <code>make</code>, <code>model</code>, and <code>year</code>, and a method <code>startEngine</code> that returns a string indicating that the engine is running.</p><p>To create a new instance of a class, you use the <code>new</code> keyword followed by the name of the class and any necessary arguments.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>myCar</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Car</span><span class=p>(</span><span class=s2>&#34;Toyota&#34;</span><span class=p>,</span> <span class=s2>&#34;Camry&#34;</span><span class=p>,</span> <span class=mi>2020</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>myCar</span><span class=p>.</span><span class=nx>startEngine</span><span class=p>());</span>
+</span></span></code></pre></td></tr></table></div></div><p>In this example, we create a new instance of the <code>Car</code> class and call its <code>startEngine</code> method, which logs the output to the console.</p><a href=#inheritance><h2 id=inheritance><span class=hanchor arialabel=Anchor># </span>Inheritance</h2></a><p>Inheritance: You can use inheritance to create a new class that is based on an existing class, inheriting its properties and methods. You can use the <code>extends</code> keyword to create a subclass, and the <code>super</code> keyword to call the superclass constructor and access its properties and methods.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>Animal</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>constructor</span><span class=p>(</span><span class=nx>name</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>name</span> <span class=o>=</span> <span class=nx>name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>speak</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=sb>`</span><span class=si>${</span><span class=k>this</span><span class=p>.</span><span class=nx>name</span><span class=si>}</span><span class=sb> makes a sound.`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>class</span> <span class=nx>Dog</span> <span class=kr>extends</span> <span class=nx>Animal</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>speak</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=sb>`</span><span class=si>${</span><span class=k>this</span><span class=p>.</span><span class=nx>name</span><span class=si>}</span><span class=sb> barks.`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>dog</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Dog</span><span class=p>(</span><span class=s2>&#34;Buddy&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>dog</span><span class=p>.</span><span class=nx>speak</span><span class=p>();</span> <span class=c1>// &#34;Buddy barks.&#34;
+</span></span></span></code></pre></td></tr></table></div></div><a href=#getters-and-setters><h2 id=getters-and-setters><span class=hanchor arialabel=Anchor># </span>Getters and Setters</h2></a><p>Getters and Setters: You can use getters and setters to control access to the properties of an object. Getters are used to retrieve the value of a property, and setters are used to set the value of a property.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>Person</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>constructor</span><span class=p>(</span><span class=nx>firstName</span><span class=p>,</span> <span class=nx>lastName</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>_firstName</span> <span class=o>=</span> <span class=nx>firstName</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>_lastName</span> <span class=o>=</span> <span class=nx>lastName</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>get</span> <span class=nx>fullName</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=sb>`</span><span class=si>${</span><span class=k>this</span><span class=p>.</span><span class=nx>_firstName</span><span class=si>}</span><span class=sb> </span><span class=si>${</span><span class=k>this</span><span class=p>.</span><span class=nx>_lastName</span><span class=si>}</span><span class=sb>`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>set</span> <span class=nx>fullName</span><span class=p>(</span><span class=nx>name</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>let</span> <span class=nx>parts</span> <span class=o>=</span> <span class=nx>name</span><span class=p>.</span><span class=nx>split</span><span class=p>(</span><span class=s2>&#34; &#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>_firstName</span> <span class=o>=</span> <span class=nx>parts</span><span class=p>[</span><span class=mi>0</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>_lastName</span> <span class=o>=</span> <span class=nx>parts</span><span class=p>[</span><span class=mi>1</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>person</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Person</span><span class=p>(</span><span class=s2>&#34;John&#34;</span><span class=p>,</span> <span class=s2>&#34;Doe&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>fullName</span><span class=p>);</span> <span class=c1>// &#34;John Doe&#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>person</span><span class=p>.</span><span class=nx>fullName</span> <span class=o>=</span> <span class=s2>&#34;Jane Doe&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>fullName</span><span class=p>);</span> <span class=c1>// &#34;Jane Doe&#34;
+</span></span></span></code></pre></td></tr></table></div></div><a href=#static-methods><h2 id=static-methods><span class=hanchor arialabel=Anchor># </span>Static Methods</h2></a><p>Static Methods: You can use static methods to create methods that are associated with the class itself, rather than with individual instances of the class.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>MathHelper</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>static</span> <span class=nx>square</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>x</span> <span class=o>*</span> <span class=nx>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kr>static</span> <span class=nx>cube</span><span class=p>(</span><span class=nx>x</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>x</span> <span class=o>*</span> <span class=nx>x</span> <span class=o>*</span> <span class=nx>x</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>MathHelper</span><span class=p>.</span><span class=nx>square</span><span class=p>(</span><span class=mi>5</span><span class=p>));</span> <span class=c1>// 25
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>MathHelper</span><span class=p>.</span><span class=nx>cube</span><span class=p>(</span><span class=mi>5</span><span class=p>));</span> <span class=c1>// 125
+</span></span></span></code></pre></td></tr></table></div></div><hr><a href=#objects-in-javascript><h1 id=objects-in-javascript><span class=hanchor arialabel=Anchor># </span>Objects in Javascript</h1></a><p>In JavaScript, an object is a collection of properties, each of which has a name and a value. Objects are used to represent real-world entities, such as a person, an animal, or an online shopping cart.</p><p>An object can have properties that are primitive values (e.g. strings, numbers, booleans) or references to other objects. It can also have methods, which are functions associated with an object.</p><p>Here&rsquo;s an example of how to create an object in JavaScript:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>person</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>firstName</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>lastName</span><span class=o>:</span> <span class=s2>&#34;Doe&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>fullName</span><span class=o>:</span> <span class=kd>function</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>firstName</span> <span class=o>+</span> <span class=s2>&#34; &#34;</span> <span class=o>+</span> <span class=k>this</span><span class=p>.</span><span class=nx>lastName</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>firstName</span><span class=p>);</span> <span class=c1>// &#34;John&#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>lastName</span><span class=p>);</span> <span class=c1>// &#34;Doe&#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>age</span><span class=p>);</span> <span class=c1>// 30
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>fullName</span><span class=p>());</span> <span class=c1>// &#34;John Doe&#34;
+</span></span></span></code></pre></td></tr></table></div></div><p>In the example above, <code>person</code> is an object with four properties: <code>firstName</code>, <code>lastName</code>, <code>age</code>, and <code>fullName</code>. The <code>fullName</code> property is a method that returns the concatenation of <code>firstName</code> and <code>lastName</code>. The <code>this</code> keyword refers to the object itself, so <code>this.firstName</code> refers to the <code>firstName</code> property of the <code>person</code> object.</p><a href=#json><h2 id=json><span class=hanchor arialabel=Anchor># </span>Json</h2></a><p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is widely used for exchanging data between a server and a client or between different parts of an application. It is a text-based format that is easy for humans to read and write, and it is also easy for machines to parse and generate.</p><p>JSON objects are very similar to JavaScript objects, but with some differences:</p><ul><li>Property names must be surrounded by double quotes (") in JSON, while they can be unquoted in JavaScript.</li><li>In JSON, property values can only be strings, numbers, booleans, null, arrays, or other JSON objects. In JavaScript, property values can also be functions, dates, and other objects.</li><li>In JSON, leading zeros are not allowed in numbers. For example, <code>01</code> is not a valid JSON number, but it is a valid JavaScript number.</li></ul><p>Here&rsquo;s an example of a JSON object:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;firstName&#34;</span><span class=p>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;lastName&#34;</span><span class=p>:</span> <span class=s2>&#34;Doe&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;age&#34;</span><span class=p>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>And here&rsquo;s how you can parse a JSON object into a JavaScript object:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>json</span> <span class=o>=</span> <span class=s1>&#39;{&#34;firstName&#34;: &#34;John&#34;, &#34;lastName&#34;: &#34;Doe&#34;, &#34;age&#34;: 30}&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>person</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>parse</span><span class=p>(</span><span class=nx>json</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>firstName</span><span class=p>);</span> <span class=c1>// &#34;John&#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>lastName</span><span class=p>);</span> <span class=c1>// &#34;Doe&#34;
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>.</span><span class=nx>age</span><span class=p>);</span> <span class=c1>// 30
+</span></span></span></code></pre></td></tr></table></div></div><p>And here&rsquo;s how you can stringify a JavaScript object into a JSON object:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>person</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>firstName</span><span class=o>:</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>lastName</span><span class=o>:</span> <span class=s2>&#34;Doe&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>30</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>json</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>person</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>json</span><span class=p>);</span> <span class=c1>// &#39;{&#34;firstName&#34;:&#34;John&#34;,&#34;lastName&#34;:&#34;Doe&#34;,&#34;age&#34;:30}&#39;
+</span></span></span></code></pre></td></tr></table></div></div><hr><a href=#unified-examples><h1 id=unified-examples><span class=hanchor arialabel=Anchor># </span>Unified Examples</h1></a><p>Here&rsquo;s an example of using classes, constructors, and JavaScript objects together:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>Book</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>constructor</span><span class=p>(</span><span class=nx>title</span><span class=p>,</span> <span class=nx>author</span><span class=p>,</span> <span class=nx>pages</span><span class=p>,</span> <span class=nx>status</span> <span class=o>=</span> <span class=s2>&#34;Not Read&#34;</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>title</span> <span class=o>=</span> <span class=nx>title</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>author</span> <span class=o>=</span> <span class=nx>author</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>pages</span> <span class=o>=</span> <span class=nx>pages</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>status</span> <span class=o>=</span> <span class=nx>status</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>read</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>status</span> <span class=o>=</span> <span class=s2>&#34;Read&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>book1</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Book</span><span class=p>(</span><span class=s2>&#34;The Great Gatsby&#34;</span><span class=p>,</span> <span class=s2>&#34;F. Scott Fitzgerald&#34;</span><span class=p>,</span> <span class=mi>180</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>book2</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Book</span><span class=p>(</span><span class=s2>&#34;Moby-Dick&#34;</span><span class=p>,</span> <span class=s2>&#34;Herman Melville&#34;</span><span class=p>,</span> <span class=mi>552</span><span class=p>,</span> <span class=s2>&#34;Reading&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>library</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>books</span><span class=o>:</span> <span class=p>[</span><span class=nx>book1</span><span class=p>,</span> <span class=nx>book2</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nx>addBook</span><span class=o>:</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>book</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>this</span><span class=p>.</span><span class=nx>books</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>book</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=nx>getBook</span><span class=o>:</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>title</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>books</span><span class=p>.</span><span class=nx>find</span><span class=p>(</span><span class=nx>book</span> <span class=p>=&gt;</span> <span class=nx>book</span><span class=p>.</span><span class=nx>title</span> <span class=o>===</span> <span class=nx>title</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>library</span><span class=p>.</span><span class=nx>books</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>// [
+</span></span></span><span class=line><span class=cl><span class=c1>//   Book { title: &#39;The Great Gatsby&#39;, author: &#39;F. Scott Fitzgerald&#39;, pages: 180, status: &#39;Not Read&#39; },
+</span></span></span><span class=line><span class=cl><span class=c1>//   Book { title: &#39;Moby-Dick&#39;, author: &#39;Herman Melville&#39;, pages: 552, status: &#39;Reading&#39; }
+</span></span></span><span class=line><span class=cl><span class=c1>// ]
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>book3</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Book</span><span class=p>(</span><span class=s2>&#34;Pride and Prejudice&#34;</span><span class=p>,</span> <span class=s2>&#34;Jane Austen&#34;</span><span class=p>,</span> <span class=mi>200</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>library</span><span class=p>.</span><span class=nx>addBook</span><span class=p>(</span><span class=nx>book3</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>library</span><span class=p>.</span><span class=nx>books</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>// [
+</span></span></span><span class=line><span class=cl><span class=c1>//   Book { title: &#39;The Great Gatsby&#39;, author: &#39;F. Scott Fitzgerald&#39;, pages: 180, status: &#39;Not Read&#39; },
+</span></span></span><span class=line><span class=cl><span class=c1>//   Book { title: &#39;Moby-Dick&#39;, author: &#39;Herman Melville&#39;, pages: 552, status: &#39;Reading&#39; },
+</span></span></span><span class=line><span class=cl><span class=c1>//   Book { title: &#39;Pride and Prejudice&#39;, author: &#39;Jane Austen&#39;, pages: 200, status: &#39;Not Read&#39; }
+</span></span></span><span class=line><span class=cl><span class=c1>// ]
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>book</span> <span class=o>=</span> <span class=nx>library</span><span class=p>.</span><span class=nx>getBook</span><span class=p>(</span><span class=s2>&#34;Moby-Dick&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>book</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>// Book { title: &#39;Moby-Dick&#39;, author: &#39;Herman Melville&#39;, pages: 552, status: &#39;Reading&#39; }
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nx>book</span><span class=p>.</span><span class=nx>read</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>book</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>// Book { title: &#39;Moby-Dick&#39;, author: &#39;Herman Melville&#39;, pages: 552, status: &#39;Read&#39; }
+</span></span></span></code></pre></td></tr></table></div></div><p>In this example, we first create a class <code>Book</code> that has properties <code>title</code>, <code>author</code>, <code>pages</code>, and <code>status</code>, as well as a method <code>read</code> to change the status of a book.</p><p>Next, we create two instances of the <code>Book</code> class and add them to a JavaScript object <code>library</code> that represents a library. The <code>library</code> object has properties <code>books</code> that holds an array of books, and methods <code>addBook</code> to add a book and <code>getBook</code> to retrieve a book by its title.</p><p>Finally, we create a third instance of the <code>Book</code> class, add it to the library, retrieve a book from the library, and change its status using the <code>read</code> method.</p></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/notes/courses/scripting-for-animation-2-course-timeline/ data-ctx="notes/courses/Classes Constructors and objects in Javascript" data-src=/notes/courses/scripting-for-animation-2-course-timeline class=internal-link>Scripting for animation 2 course timeline</a></li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://notes.benshurts.com/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><p>Made by Ben Shurts using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2023</p><ul><li><a href=https://notes.benshurts.com/>Home</a></li><li><a href=https://twitter.com/artofbenshurts>Twitter</a></li><li><a href=https://github.com/benshurts>Github</a></li></ul></footer></div></div></body></html>
