@@ -119,3 +119,10 @@ https://www.sidefx.com/docs/houdini/ref/env.html
 
 https://www.sidefx.com/docs/houdini/ref/plugins.html
 
+[[TUT] How to configure Houdini Packages - YouTube](https://www.youtube.com/watch?v=6vPycs4HeZM)
+
+---
+
+test
+
+
