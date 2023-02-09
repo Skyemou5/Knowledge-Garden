@@ -872,3 +872,27 @@ matrix3 rotation = prim(0, "rot", prim);
 
 ![[notes/attachments/Pasted image 20230207180605.png]]
 
+
+---
+
+# Houdini add first and last point to group
+
+
+```c
+0 `npoints(0)-1`
+```
+
+---
+
+# Houdini correct normals
+
+[Reversing & Correcting Normals in Houdini Pt. 4/4 – Correcting Primitive Normals - YouTube](https://www.youtube.com/watch?v=ICZv_u65hH8)
+
+
+
+---
+
+# Centroid of Prims
+
+using `v@P` in a *prim wrangle* returns the centroid
+
