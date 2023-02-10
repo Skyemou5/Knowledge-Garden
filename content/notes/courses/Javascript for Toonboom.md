@@ -292,8 +292,109 @@ function createDrawingNodes()
 }
 ```
 
+> [!IMPORTANT] This script will work based on a selection.
+
+We will use the `selection` class to grab information about the selection. 
+
+[Harmony 20 Scripting Interface: selection Class Reference](https://docs.toonboom.com/help/harmony-20/scripting/script/classselection.html)
+
+We will use two functions from this class:
+
+- `numberOfNodesSelected` ()
+- `selectedNode` (int i)
+
+Let's implement these concepts like so:
+
+```js
+function createDrawingNodes()
+{
+	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
+		var currentNode = selection.selectedNode(n); // the current selected node in the loop
+	}
+}
+```
+
+Now let's make sure we only have one node selected. To do this we will check if `selectedNodes` is equal to `1` else we will return a warning with the `MessageBox` class.
+
+> [!NOTE] Later you can decide to validate that the selected node is a *Composite* Type
+
+```js
+function createDrawingNodes()
+{
+	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	if(selectedNodes == 1) { // check if one node is selected
+		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
+			var currentNode = selection.selectedNode(n); // the current selected node in the loop
+			}
+	} else { // if more than one node is selected run the following
+		MessageBox.information("You must select only ONE composite node!"); // displays warning message
+	}
+}
+```
+
+> [!WARNING] Make sure you save your script!
+
+Now that we have access to the currently selected node we can affect it using the [node Class](https://docs.toonboom.com/help/harmony-20/scripting/script/classnode.html). We will use the `coordX()` and `coordY()` functions from the `node` class to get the X and Y positions of the node in the *Node View*.
+
+well add the following code inside the *for loop*:
+
+`var posX = node.coordX(currentNode)`;
+
+and this line:
+
+`var posY = node.coordY(currentNode);`
 
 
+
+```js
+function createDrawingNodes()
+{
+	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	if(selectedNodes == 1) { // check if one node is selected
+		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
+			var currentNode = selection.selectedNode(n); // the current selected node in the loop
+			var posX = node.coordX(currentNode); // get the X position on the node graph
+			var posY = node.coordY(currentNode); // get the Y position on the node graph
+			}
+	} else { // if more than one node is selected run the following
+		MessageBox.information("You must select only ONE composite node!"); // displays warning message
+	}
+}
+```
+
+Now that we have the information of the selected node, we can create new *drawing nodes* and link them to your selected *Composite*.
+
+One of the best way to add new nodes in using a loop. We will create a loop after the we get the coordinate information.
+
+Add the following code:
+
+```js
+for(var i = 0; i < 4; i++){
+	// this loop iterates 5 times
+}
+```
+
+The code in context:
+
+```js
+function createDrawingNodes()
+{
+	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	if(selectedNodes == 1) { // check if one node is selected
+		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
+			var currentNode = selection.selectedNode(n); // the current selected node in the loop
+			var posX = node.coordX(currentNode); // get the X position on the node graph
+			var posY = node.coordY(currentNode); // get the Y position on the node graph
+			for(var i = 0; i < 4; i++){
+		// this loop iterates 5 times
+			}
+			}
+	} else { // if more than one node is selected run the following
+		MessageBox.information("You must select only ONE composite node!"); // displays warning message
+	}
+}
+```
 
 ---
 
