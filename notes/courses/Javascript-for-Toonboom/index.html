@@ -9,7 +9,7 @@
 <script src=https://notes.benshurts.com/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
 <script src=https://notes.benshurts.com/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
 <script src=https://notes.benshurts.com/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
-<script>const BASE_URL="https://notes.benshurts.com/",fetchData=Promise.all([fetch("https://notes.benshurts.com/indices/linkIndex.df656983fbbff1f9c4823da916428e18.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://notes.benshurts.com/indices/contentIndex.d2098a8ce1a7f089eaea2731f1e9abe7.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://notes.benshurts.com",!0,!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://notes.benshurts.com",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
+<script>const BASE_URL="https://notes.benshurts.com/",fetchData=Promise.all([fetch("https://notes.benshurts.com/indices/linkIndex.df656983fbbff1f9c4823da916428e18.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://notes.benshurts.com/indices/contentIndex.1033508e354a5b27ec1d16ef199c33e1.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://notes.benshurts.com",!0,!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://notes.benshurts.com",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
     import { attachSPARouting } from "https:\/\/notes.benshurts.com\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
     attachSPARouting(init, render)
   </script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
@@ -238,6 +238,107 @@ Feb 10, 2023
 </span></span><span class=line><span class=cl><span class=p>{</span>
 </span></span><span class=line><span class=cl>	<span class=c1>// code will go here
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote class=important-callout><p>This script will work based on a selection.</p></blockquote><p>We will use the <code>selection</code> class to grab information about the selection.</p><p><a href=https://docs.toonboom.com/help/harmony-20/scripting/script/classselection.html rel=noopener>Harmony 20 Scripting Interface: selection Class Reference</a></p><p>We will use two functions from this class:</p><ul><li><code>numberOfNodesSelected</code> ()</li><li><code>selectedNode</code> (int i)</li></ul><p>Let&rsquo;s implement these concepts like so:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>createDrawingNodes</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=kd>var</span> <span class=nx>selectNodes</span> <span class=o>=</span> <span class=nx>selection</span><span class=p>.</span><span class=nx>numberOfNodesSelected</span><span class=p>();</span> <span class=c1>// create variable to store number of nodes selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>n</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>n</span> <span class=o>&lt;</span> <span class=nx>selectedNodes</span><span class=p>;</span> <span class=nx>n</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// loop through all nodes selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=kd>var</span> <span class=nx>currentNode</span> <span class=o>=</span> <span class=nx>selection</span><span class=p>.</span><span class=nx>selectedNode</span><span class=p>(</span><span class=nx>n</span><span class=p>);</span> <span class=c1>// the current selected node in the loop
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Now let&rsquo;s make sure we only have one node selected. To do this we will check if <code>selectedNodes</code> is equal to <code>1</code> else we will return a warning with the <code>MessageBox</code> class.</p><blockquote class=note-callout><p>Later you can decide to validate that the selected node is a <em>Composite</em> Type</p></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>createDrawingNodes</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=kd>var</span> <span class=nx>selectNodes</span> <span class=o>=</span> <span class=nx>selection</span><span class=p>.</span><span class=nx>numberOfNodesSelected</span><span class=p>();</span> <span class=c1>// create variable to store number of nodes selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>if</span><span class=p>(</span><span class=nx>selectedNodes</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// check if one node is selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>n</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>n</span> <span class=o>&lt;</span> <span class=nx>selectedNodes</span><span class=p>;</span> <span class=nx>n</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// loop through all nodes selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=kd>var</span> <span class=nx>currentNode</span> <span class=o>=</span> <span class=nx>selection</span><span class=p>.</span><span class=nx>selectedNode</span><span class=p>(</span><span class=nx>n</span><span class=p>);</span> <span class=c1>// the current selected node in the loop
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span> <span class=k>else</span> <span class=p>{</span> <span class=c1>// if more than one node is selected run the following
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nx>MessageBox</span><span class=p>.</span><span class=nx>information</span><span class=p>(</span><span class=s2>&#34;You must select only ONE composite node!&#34;</span><span class=p>);</span> <span class=c1>// displays warning message
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote class=warning-callout><p>Make sure you save your script!</p></blockquote><p>Now that we have access to the currently selected node we can affect it using the
+<a href=https://docs.toonboom.com/help/harmony-20/scripting/script/classnode.html rel=noopener>node Class</a>. We will use the <code>coordX()</code> and <code>coordY()</code> functions from the <code>node</code> class to get the X and Y positions of the node in the <em>Node View</em>.</p><p>well add the following code inside the <em>for loop</em>:</p><p><code>var posX = node.coordX(currentNode)</code>;</p><p>and this line:</p><p><code>var posY = node.coordY(currentNode);</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>createDrawingNodes</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=kd>var</span> <span class=nx>selectNodes</span> <span class=o>=</span> <span class=nx>selection</span><span class=p>.</span><span class=nx>numberOfNodesSelected</span><span class=p>();</span> <span class=c1>// create variable to store number of nodes selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>if</span><span class=p>(</span><span class=nx>selectedNodes</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// check if one node is selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>n</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>n</span> <span class=o>&lt;</span> <span class=nx>selectedNodes</span><span class=p>;</span> <span class=nx>n</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// loop through all nodes selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=kd>var</span> <span class=nx>currentNode</span> <span class=o>=</span> <span class=nx>selection</span><span class=p>.</span><span class=nx>selectedNode</span><span class=p>(</span><span class=nx>n</span><span class=p>);</span> <span class=c1>// the current selected node in the loop
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=kd>var</span> <span class=nx>posX</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>coordX</span><span class=p>(</span><span class=nx>currentNode</span><span class=p>);</span> <span class=c1>// get the X position on the node graph
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=kd>var</span> <span class=nx>posY</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>coordY</span><span class=p>(</span><span class=nx>currentNode</span><span class=p>);</span> <span class=c1>// get the Y position on the node graph
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span> <span class=k>else</span> <span class=p>{</span> <span class=c1>// if more than one node is selected run the following
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nx>MessageBox</span><span class=p>.</span><span class=nx>information</span><span class=p>(</span><span class=s2>&#34;You must select only ONE composite node!&#34;</span><span class=p>);</span> <span class=c1>// displays warning message
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Now that we have the information of the selected node, we can create new <em>drawing nodes</em> and link them to your selected <em>Composite</em>.</p><p>One of the best way to add new nodes in using a loop. We will create a loop after the we get the coordinate information.</p><p>Add the following code:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=mi>4</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>	<span class=c1>// this loop iterates 5 times
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>The code in context:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>createDrawingNodes</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=kd>var</span> <span class=nx>selectNodes</span> <span class=o>=</span> <span class=nx>selection</span><span class=p>.</span><span class=nx>numberOfNodesSelected</span><span class=p>();</span> <span class=c1>// create variable to store number of nodes selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>if</span><span class=p>(</span><span class=nx>selectedNodes</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// check if one node is selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>n</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>n</span> <span class=o>&lt;</span> <span class=nx>selectedNodes</span><span class=p>;</span> <span class=nx>n</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// loop through all nodes selected
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=kd>var</span> <span class=nx>currentNode</span> <span class=o>=</span> <span class=nx>selection</span><span class=p>.</span><span class=nx>selectedNode</span><span class=p>(</span><span class=nx>n</span><span class=p>);</span> <span class=c1>// the current selected node in the loop
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=kd>var</span> <span class=nx>posX</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>coordX</span><span class=p>(</span><span class=nx>currentNode</span><span class=p>);</span> <span class=c1>// get the X position on the node graph
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=kd>var</span> <span class=nx>posY</span> <span class=o>=</span> <span class=nx>node</span><span class=p>.</span><span class=nx>coordY</span><span class=p>(</span><span class=nx>currentNode</span><span class=p>);</span> <span class=c1>// get the Y position on the node graph
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=k>for</span><span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=mi>4</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>		<span class=c1>// this loop iterates 5 times
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=p>}</span>
+</span></span><span class=line><span class=cl>			<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span> <span class=k>else</span> <span class=p>{</span> <span class=c1>// if more than one node is selected run the following
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nx>MessageBox</span><span class=p>.</span><span class=nx>information</span><span class=p>(</span><span class=s2>&#34;You must select only ONE composite node!&#34;</span><span class=p>);</span> <span class=c1>// displays warning message
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></td></tr></table></div></div><hr><a href=#examples><h1 id=examples><span class=hanchor arialabel=Anchor># </span>Examples</h1></a><p>Automating the creation of a camera move:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
