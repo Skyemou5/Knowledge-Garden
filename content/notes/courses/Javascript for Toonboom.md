@@ -9,6 +9,8 @@ Before we jump in we should understand some basic things about how ToonBoom is b
 
 # QT
 
+
+
 A large part of ToonBoom is built using a framework called QT.
 
 Qt is a cross-platform software development framework and application development toolkit used for creating applications that run on multiple platforms, including Windows, macOS, Linux, Android, and iOS. It was originally developed by the Norwegian company Trolltech, which was later acquired by Nokia, and is now developed and maintained by the Qt Company.
