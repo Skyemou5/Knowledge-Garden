@@ -310,7 +310,7 @@ Let's implement these concepts like so:
 ```js
 function createDrawingNodes()
 {
-	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	var selectedNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
 	for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
 		var currentNode = selection.selectedNode(n); // the current selected node in the loop
 	}
@@ -324,7 +324,7 @@ Now let's make sure we only have one node selected. To do this we will check if 
 ```js
 function createDrawingNodes()
 {
-	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	var selectedNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
 	if(selectedNodes == 1) { // check if one node is selected
 		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
 			var currentNode = selection.selectedNode(n); // the current selected node in the loop
@@ -352,7 +352,7 @@ and this line:
 ```js
 function createDrawingNodes()
 {
-	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	var selectedNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
 	if(selectedNodes == 1) { // check if one node is selected
 		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
 			var currentNode = selection.selectedNode(n); // the current selected node in the loop
@@ -382,7 +382,7 @@ The code in context:
 ```js
 function createDrawingNodes()
 {
-	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	var selectedNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
 	if(selectedNodes == 1) { // check if one node is selected
 		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
 			var currentNode = selection.selectedNode(n); // the current selected node in the loop
@@ -420,7 +420,7 @@ The line in context:
 ```js
 function createDrawingNodes()
 {
-	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	var selectedNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
 	if(selectedNodes == 1) { // check if one node is selected
 		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
 			var currentNode = selection.selectedNode(n); // the current selected node in the loop
@@ -471,7 +471,7 @@ Below should be your script so far:
 ```js
 function createDrawingNodes()
 {
-	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	var selectedNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
 	if(selectedNodes == 1) { // check if one node is selected
 		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
 			var currentNode = selection.selectedNode(n); // the current selected node in the loop
@@ -506,7 +506,7 @@ And in context:
 ```js
 function createDrawingNodes()
 {
-	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	var selectedNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
 	if(selectedNodes == 1) { // check if one node is selected
 		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
 			var currentNode = selection.selectedNode(n); // the current selected node in the loop
@@ -538,7 +538,7 @@ And in context:
 ```js
 function createDrawingNodes()
 {
-	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	var selectedNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
 	if(selectedNodes == 1) { // check if one node is selected
 		scene.beginUndoRedoAccum("Create Drawing Nodes");
 		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
