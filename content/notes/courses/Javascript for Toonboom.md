@@ -619,3 +619,23 @@ var scene = Scene.getCurrentScene();
 var movie = scene.exportAsMovie(filePath, format);
 
 ```
+
+
+---
+
+# Possible Tools
+
+are we able to make it so that when the drawing layers are created they're connected to the composite immediately?
+
+custom toolbar?
+
+select 2 drawing.isolate nodes
+create cutter/inverted cutter
+plug nodes into cutter
+name cutter:
+	what is being cut/revealed by what is previously selected
+
+add parent to selection -> add child to selection
+
+I'm trying to think of ways to simplify aligning nodes like being able to select all the drawing nodes without having to draw a big long selection box over all of them to align them or something but idk how practical it'd be with pegs and stuff so maybe not
+
