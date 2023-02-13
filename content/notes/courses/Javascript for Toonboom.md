@@ -396,6 +396,171 @@ function createDrawingNodes()
 }
 ```
 
+To **ADD** new nodes we will use the `add()` function from the `node` class.
+
+add (String parentGroup, String name, String type, int x, int y, int z)`
+
+Arguments explained:
+
+1. The first argument is which group to the add the node to. For this we will need the get the group info in which your selected Composite is.
+2. The second argument is the name of the new node.
+3. The third argument is the type of node to add. (in our example well be add a drawing node `*.xstage`)
+4. The last arguments are for coordinates of where the node should be. (we will change the values based on the selected compites information)
+
+Below is the new line to add:
+
+```js
+var newNode = node.add("", "drawing_" + (i + 1), "", posX + (120 * i), posY + 100, 0);
+```
+
+The line in context:
+
+```js
+function createDrawingNodes()
+{
+	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	if(selectedNodes == 1) { // check if one node is selected
+		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
+			var currentNode = selection.selectedNode(n); // the current selected node in the loop
+			var posX = node.coordX(currentNode); // get the X position on the node graph
+			var posY = node.coordY(currentNode); // get the Y position on the node graph
+			for(var i = 0; i < 4; i++){
+				var newNode = node.add("", "drawing_" + (i + 1), "", posX + (120 * i), posY + 100, 0);
+			}
+			}
+	} else { // if more than one node is selected run the following
+		MessageBox.information("You must select only ONE composite node!"); // displays warning message
+	}
+}
+```
+
+Now we will add the group information.
+
+One way to do this is by using the `parentNode()` function.
+
+Edit the line we just added like so:
+
+```js
+
+var newNode =  node.add(node.parentNode(currentNode), "drawing_" + (i + 1), "", posX + (120 * i), posY + 100, 0);
+
+```
+
+To get the last argument about the node type we need to open the project `*.xstage` file. (yes this is anoying and silly)
+
+In this file we can find lots of information about modules and general information about your scene.
+
+![[Pasted image 20230212184809.png]]
+
+>[!IMPORTANT] Since the backend info doesn't always match the user interface string, it's important to verify it. *(Yes this is an oversight and shoul be fixed by toonboom... but whatever)*
+
+Edit the line like so:
+
+```js
+var newNode =  node.add(node.parentNode(currentNode), "drawing_" + (i + 1), "READ", posX + (120 * i), posY + 100, 0);
+```
+
+Add `"READ"` in the argument for type.
+
+>[!WARNING] Save your script!
+
+Below should be your script so far:
+
+```js
+function createDrawingNodes()
+{
+	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	if(selectedNodes == 1) { // check if one node is selected
+		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
+			var currentNode = selection.selectedNode(n); // the current selected node in the loop
+			var posX = node.coordX(currentNode); // get the X position on the node graph
+			var posY = node.coordY(currentNode); // get the Y position on the node graph
+			for(var i = 0; i < 4; i++){
+				var newNode =  node.add(node.parentNode(currentNode), "drawing_" + (i + 1), "READ", posX + (120 * i), posY + 100, 0);
+			}
+			}
+	} else { // if more than one node is selected run the following
+		MessageBox.information("You must select only ONE composite node!"); // displays warning message
+	}
+}
+```
+
+Now we need to link the newly created nodes.
+
+To do this we will use the `link()` function:
+
+`link (String srcNode, int srcPort, String dstNode, int dstPort)`
+
+This function takes a source node, the port number to connect from, the destination node, and which port number to connect it to.
+
+We will add the following code below the `newNode`:
+
+```js
+node.link(newNode, 0, currentNode, 0);
+```
+
+And in context:
+
+```js
+function createDrawingNodes()
+{
+	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	if(selectedNodes == 1) { // check if one node is selected
+		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
+			var currentNode = selection.selectedNode(n); // the current selected node in the loop
+			var posX = node.coordX(currentNode); // get the X position on the node graph
+			var posY = node.coordY(currentNode); // get the Y position on the node graph
+			for(var i = 0; i < 4; i++){
+				var newNode =  node.add(node.parentNode(currentNode), "drawing_" + (i + 1), "READ", posX + (120 * i), posY + 100, 0);
+				node.link(newNode, 0, currentNode, 0);
+			}
+			}
+	} else { // if more than one node is selected run the following
+		MessageBox.information("You must select only ONE composite node!"); // displays warning message
+	}
+}
+```
+
+Now we have a functional script.
+
+Because toonboom is wierd we have to fix it's undo system. So we should lump the entire script into a single undo step so don't have to undo everything we did in the script. We will add the following two lines:
+
+```js
+scene.beginUndoRedoAccum("Create Drawing Nodes");
+
+scene.endUndoRedoAccum();
+```
+
+And in context:
+
+```js
+function createDrawingNodes()
+{
+	var selectNodes = selection.numberOfNodesSelected(); // create variable to store number of nodes selected
+	if(selectedNodes == 1) { // check if one node is selected
+		scene.beginUndoRedoAccum("Create Drawing Nodes");
+		for(var n = 0; n < selectedNodes; n++) { // loop through all nodes selected
+			var currentNode = selection.selectedNode(n); // the current selected node in the loop
+			var posX = node.coordX(currentNode); // get the X position on the node graph
+			var posY = node.coordY(currentNode); // get the Y position on the node graph
+			for(var i = 0; i < 4; i++){
+				var newNode =  node.add(node.parentNode(currentNode), "drawing_" + (i + 1), "READ", posX + (120 * i), posY + 100, 0);
+				node.link(newNode, 0, currentNode, 0);
+			}
+			}
+			scene.endUndoRedoAccum();
+	} else { // if more than one node is selected run the following
+		MessageBox.information("You must select only ONE composite node!"); // displays warning message
+	}
+}
+```
+
+Now remember to save the script. and test and execute it.
+
+Challenge:
+
+Try and add more conditional logic.
+
 ---
 
 # Examples
