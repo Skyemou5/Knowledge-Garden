@@ -813,6 +813,12 @@ else
 ```
 
 
+```c
+// Adds a point at the position of each prim
+addpoint(0, @P);
+// Remove primitive and all points connected to it
+removeprim(0, @primnum, 1);
+```
 
 
 ---
