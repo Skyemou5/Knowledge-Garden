@@ -518,7 +518,7 @@ function createDrawingNodes()
 			}
 			}
 	} else { // if more than one node is selected run the following
-		MessageBox.information("You must select only ONE composite node!"); // displays warning message
+			MessageBox.information("You must select only ONE composite node!"); // displays warning message
 	}
 }
 ```
@@ -638,4 +638,78 @@ name cutter:
 add parent to selection -> add child to selection
 
 I'm trying to think of ways to simplify aligning nodes like being able to select all the drawing nodes without having to draw a big long selection box over all of them to align them or something but idk how practical it'd be with pegs and stuff so maybe not
+
+
+
+---
+
+Script:
+
+- Check that only two drawing nodes are selected
+- Save the names of each node
+- create a cutter
+- hook up the drawing nodes respectively
+- Name cutter according to nodes connected
+
+
+
+(isolation nodes?)
+
+```js
+function test()
+
+{
+
+    var selectedNodes = selection.numberOfNodesSelected();
+
+    var num = 2;
+
+    MessageLog.trace(selectedNodes);
+
+    var node1PosX = 0;
+
+    var node2PosY = 0;
+
+    if(selectedNodes == 2)
+
+    {
+
+        for(n=0;n < selectedNodes; n++)
+
+        {
+
+            var currentNode = selection.selectedNode(n);
+
+            //var currentNodeType = node.type(currentNode);
+
+            //MessageLog.trace();
+
+            if (n == 0) {  
+
+                //pass
+
+            } else {
+
+                //pass
+
+            {
+
+            var posX = node.coordX(currentNode);
+
+            var posY = node.coordX(currentNode);
+
+        }
+
+    } else {
+
+    MessageBox.information("Must have two nodes selected");
+
+        //var cutterNode = node.add("","Cutter","CUTTER",);
+
+    }
+
+    }
+
+}
+```
 
