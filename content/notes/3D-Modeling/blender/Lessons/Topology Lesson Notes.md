@@ -27,9 +27,9 @@
 				- analyze geo for non-manifold meshes
 				- >*N-Panel* for addon options
 				- [Mesh Check addon](https://pistiwique.gumroad.com/l/mesh_check_BGL_edition)
-					- ![[notes/attachments/Pasted image 20220907102651.png]]
+					- ![[notes/attachments/mesh_check_addon_location.png]]
 	- Edge flow
-	- bevels ![[notes/attachments/Pasted image 20220907091048.png]]
+	- bevels ![[notes/attachments/bevel_example_real.png]]
 		- everything is beveled in the real world
 		- modifier vs the tool
 		- levels of bevels
@@ -60,7 +60,7 @@
 		- normals
 			- direction
 				- overlay
-					- *create shorcut* ![[notes/attachments/Pasted image 20220907104801.png]]
+					- *create shorcut* ![[notes/attachments/create_shortcut_blender.png]]
 			- artifacts
 			- ! Auto-smooth
 				- normal angle

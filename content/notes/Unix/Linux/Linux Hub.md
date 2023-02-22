@@ -38,3 +38,4 @@ tags: [linux, unix, index, hub, os]
 
 [[notes/Unix/Linux/Bash Rename Files]]
 
+[Nvidia kernel module missing falling back to Nouveau (Fedora 36 PR) : Fedora](https://www.reddit.com/r/Fedora/comments/t7w5j3/nvidia_kernel_module_missing_falling_back_to/)

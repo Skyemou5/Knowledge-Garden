@@ -49,6 +49,7 @@ tags: [houdini,resources]
 
 ---
 ## Patreon
+
 [parker coleman](https://www.patreon.com/TipTopVisuals/posts)
 [Tim van helsdingen](https://www.patreon.com/timvanhelsdingen/posts)
 [Entagma](https://www.patreon.com/entagma)
@@ -86,11 +87,13 @@ tags: [houdini,resources]
 
 # vex stuff
 
-if you prefix anything i@group_ it will create a group
+## Vex groups:
+
+if you prefix anything `i@group_` it will create a group
 it's shorthand
 
 the other way is
-setprimgroup()
+`setprimgroup()`
 
 
 ---

@@ -3,16 +3,12 @@ title: "Edge Flow and Artifacts Assignment"
 tags: "blender-assignments"
 ---
 
-#todo 
-- [x] Outline each exercise
-- [x] explain the addons that will be used
-- [x] Create criteria for each exercise
-- [x] create short training videos for tools and procedures
-
-
 
 ## Exercises
---
+
+
+
+
 ### Topology
 1. from 4 different planes, create 1-2, 1-3, 1-4, 1-6 polygon strips
 2. redirect edge flow on a grid in 3 different ways
@@ -38,7 +34,7 @@ tags: "blender-assignments"
 
 ---
 ## Videos
-- [x] 
+
 
 ---
 

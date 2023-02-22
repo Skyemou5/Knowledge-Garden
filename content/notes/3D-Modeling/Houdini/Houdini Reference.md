@@ -22,6 +22,58 @@ i@group_groupone = 1;
 
 ---
 
+# Resample into random length segments
+
+[Houdini VEX code to resample a (two point) curve into segments of random length (with restrictions)](https://gist.github.com/werediver/4e51bbd36741a6b6aed012d3770b160e)
+
+```c
+// Resample into segments of random length
+// Run over primitives
+
+float seed = chf("seed");
+float seg_len_min = chi("seg_len_min");
+float seg_len_max = chi("seg_len_max");
+float seg_padding = chf("padding");
+
+if (seg_len_min <= 0 || seg_len_max < seg_len_min || seg_padding < 0) {
+   error("Make sure 0 < seg_len_min <= seg_len_max and 0 <= seg_padding");
+}
+
+int np = npoints(0);
+vector pstart = point(0, "P", 0);
+vector pend = point(0, "P", np - 1);
+
+vector dir = normalize(pend - pstart);
+float len_max = distance(pend, pstart);
+
+float len = 0;
+vector pos = pstart;
+
+int pts[]; // Numbers (IDs) of points to construct resulting segments from
+append(pts, addpoint(0, pos));
+
+while (true) {
+   float seg_len_max_adjusted = clamp(len_max - len - seg_padding, seg_len_min, seg_len_max);
+   float seg_len = rint(fit01(rand(seed + len), seg_len_min, seg_len_max_adjusted)) + seg_padding;
+   
+   vector pos_next = pos + dir * seg_len;
+   
+   if (len + seg_len <= len_max) {
+       append(pts, addpoint(0, pos_next));
+       
+       len += seg_len;
+       pos = pos_next;
+   } else {
+       break;
+   }
+}
+
+removeprim(0, 0, 1); // Remove the original primitive and its points
+addprim(0, "polyline", pts);
+```
+
+---
+
 # Adding second to last point to a group
 
 `setpointgroup(0,"controlPoint",npoints(0)-2,1,"set");`
@@ -901,4 +953,21 @@ matrix3 rotation = prim(0, "rot", prim);
 # Centroid of Prims
 
 using `v@P` in a *prim wrangle* returns the centroid
+
+
+---
+
+# Groups to Attributes Vex
+
+```c
+string groups[] = detailintrinsic(0,'top');
+foreach(string g; groups)
+{
+    if(inpointgroup(0,g,@ptnum)==1)
+    {
+        s@top = g;
+    }
+
+}
+```
 

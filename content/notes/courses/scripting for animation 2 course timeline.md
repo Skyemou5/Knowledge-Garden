@@ -70,6 +70,12 @@ tags: [timeline,courses]
 
 ### Week 8: Introduction to 3D and final project introduction:
 
+[[notes/General/CG-Fundimentals/CG Fundimentals]]
+
+
+[[notes/3D-Modeling/blender/Lessons/Navigation In Blender]]
+
+
 - Final project proposal
 - 3D fundimentals
 	- History of 3D
