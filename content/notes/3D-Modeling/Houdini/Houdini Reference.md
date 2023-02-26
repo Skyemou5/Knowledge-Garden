@@ -971,3 +971,15 @@ foreach(string g; groups)
 }
 ```
 
+---
+
+# Gradient Vex
+
+```c
+vector grad = relbbox(0,@P);
+@density=grad.y;
+```
+
+
+---
+

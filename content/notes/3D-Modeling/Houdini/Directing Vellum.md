@@ -90,5 +90,9 @@ if (@Frame > 50) removepoint(0, @ptnum);
 
 ---
 
+# Retime Node
+
+Often you should retime after the file cache
+
 
 
