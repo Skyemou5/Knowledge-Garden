@@ -133,7 +133,6 @@ Unlike most other 3D applications blender is meant to be used by hitting chains 
 
 
 
-
 # Navigation
 
 There is a lot to learn about navigating in blender. 

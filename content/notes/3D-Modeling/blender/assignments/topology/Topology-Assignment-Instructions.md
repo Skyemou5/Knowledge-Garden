@@ -5,7 +5,7 @@ In this assignment you will do several exercises to help you understand some com
 To do this you will need to follow the following steps:
 1. Watch the video explanation of this assignment.
 	1. If you need to, watch the other videos as well.
-2. Download the zip file with the blend file and open it up in your blender.
+2. Download the zip file with the blend file and open it up in your blender. [Blend File](https://github.com/benshurts/Knowledge-Garden/blob/hugo/content/notes/3D-Modeling/blender/assignments/topology/Topology-Assignment.blend) (Click the download button ![[notes/attachments/github-download-file.png]])
 3. Make sure you install the Mesh-Check addon and enable it.
 4. Make sure your viewport settings are set to view textures in the viewport or you will not see some of the guides in the file.
 5. In the Outliner, use the checkboxes to enable each exercise and complete it. 
@@ -38,18 +38,16 @@ Each exercise has the following criteria
 1. You must complete the exercise yourself using the indicated tools.
 2. The meshes must be completed in the blend file you submit, so make sure you save the file and upload it canvas.
 
----
-
 Do your best!
 
 
 
 ---
-Videos
+Watch these videos!
 
-https://youtu.be/4pOyCHr8WIo - bevel
-https://youtu.be/hLciEyyU1qs - knife tool
-https://youtu.be/QR5QNWgeEUU - mesh cleanup tools
-https://youtu.be/6QJ5DU61WSk - assignment overview
-https://youtu.be/vJw3MRds03I - selection tools
-https://youtu.be/tsVs3zg8iwI - demonstrations
+- https://youtu.be/4pOyCHr8WIo - bevel
+- https://youtu.be/hLciEyyU1qs - knife tool
+- https://youtu.be/QR5QNWgeEUU - mesh cleanup tools
+- https://youtu.be/6QJ5DU61WSk - assignment overview
+- https://youtu.be/vJw3MRds03I - selection tools
+- https://youtu.be/tsVs3zg8iwI - demonstrations

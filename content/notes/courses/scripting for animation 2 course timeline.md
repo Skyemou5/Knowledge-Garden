@@ -94,6 +94,18 @@ tags: [timeline,courses]
 
 ### Week 9: Topology and modeling
 
+[[notes/3D-Modeling/blender/assignments/Topology in CG Lesson]]
+
+[[notes/General/CG-Fundimentals/resources/Topology Resources]]
+
+[[notes/3D-Modeling/blender/assignments/Diagnosing and Fixing Meshes]]
+
+[[notes/3D-Modeling/blender/Lessons/Topology Lesson Notes]]
+
+[[notes/3D-Modeling/blender/assignments/topology/Topology-Assignment-Instructions]]
+
+
+
 - topology
 - edge-flow
 - correcting bad geometry
