@@ -1,6 +1,14 @@
+---
+titel: "Topology Assignment Instructions"
+tags: [topology,assignment,instructions]
+---
+
 # Topology Exercises
 In this assignment you will do several exercises to help you understand some common mesh problems and how to fix them, as well as some techniques to help you solve some tough problems when you are modeling.
 
+What to turn in:
+1. The completed Blend file.
+2. A paragraph or OBS recording with voice over talking about what you learned and what problems you ran into.
 ---
 To do this you will need to follow the following steps:
 1. Watch the video explanation of this assignment.

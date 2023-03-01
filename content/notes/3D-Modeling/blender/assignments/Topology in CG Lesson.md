@@ -3,6 +3,9 @@ title: "Togology in CG Lesson"
 tags: [topology,cg,lesson]
 ---
 
+[[notes/3D-Modeling/blender/assignments/topology/Topology-Assignment-Instructions]]
+
+
 Understanding topology is a critical part of being a competent 3D artist. Topology is the fundamental structure of your 3D data works and relates with itself.
 
 Topology is really important to understand for several reasons. The first and formost is probably *polycount*.
