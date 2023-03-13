@@ -25,7 +25,7 @@ tags: [blender, index, lessons, cg, 3d, 3d-modeling]
 
 [[notes/3D-Modeling/Modeling-Fundimentals/Lessons/Poly Modeling]]
 
-[[notes/3D-Modeling/blender/Lessons/Sculpting and Retopology in Blender]]
+[[notes/3D-Modeling/blender/Lessons/Retopology in Blender]]
 
 
 

@@ -1,81 +1,10 @@
 ---
-title: "Scultping and retopology lesson notes"
+title: "Retopology lesson notes"
 tags: [blender, retopology, sculpting]
 ---
 
 
-### Lesson
-
-- Assignments
-- Proposals
-- Sculpting
-- Retopology
-- Next week
-
----
-
-### Reminders of some blender things
-- moving around
-- wireframe and face direction
-- context menus
-
----
-## General Blender Hotkeys
-- cntrl + Tab -> modes pie menu
-- Tab -> switch modes
-	- machinetools - pie menu
-	- no machinetools -> hit 1 2 3 for edge vert and face modes
-
-
-
----
-### Sculpting
-Sculpting in blender has seen a lot of improvements in the last few years. It's still no ZBrush, but it can fill most of your sculpting needs for free and you don't have to leave blender.
-
-my video -> [Intro to blender sculpt mode](https://youtu.be/c8iK4zSZjHg)
-
-
-### Resources
-[Learn to Sculpt in Blender - Quick Start Guide - YouTube](https://www.youtube.com/watch?v=Cmi0KoFtc-4)
-
-### Setup Blender for Sculpting
-
-
-1. Get into sculpting mode
-	1. Either with the regular mode switching or 
-	2. the sculpting workspace
-		1. The workspace has some specific hot-keys and things setup for sculpting so, it's probably best to use this one.
-
-
-#### Sculpt mode interface
-![[notes/3D-Modeling/attatchments/sculpting-window-areas.png]]
-
-1. Sculpting tools
-2. Tool options
-3. N-Panel
-4. Global sculpting options
-5. Context menus for sculpt-mode
-
-![[notes/3D-Modeling/attatchments/blender-sculpt-mode-upper-left-window-menus.png]]
-
-1. Mode dependent context menus
-2. Brush selection
-3. Brush dependent quick options
-
-### Sculpting Tools
--  ![[notes/attachments/keys-color/f-key-col.png|50]] -> resize brush
-- ![[notes/attachments/keys-color/cntrl-key-col.png|50]] -> subtract 
-- ![[notes/attachments/keys-color/shift-key-col.png|100]] -> toggle smooth brush
-
->[!Important] If you have a tablet map your pen buttons to middle click and right click
-
-
-
-
-
-
----
-## Retopology Theory
+# Retopology Theory
 Retopology is the the process of creating new geometry on top of a high resolution mesh in order to texture and animate the mesh.
 ### Important guidelines
 - Create your edge flow in a way that follows the surface of your high-resolution mesh
@@ -87,10 +16,8 @@ Retopology is the the process of creating new geometry on top of a high resoluti
 - Add extra resolution in areas that will have a lot of deformation
 - make sure your edge and faceloops make sense as you progress
 
-
-
 ---
-### Retopo in blender without paid or external addons
+## Retopo in blender without paid or external addons
 
 My video -> [Intro to blender retopo](https://youtu.be/6QVPsSWuEpI)
 

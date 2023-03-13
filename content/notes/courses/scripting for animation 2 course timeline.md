@@ -113,6 +113,13 @@ tags: [timeline,courses]
 
 ### Week 10: Surfacing
 
+[[notes/3D-Modeling/blender/Lessons/Sculpting in Blender]]
+
+[[notes/3D-Modeling/blender/Lessons/Retopology in Blender]]
+
+
+
+
 - How 3D surfaces work
 	- normals
 	- tangents
