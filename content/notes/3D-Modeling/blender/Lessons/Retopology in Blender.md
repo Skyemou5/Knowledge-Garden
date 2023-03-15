@@ -2,6 +2,7 @@
 title: "Retopology lesson notes"
 tags: [blender, retopology, sculpting]
 ---
+`last updated March 15 2023`
 
 >[!NOTE] The Blender dev team is currently working on creating a native retopology mode with viewport overlays. So stay tuned for the next few blender updates. *(This is as of March 2023)*
 
@@ -89,14 +90,14 @@ My video -> [Intro to blender retopo](https://youtu.be/6QVPsSWuEpI)
 ### Retopology work after setup
 
 Use the following tools in the following ways:
-- cntrl + right-click -> to extrude to where your mouse cursor is
-- g -> move verts and edges
-- g+g -> slide verts and edges
-- cntrl + r -> add edge loop
+- `cntrl` + `right-click` -> to extrude to where your mouse cursor is
+- `g` -> move verts and edges
+- `g`+`g` -> slide verts and edges
+- `cntrl` + `r` -> add edge loop
 	- drag after
 	- right-mouse to snap to center
 	- scroll middle mouse to add segments
-- e -> extrude
+- `e` -> extrude
 
 >[!warning] Use as few loops as you need and no more
 
@@ -133,7 +134,7 @@ Select a corner vert and hit `f`
 - you could also add some transparency to your viewport shader
 - remap your merge hotkey to something more easily accessable
 - bridge tool
-	- select two apposing edges and hit *f*
+	- select two apposing edges and hit `f`
 	- *F2* will do the same but you select one edge
 - Only use subd for sanity checks
 - grid-fill
@@ -141,14 +142,14 @@ Select a corner vert and hit `f`
 	- you will have to tweak offset
 	- it's in the menus
 - Soft-select / proportional editing
-	- o -> hotkey
+	- `o` -> hotkey
 	- in the menu
 	- different types of falloffs
 - sculpt smoothing
 	- go into sculpting
-	- shift -> smooth brush
+	- `shift` -> smooth brush
 		- or select smooth brush
-		- f -> change brush size
+		- `f` -> change brush size
 	- in viewport overlays enable wireframe
 	
 
