@@ -3,10 +3,21 @@ title: "Retopology lesson notes"
 tags: [blender, retopology, sculpting]
 ---
 
+>[!NOTE] The Blender dev team is currently working on creating a native retopology mode with viewport overlays. So stay tuned for the next few blender updates. *(This is as of March 2023)*
 
 # Retopology Theory
-Retopology is the the process of creating new geometry on top of a high resolution mesh in order to texture and animate the mesh.
-### Important guidelines
+
+Retopology is an essential process in computer graphics (CG) that involves creating a new, clean topology (structure) for a 3D model with an existing, often dense, and messy topology. The goal of retopology is to create a 3D model with an optimized topology for efficient animation, rendering, and texturing. In this process, the new topology should preserve the original shape, proportions, and details of the model as much as possible.
+
+Retopology is important in CG because it enables the 3D artist to create a model with a lower polygon count while maintaining its shape, texture, and details. This is important because it allows for faster processing of the model, which is essential for real-time rendering, animation, and games. Additionally, a clean topology helps to avoid shading issues, texture stretching, and other deformations that may occur during animation.
+
+There are different methods of retopology, including manual, semi-automatic, and automatic techniques. Manual retopology involves creating a new topology by hand, using a 3D modeling software, to create new polygons and edge loops that conform to the original model's shape. Semi-automatic methods use tools such as surface snapping or curve-based drawing to assist in the creation of new topology. Automatic methods, on the other hand, rely on algorithms to generate a new topology based on the original model's surface.
+
+The theory behind retopology involves understanding the principles of topology and how it affects the performance and visual quality of a 3D model. Topology refers to the arrangement of vertices, edges, and faces in a 3D model, which defines its structure and shape. A clean and efficient topology is crucial for maintaining the shape and details of a model, while minimizing its polygon count. Edge loops, quads, and poles are some of the essential concepts in topology that 3D artists need to understand to create optimized and efficient 3D models.
+
+
+### ![[notes/attachments/warning-icon-1.png|40]] Important guidelines ![[notes/attachments/warning-icon-1.png|40]]
+
 - Create your edge flow in a way that follows the surface of your high-resolution mesh
 - Stick to quads as much as you can
 - Evenly space you quads as much as you can
@@ -17,6 +28,7 @@ Retopology is the the process of creating new geometry on top of a high resoluti
 - make sure your edge and faceloops make sense as you progress
 
 ---
+
 ## Retopo in blender without paid or external addons
 
 My video -> [Intro to blender retopo](https://youtu.be/6QVPsSWuEpI)
@@ -33,35 +45,49 @@ My video -> [Intro to blender retopo](https://youtu.be/6QVPsSWuEpI)
 [(3) Use My EASY Method For Retopology In Blender ! - YouTube](https://www.youtube.com/watch?v=dqA039UOSwA)
 
 
-### Enable the following addons
+### ![[notes/attachments/warning-icon-1.png|30]] Enable the following addons ![[notes/attachments/warning-icon-1.png|30]]
+
 - Loop tools
 - F2
 
 
 ### Setup
+
 1. Make base mesh non-selectable
-2. make a new mesh with a single quad and align it to a position where you want to start
+	1. ![[notes/attachments/blender-outliner-options-selectable.png]]
+	2. ![[notes/attachments/blender-basemesh-nonselectable.png]]
+2. make a new mesh with a single quad and align it to a position where you want to start *(moving it in edit mode might work better so the origin remains the same as the basemesh)*
+	1. ![[notes/attachments/Alignfacetobasemeshretopoblender.gif]]
 3. Enable snapping to face
 	1. and enable project individual elements
-4. Enable always in-front for retopo-mesh in viewport display options
-5. in viewport shading enable backface culling
-6. create new material
-	1. then go to viewport display and choose a new color for visibility
-7. Add shrink-wrap modifier and set the target to the base-mesh
+	2. ![[notes/attachments/blender-faceproject.png]]
+4. Enable always in-front and wireframe and color for retopo-mesh in viewport display options
+	1. ![[notes/attachments/blender-retopo-display-options.png]]
+5. in viewport shading enable backface culling and object color
+	1. ![[notes/attachments/blender-viewport-display-color-backface.png]]
+6. Add shrink-wrap modifier and set the target to the base-mesh
 	1. Make sure the cage is visible in the viewport
->[!NOTE] This is just for improved accuracy
-8. Add mirror modifier
+
+ >[!NOTE] This is just for improved accuracy
+
+![[notes/attachments/blender-shrinkwrap-inmenu.png]]
+
+
+![[notes/attachments/blender-shrinkwrap-retopo-options.png]]
+
+7. *Optional* -> Add mirror modifier
 	1. make sure clipping and merge is enabled
-9. *Optional* Add displacement modifier to push the mesh out a bit along the normal if needed
+8. *Optional* -> Add displacement modifier to push the mesh out a bit along the normal if needed
 
 >[!warning] Never use subd or have it on when retopologizing
 >
 >You may toggle it on and off just to check if you want but that's it.
 >You want your mesh to look as honest as you can
 
->A subd can give you a false view of your mesh
+>[!WARNING] A subd can give you a false view of your mesh
 
 ### Retopology work after setup
+
 Use the following tools in the following ways:
 - cntrl + right-click -> to extrude to where your mouse cursor is
 - g -> move verts and edges
@@ -79,6 +105,9 @@ Use the following tools in the following ways:
 ---
 
 ### F2 Addon
+
+>[!NOTE] See flipped normals video on blender retopology
+
  Make sure it's enabled
 
 The F2 addon is a smarter filler tool that you will probably find yourself using all the time.
@@ -88,11 +117,16 @@ The F2 addon is a smarter filler tool that you will probably find yourself using
 >[!NOTE] This only works you have 4 edges connected to a vert
 
 
-Select a corner vert and hit *f*
+Select a corner vert and hit `f`
+
+
 
 ---
 
-### Other Rips and Tools for Retopology
+### Other Tips and Tools for Retopology
+
+
+
 
 - set spacebar as search menu
 - ![[notes/attachments/keys-color/alt-key-col.png|70]] + ![[notes/attachments/keys-color/z-key-col.png|50]] -> enable x-ray
@@ -123,9 +157,19 @@ Select a corner vert and hit *f*
 ## Bsurfaces Workflow
 This method is faster and uses an addon that ships with blender called bsurfaces
 
->[!important] Makes sure you enable bsurfaces in your addon preferences
+### Resources
+
+- [How to Setup Blender 2.8 for Retopology With Bsurfaces Tutorial - YouTube](https://www.youtube.com/watch?v=Sb53GpN9YXg)
+- [Retopology in Blender (Beginner Tutorial) - YouTube](https://www.youtube.com/watch?v=X2GNyEUvpD4)
+- [Blender Secrets - Retopology with BSurfaces and Annotation - YouTube](https://www.youtube.com/watch?v=_33KN56zvq0)
+
+
+
 
 ### Setup
+
+>[!important] Makes sure you enable bsurfaces in your addon preferences
+
 1. Enable bsurfaces
 2. Select your base-mesh
 3. press ![[notes/attachments/keys-color/n-key-col.png|50]] to bring up the n-panel
@@ -159,6 +203,12 @@ This method is faster and uses an addon that ships with blender called bsurfaces
 ---
 
 ## Other Tools
+
+
+>[!NOTE] Remeshing vs Retopology
+>
+>Retopology involves creating a new mesh with a clean topology that preserves the shape and details of the original model, while remeshing involves creating a new mesh with a uniform topology that is free from irregularities or holes. The goal of retopology is to optimize the mesh for animation and rendering, while the goal of remeshing is to simplify and clean up an existing mesh.
+
 There are many tools people have built for retopology in blender. Some of the best ones are paid
 
 I frequently will use a tool called [Retopoflow](https://www.blendermarket.com/products/retopoflow)
