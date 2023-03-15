@@ -17,7 +17,8 @@ There are different methods of retopology, including manual, semi-automatic, and
 The theory behind retopology involves understanding the principles of topology and how it affects the performance and visual quality of a 3D model. Topology refers to the arrangement of vertices, edges, and faces in a 3D model, which defines its structure and shape. A clean and efficient topology is crucial for maintaining the shape and details of a model, while minimizing its polygon count. Edge loops, quads, and poles are some of the essential concepts in topology that 3D artists need to understand to create optimized and efficient 3D models.
 
 
-### ![[notes/attachments/warning-icon-1.png|40]] Important guidelines ![[notes/attachments/warning-icon-1.png|40]]
+### Important guidelines!
+![[notes/attachments/warning-icon-1.png|30]]
 
 - Create your edge flow in a way that follows the surface of your high-resolution mesh
 - Stick to quads as much as you can
@@ -46,7 +47,9 @@ My video -> [Intro to blender retopo](https://youtu.be/6QVPsSWuEpI)
 [(3) Use My EASY Method For Retopology In Blender ! - YouTube](https://www.youtube.com/watch?v=dqA039UOSwA)
 
 
-### ![[notes/attachments/warning-icon-1.png|30]] Enable the following addons ![[notes/attachments/warning-icon-1.png|30]]
+### Enable the following addons 
+
+![[notes/attachments/warning-icon-1.png|30]]
 
 - Loop tools
 - F2
