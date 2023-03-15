@@ -36,6 +36,9 @@ The theory behind retopology involves understanding the principles of topology a
 My video -> [Intro to blender retopo](https://youtu.be/6QVPsSWuEpI)
 
 
+Timelapse of me retopologizing a pumpkin -> [(pumpkin retopo timelapse - YouTube](https://www.youtube.com/watch?v=RSxEvP3yWJk)
+
+
 ### Resources
 
 [Retopology for Beginners in Blender 2.8 - Retopo the Correct Way - YouTube](https://www.youtube.com/watch?v=CuQzPDs99yM&t=1s)
