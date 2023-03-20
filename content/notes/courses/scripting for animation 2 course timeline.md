@@ -138,6 +138,8 @@ tags: [timeline,courses]
 
 ### Week 12: Rendering
 
+[[notes/3D-Modeling/blender/assignments/UV Exercises Assignment]]
+
 - Rendering
 	- What is renderings
 	- What are renderers

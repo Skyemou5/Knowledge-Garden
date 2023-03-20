@@ -2,7 +2,7 @@
 title: "Retopology lesson notes"
 tags: [blender, retopology, sculpting]
 ---
-`last updated March 15 2023`
+
 
 >[!NOTE] The Blender dev team is currently working on creating a native retopology mode with viewport overlays. So stay tuned for the next few blender updates. *(This is as of March 2023)*
 
