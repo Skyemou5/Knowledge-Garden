@@ -140,6 +140,13 @@ tags: [timeline,courses]
 
 [[notes/3D-Modeling/blender/assignments/UV Exercises Assignment]]
 
+[[notes/3D-Modeling/blender/Lessons/Shading and Rendering in Blender]]
+
+[[notes/3D-Modeling/blender/Lessons/Texturing in Blender]]
+
+[[notes/3D-Modeling/blender/Lessons/Texturing in Substance]]
+
+
 - Rendering
 	- What is renderings
 	- What are renderers

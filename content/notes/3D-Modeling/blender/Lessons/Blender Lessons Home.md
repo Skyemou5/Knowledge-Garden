@@ -7,7 +7,7 @@ tags: [blender, index, lessons, cg, 3d, 3d-modeling]
 
 [[notes/3D-Modeling/blender/Lessons/Lesson - Boolean surfacing and normals|Booleans and Normals]]
 
-[[notes/3D-Modeling/blender/Lessons/Texturing lesson 2]]
+[[notes/3D-Modeling/blender/Lessons/Texturing in Blender]]
 
 [[notes/3D-Modeling/Texturing/Texturing Fundimentals]]
 
@@ -21,7 +21,7 @@ tags: [blender, index, lessons, cg, 3d, 3d-modeling]
 
 [[notes/3D-Modeling/Course Timeline/2 CG Fundimentals]]
 
-[[notes/3D-Modeling/blender/Lessons/Shading]]
+[[notes/3D-Modeling/blender/Lessons/Shading and Rendering in Blender]]
 
 [[notes/3D-Modeling/Modeling-Fundimentals/Lessons/Poly Modeling]]
 
