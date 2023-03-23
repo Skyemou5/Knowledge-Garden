@@ -104,7 +104,7 @@ tags: [timeline,courses]
 
 [[notes/3D-Modeling/blender/assignments/topology/Topology-Assignment-Instructions]]
 
-
+[[notes/3D-Modeling/blender/Lessons/Shorter texture and shading exercise]]
 
 - topology
 - edge-flow
