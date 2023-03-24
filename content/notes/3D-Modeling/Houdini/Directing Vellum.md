@@ -96,3 +96,15 @@ Often you should retime after the file cache
 
 
 
+
+---
+
+# vex stuff
+
+## Vex groups:
+
+if you prefix anything `i@group_` it will create a group
+it's shorthand
+
+the other way is
+`setprimgroup()`
