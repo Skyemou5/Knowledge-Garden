@@ -3,18 +3,13 @@ tags: [lessons, notes, grease-pencil, blender]
 title: "Blender Grease Pencil Lesson Notes"
 ---
 
-
-
----
-
 ### Extra blender tips
 - Cntrl + 2 in object mode -> auto subdivides
 - Cntrl + A -> look in the apply menu for *Visual Geometry to Mesh*
 
 
-
-
 ---
+
 
 ## Grease Pencil
 ### Set up
@@ -33,6 +28,7 @@ title: "Blender Grease Pencil Lesson Notes"
 
 ---
 ## Interface
+
 
 
 ---
@@ -68,11 +64,15 @@ title: "Blender Grease Pencil Lesson Notes"
 
 ---
 ## Grease Pencil Workflows
+
 When you use grease pencil there are many different workflows. Often workflows still include modeling especially for 3D illustrations. 
 
 ### Materials vs. Vertex Color
+
 There are pros and cons to each workflow.
 When you are using materials for all your colors 
+
+Materials are a nice way to organize your colors. It's like using a set palette. 
 
 ### Sketching
 
@@ -103,6 +103,11 @@ When you are using materials for all your colors
 ## Extra learning
 
 >[!NOTE] Some of these tutorials are breaking some modeling rules that you should be following.
+>
+>Just keep this in mind as your working and try and focus on the 2D aspects of the tutorials.
+
+
+
 
 [Grease Pencil #1: Basics of Interface | Blender 2.82 | Tutorial - YouTube](https://www.youtube.com/watch?v=w3O-t_dkoBU)
 
@@ -119,3 +124,10 @@ When you are using materials for all your colors
 [Grease pencil beginner tutorial | TOTORO | Blender 3.2 - YouTube](https://www.youtube.com/watch?v=SpFwrQOpQ0M)
 
 [Basic Blender Toon / Cel Shader Tutorial 2D Grease Pencil + 3D Modelling - YouTube](https://www.youtube.com/watch?v=hBztmFHkNQo)
+
+[Let's try the new Build modifier in Blender: Grease Pencil (3.5 Beta feature) - YouTube](https://www.youtube.com/watch?v=3Y4aBKZ3Pec)
+
+[Compositing Lineart - This week with Grease Pencil - YouTube](https://www.youtube.com/watch?v=lrrB_qZAo7U)
+
+[Storypencil - Grease Pencil add-on for Storyboarding - YouTube](https://www.youtube.com/watch?v=b25kfE6qd_c)
+

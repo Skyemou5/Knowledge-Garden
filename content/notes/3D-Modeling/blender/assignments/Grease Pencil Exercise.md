@@ -10,7 +10,7 @@ title: "Grease Pencil Exercise"
 ---
 # Objectives
 
-Download the Blend file -> [Blend File](https://github.com/benshurts/CG-Knowledge-Garden/blob/main/3D-Modeling/blender/assignments/grease-pencil/grease-pencil-example.blend)
+Download the Blend file -> [Blend File](https://github.com/benshurts/Knowledge-Garden/blob/hugo/content/notes/3D-Modeling/blender/assignments/grease-pencil/grease-pencil-exercises-fundimentals.blend)
 Watch the main video! -> https://youtu.be/lyupZ87uB7w
 
 

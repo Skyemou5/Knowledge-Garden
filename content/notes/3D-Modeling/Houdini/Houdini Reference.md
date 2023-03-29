@@ -801,38 +801,36 @@ f@pscale = point(1, "oPscale", @ptnum);
 # Vex add point to center of faces
 
 ```c
-{
 
-    int newpt = addpoint(0,v@P);
-    setpointgroup(0,"new",newpt,1);
-    setpointattrib(0,"N",newpt,v@N);
-    
-    int npts[] = primpoints(0, @primnum);
-    
-    vector pos1 = point(0,"P", npts[0]);
-    vector pos2 = point(0,"P", npts[1]);
-    
-    vector up = normalize(pos2 - pos1);
-    //setpointattrib(0,"up",newpt,v@N);
-    setpointattrib(0,"up",newpt,up);
-    
-    float avgdist = 0.0;
-    
-    // loop through above list of points
-    foreach(int npt; npts)
-    {
-        vector nppos = point(0, "P", npt);
-        float mydist = distance(v@P, nppos);
-        avgdist += mydist;
-    }
-    
-    float n = len(npts);
-    avgdist /= n;
-    f@pscale = avgdist;
-    
-    setpointattrib(0,"N",newpt,v@N);
-    setpointattrib(0,"pscale",newpt,avgdist);
+int newpt = addpoint(0,v@P);
+setpointgroup(0,"new",newpt,1);
+setpointattrib(0,"N",newpt,v@N);
+
+int npts[] = primpoints(0, @primnum);
+
+vector pos1 = point(0,"P", npts[0]);
+vector pos2 = point(0,"P", npts[1]);
+
+vector up = normalize(pos2 - pos1);
+//setpointattrib(0,"up",newpt,v@N);
+setpointattrib(0,"up",newpt,up);
+
+float avgdist = 0.0;
+
+// loop through above list of points
+foreach(int npt; npts)
+{
+	vector nppos = point(0, "P", npt);
+	float mydist = distance(v@P, nppos);
+	avgdist += mydist;
 }
+
+float n = len(npts);
+avgdist /= n;
+f@pscale = avgdist;
+
+setpointattrib(0,"N",newpt,v@N);
+setpointattrib(0,"pscale",newpt,avgdist);
 ```
 
 Lift points off surface
