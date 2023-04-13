@@ -145,6 +145,11 @@ tags: [timeline,courses]
 
 [[notes/3D-Modeling/blender/Lessons/Texturing in Substance]]
 
+[[notes/3D-Modeling/blender/Lessons/Compositing in Blender]]
+
+[[notes/3D-Modeling/blender/Lessons/Blender Shading Exercise]]
+
+
 
 - Rendering
 	- What is renderings
