@@ -22,6 +22,39 @@ i@group_groupone = 1;
 
 ---
 
+# Chramp shape of line
+
+```c
+@pscale = fit01(chramp("shape",@uv.x)+chf("thickness"),chf("min"),chf("max"));
+```
+
+---
+
+# BBox expression
+
+You can use this in parameters
+
+```c
+bbox("../path-to-node/",D_YSIZE)
+```
+
+in a wrange you can use similar expression
+
+```c
+vector min, max;
+
+getbbox(0,min,max);
+
+if(@P.x > max.x*ch("threshHold"))
+{
+    @P.y+=1;
+}
+```
+
+
+
+---
+
 # Resample into random length segments
 
 [Houdini VEX code to resample a (two point) curve into segments of random length (with restrictions)](https://gist.github.com/werediver/4e51bbd36741a6b6aed012d3770b160e)

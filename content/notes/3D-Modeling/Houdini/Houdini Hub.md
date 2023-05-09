@@ -13,6 +13,9 @@ Houdini is a procedural 3D Development Enviornment.
 
 [[notes/3D-Modeling/Houdini/Houdini Resources]]
 
+[[notes/3D-Modeling/Houdini/lessons/Houdini Procedural Bridge]]
+
+[[notes/3D-Modeling/Houdini/lessons/Houdini Destroying the Bridge]]
 
 ---
 # Vex
