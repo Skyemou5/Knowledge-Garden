@@ -16,3 +16,5 @@ Houdini excels in these approaches for the following reasons:
 
 ---
 
+[[notes/3D-Modeling/Houdini/lessons/Houdini Procedural Bookshelf Tutorial|Houdini Procedural Bookshelf Tutorial]]
+
