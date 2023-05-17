@@ -25,6 +25,9 @@ Houdini is a procedural 3D Development Enviornment.
 
 [[notes/3D-Modeling/Houdini/lessons/Lesson Plans|Lesson Plans]]
 
+[[notes/3D-Modeling/Houdini/lessons/Houdini Procedural Bookshelf|Houdini Procedural Bookshelf]]
+
+
 ---
 # Vex
 

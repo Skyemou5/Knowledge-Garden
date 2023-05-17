@@ -52,6 +52,8 @@ Once you've created a workspace you like you can save it and set it as a default
 
 Houdini's 3D viewport is very powerful. Like other packages the main window shows the 3D view.
 
+![[notes/attachments/houdini-viewport.png]]
+
 1. Toolbar
 2. Camera options
 3. camera and view options - ortho is here
@@ -175,15 +177,22 @@ This toolbar is extremely powerful and help you view your 3D data in more powerf
 
 ### Navigation and hotkeys
 
+#hotkeys
+
 Houdini uses `ALT` navigation.
 
 - `ALT` + `LMB` / `MMB` / `RMB` => rotate / pan / zoom (it can be locked to not have to use alt)
-- Reset view => `SPACE+G`
+- Frame selected from home view => `SPACE+G`
 - Perspective view => `SPACE+1` 
 - Top/bottom view => `SPACE+2` (hit 2 more to toggle between bottom and top)
 - Front/back => `SPACE+3`
 - Left/Right => `SPACE+4`
 - UV vierw => `SPACE+5`
+- Focus on selection => `F`
+- get back to home view => `SPACE+H`
+- 
+
+
 
 ### 3D Selection (edit mode)
 
@@ -258,10 +267,118 @@ Holding down `SHIFT` will toggle *fine tune* mode for any action.
 
 Holding down `CNTRL` will toggle snapping, (Usually grid snapping, but this can be changed)
 
+To change the snapping increments of the handle tool right click on the handle and open the `handle parameters`
+
+![[notes/attachments/houdini-rightclick-onhandle.png]]
+
+![[notes/attachments/houdini-handle-parameters.png]]
+
+Middle mouse click can be set up to speed up your workflow.
+
+I change the behavior to be more like blender. In that you middle mouse click and drag and snap to an axis you drag in.
+
+>[!NOTE] Construction planes can be used for extra reference in setting things up. By default the middle mouse drag will constrain to a construction plane. You just need to add one.
+
+#### Handle Tool
+
+Different tools have different handles *and* you can define your own handles in python.
+
+For example the transform tools have handles that you probably recognize, the camera has different types of handles to change different parameters.
+
+
+### Radial Menus
+
+Radial menus can be used in the viewport and network view.
+
+These can be customized and set per what you need.
+
+![[notes/attachments/houdini-radial-menu.png]]
+
+In the viewport you tap `C` to bring up the menu.
+
+# Takes
+
+Takes can be used to store different settings. For example, high quality render settings for a final take.
+
+![[notes/attachments/houdini-takes.png]]
+
+### Transforming and Objects Pivot
+
+There are many ways to do this.
+
+- Pivot mode => `insert`
+
+>[!NOTE] This behaves a lot like maya
+
+You can also change the pivot in the parameter view.
+
+![[notes/attachments/houdini-pivot-param.png]]
+
+You can do some operations like freezing transforms and things like that in the parameter window as well.
+
+![[notes/attachments/houdini-clean-transform.png]]
+
+>[!NOTE] This has to do with *pre transforms* well cover more of this later.
+
+#### Detaching Handles
+
+Detaching handles can help you work in a similar way to using the *3d cursor* in blender. Its a temporary way to create a different reference point to do your manipulation.
+
+- Detatch Handle => `'` apostrophe 
+
+>[!NOTE] You can also detach it in the right click menu of the handle
+
+>[!NOTE] You can make the detached handle persistent in the right click menu and use both.
+>
+>![[notes/attachments/houdini-persistent-detached-handle.png]]
+>
+>You can then select snap to centroid or pivot in the right click menu to put it back.
+>
+>You can also change the orientation of the handle
+
+### Transforming Multiple Objects
+
+If you select multiple objects you then need to use the `transform`, `scale` or `rotate` tools to change them all.
+
+In the right click menu you can tell it to change all at once or each individually.
+
+#### Matching Transforms
+
+In houdini you can quickly match transforms. Click on the buttons indicated below then click the target object and it will match.
+
+![[notes/attachments/houdini-match-transforms.png]]
+
+#### Align state and Orientation picking
+
+This is great tool to help you align and orient objects to other objects in your scene.
+
+There are two ways to get to Orientation picking.
+
+1. Right click the handle and choose it:
+
+![[notes/attachments/houdini-orientation-picking-01.png]]
+
+2. Press the `;` to start orientation picking.
+
+Then the handles should like this:
+
+![[notes/attachments/houdini-orientation-picking-02.png]]
+
+>[!NOTE] If you hold shift while you click on another objects component then it will align and not move.
+>Always check the hints at the bottom of the viewport.
+>![[notes/attachments/houdini-pivot-align-notes.png]]
+
 
 ## Network View
 
 The network view is the heart of houdini. This is where the magic happens. This is where you can see your node network.
 
 ![[notes/attachments/houdini-networkview-example.png]]
+
+A lot of the same #hotkeys are used in the network to move around:
+
+- frame selected => `F`
+- get to home => `H`
+
+### Object Context
 
