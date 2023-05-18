@@ -349,5 +349,158 @@ Your network should look something like this now:
 
 ## Bottom Boards
 
-Next we will create 
+### Horizontal line
+
+Next we will create another `line` node.
+
+Wire in a `null` into the lines output and call it `OUT_horizontal_line`.
+
+![[notes/attachments/hou_bookshlef_horiz_line_OUT.png]]
+
+>[!NOTE] I put this line in another frame for setup objects, because we will reuse this line for more components.
+
+### Copy to points boards
+
+Drop down a new `copy to points` node.
+
+Now connect the OUT of the new line to *left* side of the new `copy to points` node.
+
+Now wire in the output of the first `resample` node into the *right* input of the new `copy to points`.
+
+You'll probably notice there is a problem. The lines extend past the edge of the bookshelf. So let's fix this:
+
+### Remove last point wrangle
+
+Between the first `resample` and the boards `copy to points` we just put down, drop down a new `attribute wrangle`.
+
+Copy this code into it:
+
+```c
+removepoint(0,@numpt-1);
+```
+
+This will remove the last point in the array.
+
+Now it doesn't extend past the edge.
+
+### Board Geo
+
+This part is easy. Just copy the `sweep` and `poly extrude` nodes you made before.
+
+>[!NOTE] You can copy nodes with `CNTRL+C` and paste with `CNTRL+V` *OR* hold `ALT` and drag nodes and they will copy.
+>
+>![[notes/attachments/alt-drag-hou.gif]]
+
+>[!IMPORTANT] Copying these nodes will *ALSO* copy the references inside them so you don't need to set it up again.
+
+![[notes/attachments/hou_bookshelf_bottom_board_sweep_ext.png]]
+
+Now let's add a `transform` node below those two and set an offset of `0.05` in the `Y` direction to move them up a bit.
+
+## Vertical Separators
+
+You've probably noticed that the bottom boards aren't the correct length. This will get a little more complicated than before, so follow along closely.
+
+There are a few things we need to do to fix this.
+
+>[!IMPORTANT] This is where we will use the `ptdist` attribute we turned on in the resample node.
+
+### Creating the vertical boards
+
+Firs thing we'll do is copy the entire `copy to points` `sweet` `poly extrude` chain from before.
+
+Then we wire in the vertical line we made into the *left* slot of the copy to points.
+
+Next, take the *right* output from the `split` node and wire it into the *right* side of the new `copy to points` node.
+
+You should have one or more vertical boards like this:
+
+![[notes/attachments/hou-bookshlef-vert-boards.png]]
+
+## ptdist attribute
+
+>[!INFO] The reason I am using the `ptdist` attribute instead of just the `Length` parameter from the `resample` node is for two reasons:
+>
+>1. What if I don't want to use the `length` parm and instead want to use amount?
+>2. The `Length` results in some wiggle room and imprecise distances as things change. For this we need precision.
+
+One of the problems we have to solve is how do we get the information of the distance between points to the line distance and anywhere else we need it.
+
+We will drop down 3 nodes:
+- `Attribute Promote`
+- `Attribute Wrangle`
+- `null`
+
+Hook them up respectively.
+
+![[notes/attachments/hou-bookshelf-ptdist.png]]
+
+### Attribute Promote
+
+The first node is an `attribute promote`, This node lets up change type of an attribute. In our case we just need to worry about two fields.
+
+1. `original name`
+2. `new class`
+
+set `ptdist` in the first one. and set the `new class` to `Detail`
+
+>[!NOTE] `Detail` attributes are not stored on components but instead on the object level. We only need this stored once, so we save computation by not putting it on points.
+
+### Attribute Wrangle
+
+In this wrangle we will solve a strange behavior that caused me some problems. The problem was that because we were using the distance attribute when there was no extra points being created in the resample that attribute was set to 0. So we need to correct it.
+
+What we will do is check whether the attribute is zero, if it is we will set it to the length of the bookself.
+
+```c
+if (@ptdist == 0)
+{
+    @ptdist = chf("dist");
+}
+```
+
+>[!NOTE] To create a parameter in vex you use channel expressions. In this case `chf` stands for channel float. or a float channel. The argument is a string indicating the name it will have.
+>Then you click the slider button in the wrangle.
+>
+>![[notes/attachments/hou-wrangle-add-parms-button.png]]
+
+
+Now copy in the `length` parm from the `CONTROLLER` into the new parameter.
+
+![[notes/attachments/hou-bookshelf-fix-dist-parm.png]]
+
+Now name the `null` something like `OUT_ptdist`.
+
+## Shelves
+
+Now we will use the `ptdist` attribute. In this case we will use an *expression* inside a parameter.
+
+>[!NOTE] Houdini uses `HScript` or `Python` as an expression language. HScript is similar to linux command line languages like `Bash`. You can check the *documentation* for more info [Expression functions](https://www.sidefx.com/docs/houdini/expressions/index.html)
+
+In the *horizontal* `line` node we created earlier is where we will write this expression.
+
+>[!IMPORTANT] In this case I am using `HScript`
+
+The expression is:
+
+```python
+abs(detail("../OUT_ptdist_attrib/","ptdist",0)-ch("../CONTROLLER/board_thickness"))
+```
+
+![[notes/attachments/hou-bookshelf-line-len-expression.png]]
+
+1.  `abs()` is a function that calculates the absolute value of a number. It ensures that the result is always positive.
+2.  `detail()` function is used to access attribute values from another geometry in the scene. In this case, it is accessing the attribute named "ptdist" from the geometry located at the relative path "../OUT_ptdist_attrib/". The third argument, `0`, specifies that the first geometry instance should be used.
+3.  `"ptdist"` is the name of the attribute being accessed using the `detail()` function. It refers to the attribute called "ptdist" in the referenced geometry.
+4.  `-` is the subtraction operator, which subtracts the value obtained from `detail("../OUT_ptdist_attrib/","ptdist",0)` from the next part of the expression.
+5.  `ch()` function is used to retrieve the value of a channel parameter. In this case, it is accessing the channel parameter named "board_thickness" from the node located at the relative path "../CONTROLLER/".
+6.  `"../CONTROLLER/board_thickness"` specifies the relative path to the channel parameter named "board_thickness" in the referenced node.
+
+Putting it all together, the expression calculates the absolute difference between the value of the "ptdist" attribute from the referenced geometry and the value of the "board_thickness" channel parameter from the referenced node. The `abs()` function ensures that the result is positive.
+
+Now we just need to copy the parameter `board thickness` from the `CONTROLLER` into the `X` component of the origin vector on the line.
+
+![[notes/attachments/hou-bookshelf-line-origin-position.png]]
+
+What this does is shifts the line over based on the thickness of the boards and shrinks it so that there are no intersections. This will be important if we want to destroy the bookshelf.
 
