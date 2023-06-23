@@ -3,7 +3,7 @@ title: "Houdini Procedural Bookshelf Tutorial"
 tags: [houdini, procedural, setups, tutorial]
 ---
 
-`Github link to file - update this`
+[Example FIle](https://github.com/benshurts/Knowledge-Garden/blob/hugo/content/notes/3D-Modeling/Houdini/example-files/simple-bookshelf/simple-bookshelf.hiplc)
 
 
 This is a simple setup for a procedural bookshelf in houdini.
@@ -496,11 +496,97 @@ abs(detail("../OUT_ptdist_attrib/","ptdist",0)-ch("../CONTROLLER/board_thickness
 5.  `ch()` function is used to retrieve the value of a channel parameter. In this case, it is accessing the channel parameter named "board_thickness" from the node located at the relative path "../CONTROLLER/".
 6.  `"../CONTROLLER/board_thickness"` specifies the relative path to the channel parameter named "board_thickness" in the referenced node.
 
-Putting it all together, the expression calculates the absolute difference between the value of the "ptdist" attribute from the referenced geometry and the value of the "board_thickness" channel parameter from the referenced node. The `abs()` function ensures that the result is positive.
+Putting it all together, the expression calculates the absolute difference between the value of the `ptdist` attribute from the referenced geometry and the value of the "board_thickness" channel parameter from the referenced node. The `abs()` function ensures that the result is positive.
 
 Now we just need to copy the parameter `board thickness` from the `CONTROLLER` into the `X` component of the origin vector on the line.
 
 ![[notes/attachments/hou-bookshelf-line-origin-position.png]]
 
-What this does is shifts the line over based on the thickness of the boards and shrinks it so that there are no intersections. This will be important if we want to destroy the bookshelf.
+What this does is shifts the line over based on the thickness of the boards and shrinks it so that there are no intersections.
 
+>[!IMPORTANT] This will be important if we want to destroy the bookshelf.
+
+### Loops
+
+Next we will use *loops* in the **SOP** network.
+
+![[notes/attachments/houdini_bookshelf_shelves_loop.png]]
+
+The reason we are going to a loop here is simple. We need to delete first and last point of each shelf line. This is to remove to the top and bottom lines because those are already accounted for in the rest of the network.
+
+We can drop down a *for each connected piece* loop preset. This will setup a *connectivity* node which adds a *class* attribute to each separate piece. We can then loop through each of those separately.
+
+>[!IMPORTANT] The reason we use a loop is to easily solve the the *first and last* in each line. This is because we are going to use the *point numbers* to target the first and last in a *wrangle*.
+>
+
+Before we get to the loops though we need to drop down a *copy to points*. This will copy the lines we will use for the shelves.
+
+![[notes/attachments/houdini_bookshelf_connect_to_shelves_91.png]]
+
+Below is sort of what the lines should look like (depending on your parameters)
+
+![[notes/attachments/houdini_bookshelf_vertical_lines.png]]
+
+After the *copy to points* drop down a *resample* node.
+
+![[notes/attachments/houdini_bookshelf_ctp_resample_shelves.png]]
+
+The resample node will determine the amount of shelves in our bookshelf.
+
+In the *resample* we'll then copy the `shelf_distance` to length.
+
+![[notes/attachments/houdini_bookshelf_shelf_distance.png]]
+
+Now your lines should look similar to this:
+
+![[notes/attachments/houdini_bookshelf_vertical_lines_numbers.png]]
+
+Pay attention to the numbers here. As explained before we will have to use this information to solve a problem.
+
+Now is where we get into loops.
+
+Loops are pervasive in programming, in houdini we can use loops on the SOP level to loop through elements of the geometry or simply sumbers.
+
+Drop down a *loop through connected pieces* loop preset. This will create a set of nodes that will loop through separate pieces of a mesh.
+
+![[notes/attachments/houdini_bookshelf_loop_through_pieces.png]]
+
+Next put an *attribute wrangle* inside the loop and add the following code to it.
+
+>[!IMPORTANT] Make sure you are running over points
+
+```c
+int npts = npoints(0); //npoints is the total number of points in the geo stream
+removepoint(0, npts-1);
+removepoint(0, 0);
+```
+
+If you turn on *single pass* in the foreach loop we can see what's going on. Each line now has point numbers that start at 0.
+
+![[notes/attachments/houdini_bookshelf_vertical_point_numbers.png]]
+
+After the wrangle it looks like this:
+
+![[notes/attachments/houdini_bookshelf_remove_first_and_last.png]]
+
+Now we take the horizontal lines and copy those to these points.
+
+![[notes/attachments/houdini_bookshelf_copy_horizontal_lines.png]]
+
+It should look similar to this now:
+
+![[notes/attachments/houdini_bookshelf_horizontal_lines_shelves.png]]
+
+Now we do the same thing we did for the rest of the boards. We use a *sweep* and *polyextrude* node.
+
+![[notes/attachments/houdini_bookshelf_sweep_extrude_shelves.png]]
+
+In the sweep node copy in the `depth` parameter from the controller. Or whatever parameter you are using for the depth of the bookshelf.
+
+Then in the *polyextrude* node copy in the `board thickness` parameter from the controller to the `Distance` parameter of the *polyextrude* node.
+
+You should now see the following in the viewport:
+
+![[notes/attachments/houdini_bookshelf_shelves_after_extrude.png]]
+
+The next section is similar:
