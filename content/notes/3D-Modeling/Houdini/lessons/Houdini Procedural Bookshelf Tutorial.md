@@ -3,12 +3,14 @@ title: "Houdini Procedural Bookshelf Tutorial"
 tags: [houdini, procedural, setups, tutorial]
 ---
 
-[Example FIle](https://github.com/benshurts/Knowledge-Garden/blob/hugo/content/notes/3D-Modeling/Houdini/example-files/simple-bookshelf/simple-bookshelf.hiplc)
+Download the [Example FIle](https://github.com/benshurts/Knowledge-Garden/blob/hugo/content/notes/3D-Modeling/Houdini/example-files/simple-bookshelf/simple-bookshelf.hiplc) for a closer look.
+
+>[!NOTE] However if you are learning I highly recommend setting this up yourself and then checking your work with the file
 
 
 This is a simple setup for a procedural bookshelf in houdini.
 
->[!NOTE] Obviously there are infinite ways to set this up, this is just one way
+>[!NOTE] Obviously there are infinite ways to set this up, this is just the way I decided to do it
 
 I am going to set this up so it's easy to expand with more features down the road.
 
@@ -589,4 +591,49 @@ You should now see the following in the viewport:
 
 ![[notes/attachments/houdini_bookshelf_shelves_after_extrude.png]]
 
-The next section is similar:
+
+## Top Board
+
+Remember we removed the top and bottom boards. Now we need to add them back in. 
+
+We will do this in a similar way. 
+
+![[notes/attachments/houdini_bookshelf_top_board_ctp.png]]
+
+Next we need to plug in the horizontal and vertical lines into this *copy to points*. It should look like the following:
+
+![[notes/attachments/houdini_bookshelf_ctp_top_shelf_lines.png]]
+
+Next we need to drop down another *Loop through connected pieces*, just like before.
+
+Now put an *attribute wrangle* down inside the loop. This time all we need to do is remove the first point. We can do so with one line:
+
+```c
+removepoint(0, 0);
+```
+
+Now after the loop drop down a *transform* node.
+
+In the `Y` section of the transform copy the `Board Thickness` parameter and add a `-` to the front.
+
+This will offset the lines by the board thickness in the `Y` direction.
+
+Next add the sweep and poly bevel nodes like before.
+
+>[!IMPORTANT] You can copy them from the other setup because the references are going to be the exact same here.
+
+# Combine components
+
+Now we can combine all the components.
+
+Drop down a `merge` node and pipe in all the `OUTs` from each component into it.
+
+It should look like the following:
+
+![[notes/attachments/houdini_bookshelf_combined_components.png]]
+
+# UVs
+
+Let's tackle procedural UVs. This can be an extremely complex topic, we are going to keep it as simple as we can to make doing it procedurally worthwhile for us.
+
+
