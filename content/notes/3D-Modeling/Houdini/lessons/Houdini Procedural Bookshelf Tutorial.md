@@ -636,4 +636,136 @@ It should look like the following:
 
 Let's tackle procedural UVs. This can be an extremely complex topic, we are going to keep it as simple as we can to make doing it procedurally worthwhile for us.
 
+## Defining the problem for UVs
+
+In procedural systems where the geometry changes and we want textures or surface coordinates we need our UV system to be procedural as well.
+
+To accomplish this we will start with a simple solution.
+
+>[!NOTE] Procedural UVs can be tricky and computationally intensive.
+
+## Setting up initial UVs
+
+Now in each of the blocks we've created for all our components we will need to add a section for UVs.
+
+First let's add a UV section to our controller. In that section let's add a `toggle` parameter and name it `bypass UVs`.
+
+Now, in each of the component sections add the following after the `polyextrude` nodes.
+
+1. `uvautoseam`
+2. `uvflatten`
+3. `switch`
+
+Hook the `switch` node up to bypass the UV nodes.
+
+![[notes/attachments/houdini_bookshelf_UV_switch.png]]
+
+copy the `bypass UVs` parameter into the `switch` node. This will allow us to bypass the UVs while we are just working on the geometry.
+
+>[!TIP] You can split the 3D viewport by using the white square drop-down in the top right.
+>
+>![[notes/attachments/houdini_split_3d_viewport.png]]
+
+Your UVs should look something like this:
+
+![[notes/attachments/houdini_bookshelf_UV_example_01.png]]
+
+### Fixing UVs for vertical boards
+
+Once you have copied this setup to the other components you'll probably notice that the UVs for the vertical boards are not consistent. They are too long and force the rest of the UVs to be too small or are not the correct [[texel density]].
+
+In order to fix this we need to add *edge loops* to our geometry. This will allow us to cut the UVs so they fit in our UV space better.
+
+To do this we need to add a resample node after the `OUT_vert_line` and before the `inner` and `outer` vertical boards.
+
+![[notes/attachments/houdini_bookshelf_resaple_vertical_boards.png]]
+
+Let's add another parameter to our `CONTROLLER`. Add a float called `vertical_board_UV_split` to the UV section we created.
+
+Copy that parameter into the `distance` of the new `resample` node we created.
+
+>[!NOTE] We are using a resample here because the `sweep` node will create segments at each point. It's easier doing it this way than adding edge loops after the fact.
+
+Now add a `group` node after the `polyextrude`. It should look like this:
+
+![[notes/attachments/houdini_bookshelf_vertical_seams_group.png]]
+
+This will allow us to select those *edge loops*. In the group node uncheck everything but `include by edges` and then only have `max edge angle` checked on. and set it to 20
+
+![[notes/attachments/houdini_bookshelf_group_select_edge_loops.png]]
+
+Name the group `seams`.
+
+Now the UV nodes and the switch should be copied over after this group node.
+
+![[notes/attachments/houdini_bookshelf_seams_uv_nodes.png]]
+
+In the `uvautoseam` we need to tell it to use the group we just created as *seams* to cut the UVs.
+
+![[notes/attachments/houdini_bookshelf_use_seam_group.png]]
+
+Add the `seams` group to the `include edges` parameter of the `uvautoseam`.
+
+Then add the `seams` group to the `uvflatten` node under the `Flattening Constraints` and in the `seams` parameter:
+
+![[notes/attachments/houdini_bookshelf_seams_uvflatten_group.png]]
+
+Now you should have something like the following:
+
+![[notes/attachments/houdini_bookshelf_3d_uv_vertical_boards.png]]
+
+We can see the cuts here working as expected and unwrapping the geometry.
+
+But we have overlapping UVs. We need to add the `seams` group to another parameter in the `uvflatten` node.
+
+![[notes/attachments/houdini_bookshelf_layout_seams_uvflatten.png]]
+
+Add `seams` under the `layout constraints` section in the `seams` parameter.
+
+Now our UVs should look like this:
+
+![[notes/attachments/houdini_bookshelf_uvs_layout_seams.png]]
+
+
+## UV layout
+
+We now want to layout the UVs a bit better. we can do this with a `uvlayout` node. Let's drop one after the `uvflatten` node.
+
+![[notes/attachments/houdini_bookshelf_uvlayout_after_flatten.png]]
+
+
+
+Next let's add a `toggle` to our `CONTROLLER` in the UV section called `Stack_UVs`. We will use this to toggle the `stack identical islands` parameter on the `uvlayout` node.
+
+### Align UVs
+
+In order to align our UVs we need to do some tricky things. We will need to loop through our UV islands.
+
+We are also going to add another switch to bypass the aligning loop as this can be computationally intense.
+
+You're setup should look something like this:
+
+![[notes/attachments/houdini_bookshelf_uv_align_loop_start.png]]
+
+In the new group node we need to select the vertical edges:
+
+![[notes/attachments/houdini_bookshelf_group_select_vertical_edges.png]]
+
+set the group name to `align`.
+
+Then enable `include by edges` and use the `min` and `max` edge angles until you select the vertical edges.
+
+![[notes/attachments/houdini_bookshelf_selected_vertical_edges.png]]
+
+We will use these to align and rotate our UVs in the same direction.
+
+>[!NOTE] This alignment will help us for texturing, maybe we want it to be a wood bookshelf and we want the grains to all be in the correct direction.
+
+Now let's setup the loop to run over our UVs.
+
+in the `connectivity` node set it `primitive` and the attribute type to `integer` then toggle on the `use UV connectivity` and make sure the uv attribute is `uv`
+
+![[notes/attachments/houdini_bookshelf_connectivity_uvs.png]]
+
+Now we need to add another `uvflatten` node, but this time inside the loop.
 

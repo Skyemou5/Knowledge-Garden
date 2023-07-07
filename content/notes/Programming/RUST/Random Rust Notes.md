@@ -16,3 +16,4 @@ declare capital type assignment
 
 these can be global
 these are even faster than immutable vars
+
