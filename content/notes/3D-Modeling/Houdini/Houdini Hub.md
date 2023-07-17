@@ -5,6 +5,11 @@ tags: [houdini, 3d, cgi, index, procedural]
 
 Houdini is a procedural 3D Development Enviornment.
 
+#todo 
+- [ ] organize houdini notes by main concept
+
+
+
 [[notes/3D-Modeling/Houdini/Houdini Scratchpad|Unorganized Houdini Notes]]
 
 [[notes/3D-Modeling/Houdini/Houdini Scratchpad]]

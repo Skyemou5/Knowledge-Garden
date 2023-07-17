@@ -5,6 +5,10 @@ tags: [index,hub]
 
 >[!IMPORTANT] This site is under active development. Expect some inconsistencies while I work out the bugs. Feel free to contact me if you have questions.
 
+# header1
+
+
+
 
 # About This Site
 This website was created in [Obsidian](https://obsidian.md/), a [markdown](https://www.markdownguide.org/) editor focused around knowledge management. This website contains a knowledge graph similar to what Obsidian uses in order to help you navigate and find the resources you need.
