@@ -3,6 +3,8 @@ title: "Blender Chess Piece Assignment"
 tags: [blender,assignment,3d modeling]
 ---
 
+![[Pasted image 20230829175550.png]]
+
 10 Points
 
 For this assignment you will choose a chess piece to model in Blender.

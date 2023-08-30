@@ -1,6 +1,6 @@
 ---
 title: "Blender Resources"
-tags: [index blender resources]
+tags: [index, blender, resources]
 ---
 
 

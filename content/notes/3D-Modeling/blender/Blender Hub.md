@@ -5,10 +5,11 @@ tags: [blender, cgi, 3d, 3d-modeling, index, hub]
 
 # Blender Course for UVU
 
-[[notes/3D-Modeling/DGM 2210 - 3D for 2D Pipelines]]
+[[notes/3D-Modeling/DGM 2210 - 3D for 2D Pipelines|3D for 2D Pipelines]]
 
-[[notes/3D-Modeling/blender/assignments/3D-Assignments]]
+[[notes/3D-Modeling/blender/assignments/3D-Assignments|3D Assignments]]
 
+[[notes/3D-Modeling/blender/Blender_course_home|Blender course home]]
 
 ---
 

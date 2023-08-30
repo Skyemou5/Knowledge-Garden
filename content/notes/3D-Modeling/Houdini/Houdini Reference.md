@@ -52,6 +52,19 @@ if(@P.x > max.x*ch("threshHold"))
 ```
 
 
+---
+# Random Attributes in Copy to Points
+
+Copy to points goes in a for each loop, for each begin is on the points side
+
+Randomized attribute goes on the points prior to the loop
+
+On the parameter on the geo side you want to read the attribute into, run a point function
+
+General format being 
+`point("../foreach_begin<whatever>", 0, "attribute_name", 0)`
+
+
 
 ---
 
