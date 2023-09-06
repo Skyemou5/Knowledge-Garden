@@ -9,7 +9,7 @@ tags: [blender, cgi, 3d, 3d-modeling, index, hub]
 
 [[notes/3D-Modeling/blender/assignments/3D-Assignments|3D Assignments]]
 
-[[notes/3D-Modeling/blender/Blender_course_home|Blender course home]]
+[[notes/3D-Modeling/blender/Blender course home|Blender course home]]
 
 ---
 
