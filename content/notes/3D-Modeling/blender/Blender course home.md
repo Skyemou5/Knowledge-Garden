@@ -38,13 +38,15 @@ Students will be able to create a 3D asset and integrate into a 2D scene using s
 		- [[notes/3D-Modeling/blender/assignments/Topology in CG Lesson|Topology in CG Lesson]]
 		- [[notes/3D-Modeling/blender/assignments/topology/Topology-Assignment-Instructions|Topology-Assignment-Instructions]]
 	- *Wed:* 
+		- [[notes/3D-Modeling/blender/assignments/Diagnosing and Fixing Meshes|Diagnosing and Fixing Meshes]]
+		- 
 - **Lesson 3:(Sept/11)**
-	- *Mon:* Intro to mesh problems
-	- *Wed:*
-- **Lesson 4: UVs Basics (Sept/18)**	
+	- *Mon:* More modeling
+	- *Wed:* Scultping
+- **Lesson 4: Retopology (Sept/18)**	
 	- *Mon:* UV Basics	
 	- *Wed:* UV Advanced	
-- **Lesson 5: Final Project & Project Management (Sept/25)**
+- **Lesson 5: Final Project & Project Management and UVs(Sept/25)**
 	- *Mon:* Final Project Review	
 	- *Wed:* Project Management	
 - **Lesson 6: Surfaces (Oct/02)**	
