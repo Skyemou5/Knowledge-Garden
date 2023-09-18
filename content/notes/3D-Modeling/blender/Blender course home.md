@@ -10,6 +10,7 @@ Students will be able to create a 3D asset and integrate into a 2D scene using s
 
 [[notes/3D-Modeling/blender/Final Project Examples|Final Project Examples]]
 
+[[notes/3D-Modeling/blender/3D for 2D Pipeline Examples|3D for 2D Pipeline Examples]]
 
 # Lessons
 
@@ -30,12 +31,14 @@ Students will be able to create a 3D asset and integrate into a 2D scene using s
 	- *Wed:* 
 		- [[notes/3D-Modeling/blender/assignments/Diagnosing and Fixing Meshes|Diagnosing and Fixing Meshes]]
 		- 
-- **Lesson 3:(Sept/11)**
-	- *Mon:* More modeling
+- **Lesson 3: More Modeling (Sept/11)** 
+	- *Mon:* More modeling and sculpting
+		- [[notes/3D-Modeling/blender/assignments/Intermediate Modeling Exercise|Intermediate Modeling Exercise]]
 	- *Wed:* Scultping
-- **Lesson 4: Retopology (Sept/18)**	
-	- *Mon:* UV Basics	
-	- *Wed:* UV Advanced	
+		- 
+- **Lesson 4: Sculpting (Sept/18)**	
+	- *Mon:* UV Basics
+	- *Wed:* UV Advanced
 - **Lesson 5: Final Project & Project Management and UVs(Sept/25)**
 	- *Mon:* Final Project Review	
 	- *Wed:* Project Management	
