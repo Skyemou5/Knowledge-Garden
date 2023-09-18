@@ -8,18 +8,8 @@ tags: [blender, course, uvu, index, hub, home]
 ## Objectives
 Students will be able to create a 3D asset and integrate into a 2D scene using shading, texturing, lighting, and compositing and render a final image.
 
-## Timeline
+[[notes/3D-Modeling/blender/Final Project Examples|Final Project Examples]]
 
-- CG Fundimentals
-- Modeling Fundimentals
-	- What is CG
-	- Topology
-	- fixing mesh problems.
-	- Blender Basics
-- Modeling 
-
-
----
 
 # Lessons
 
