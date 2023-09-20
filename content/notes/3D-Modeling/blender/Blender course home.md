@@ -35,7 +35,7 @@ Students will be able to create a 3D asset and integrate into a 2D scene using s
 	- *Mon:* More modeling and sculpting
 		- [[notes/3D-Modeling/blender/assignments/Intermediate Modeling Exercise|Intermediate Modeling Exercise]]
 	- *Wed:* Scultping
-		- 
+		- [[notes/3D-Modeling/blender/Lessons/Sculpting in Blender|Sculpting in Blender]]
 - **Lesson 4: Sculpting (Sept/18)**	
 	- *Mon:* UV Basics
 	- *Wed:* UV Advanced
