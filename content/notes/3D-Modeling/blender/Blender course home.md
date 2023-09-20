@@ -73,7 +73,7 @@ Students will be able to create a 3D asset and integrate into a 2D scene using s
 
 ---
 
-
+[[notes/csharp/create a pyramid in csharp|create a pyramid in csharp]]
 
 # Potential Topics
 
