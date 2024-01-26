@@ -64,7 +64,7 @@ Below are links to hubs of the different topics I will have on this site.
 
 [[notes/VFX/VFX Hub]]
 
-
+[[notes/git/Git Hub|Git Hub]]
 ### Software Specific Hubs
 
 ![[notes/attachments/icons/blender-icon.png|30]] [[notes/3D-Modeling/blender/Blender Hub|Blender]]

@@ -32,3 +32,4 @@ There is a lot to know about terminals and shells. More info [[notes/Unix/Linux/
 
 [[notes/git/git branching and merging]]
 
+[[notes/git/git lesson|git lesson]]

@@ -58,4 +58,10 @@ Shopping:
 - [ ] skin care
 	- [ ] script
 	- [ ] ordinary
+
+Computer:
+
+- [ ] clean up computer
+- [ ] make my own dotfile setup
+- [ ] make backup system
 - [ ] 

@@ -28,6 +28,8 @@ tags: [private, houdini, scratchpad]
 # Vex
 [[notes/3D-Modeling/Houdini/Vex]]
 
+[[notes/3D-Modeling/Houdini/houdini-vex/Sine Waves on a Circle|Sine Waves on a Circle]]
+
 
 ---
 # Small Setups

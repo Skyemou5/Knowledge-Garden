@@ -1,6 +1,9 @@
 ---
-title: "Houdini Bash"
-tags: [houdini,bash,linux]
+title: Houdini Bash
+tags:
+  - houdini
+  - bash
+  - linux
 ---
 
 https://www.youtube.com/watch?v=rY413t5fArw
@@ -28,3 +31,5 @@ PATH="/usr/redshift/bin:$PATH"
 export HOUDINI_PATH="/usr/redshift/redshift4houdini/$HOUDINI_VERSION;&"
 export OCIO="/home/jonathan/ACES/aces_1.2/config.ocio"
 ```
+
+
