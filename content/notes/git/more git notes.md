@@ -14,6 +14,7 @@ tags:
 ---
 
 ## Git Revert
+
 > **Note**: `git revert` is used to undo changes made by specific commits, creating a new commit that represents the reversal.
 
 ### Usage
@@ -29,6 +30,7 @@ git revert HEAD~4
 ---
 
 ## Updating Remote Repository
+
 > **Caution**: Be aware of the impacts on the remote repository when pushing changes.
 
 ### Process
@@ -42,6 +44,7 @@ git revert HEAD~4
 ---
 
 ## Alternative Methods
+
 > **Tip**: Multiple ways exist to achieve similar outcomes in Git. Choose the method that best suits your project's needs.
 
 ### Squashing Commits
