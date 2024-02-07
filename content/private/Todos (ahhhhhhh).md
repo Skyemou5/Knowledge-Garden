@@ -1,4 +1,4 @@
-
+#TODO
 Work
 
 - [ ] make assignments for project checkins
@@ -12,6 +12,9 @@ job hunt
 - [ ] work on modeling
 - [ ] finish python tool
 - [ ] work on rust tool
+- [ ] find any certifications I could do
+- [ ] start looking for work in PNW
+- [ ] 
 
 skills
 
@@ -22,7 +25,7 @@ Social
 
 - [ ] prepare for wednesday
 	- [ ] deep clean bathroom
-	- [ ] deep clean basement
+		- [ ] deep clean basement
 	- [ ] decorate?
 	- [ ] plan with micheala
 		- [ ] decorate
@@ -30,10 +33,12 @@ Social
 
 meds
 
+- [x] ⏫ Altreno ✅ 2024-02-07
 
 Trans stuff 
 
 - [ ] get new HRT doctor
+- [ ] schedule FFS surgery
 - [ ] 
 
 Finance:
