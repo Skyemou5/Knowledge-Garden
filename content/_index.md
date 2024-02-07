@@ -65,6 +65,8 @@ Below are links to hubs of the different topics I will have on this site.
 [[notes/VFX/VFX Hub]]
 
 [[notes/git/Git Hub|Git Hub]]
+
+
 ### Software Specific Hubs
 
 ![[notes/attachments/icons/blender-icon.png|30]] [[notes/3D-Modeling/blender/Blender Hub|Blender]]
@@ -86,6 +88,14 @@ Below are links to hubs of the different topics I will have on this site.
 [[notes/Godot/Godot Hub]]
 
 [[bitwig hub]]
+
+---
+
+### Other Hubs
+
+[[notes/Neurodivergence/Neurodivergence Hub|Neurodivergence Hub]]
+
+[[notes/traaan/tran hub|Gender Hub]]
 
 
 ---
@@ -111,6 +121,7 @@ Below are links to hubs of the different topics I will have on this site.
 [[notes/3D-Modeling/blender/Notes/sept 19 notes]]
 
 [[notes/Unix/Unix Hub|Unix-Linux Hub]]
+
 
 ---
 
