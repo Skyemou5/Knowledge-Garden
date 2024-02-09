@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>os on</title><link>https://notes.mzmr.xyz/tags/os/</link><description>Recent content in os on</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://notes.mzmr.xyz/tags/os/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux Hub</title><link>https://notes.mzmr.xyz/notes/Unix/Linux/Linux-Hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.mzmr.xyz/notes/Unix/Linux/Linux-Hub/</guid><description>[[notes/Unix/Linux/Bash go to last dir]]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>os on</title><link>https://notes.mzmr.xyz/tags/os/</link><description>Recent content in os on</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://notes.mzmr.xyz/tags/os/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux Hub</title><link>https://notes.mzmr.xyz/notes/Unix/Linux/Linux-Hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.mzmr.xyz/notes/Unix/Linux/Linux-Hub/</guid><description>[[notes/Unix/Linux/NIX/NIX Hub|NIX Hub]]
+[[notes/Unix/general/dotfile management|dotfile management]]
+[[notes/Unix/Linux/Bash go to last dir]]
 [[notes/Unix/Linux/Emacs Notes]]
 [[notes/git/Git Hub]]
 [[notes/Unix/Linux/Check Current Terminal]]
-[[notes/Unix/Linux/Check if Env Var Exists]]
-[[notes/Unix/Linux/Drop Down Terminals]]</description></item></channel></rss>
+[[notes/Unix/Linux/Check if Env Var Exists]]</description></item></channel></rss>
