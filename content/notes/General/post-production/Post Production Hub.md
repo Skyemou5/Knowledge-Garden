@@ -26,8 +26,8 @@ tags: [hub, index, post-production]
 
 [[notes/Davinci resolve/Fusion/Fusion 360 Hub]]
 
-[[blender compositing]]
+[[notes/3D-Modeling/blender compositing]]
 
-[[houdini compositing]]
+[[notes/3D-Modeling/houdini compositing]]
 
 [[notes/Deadline/Deadline Hub]]

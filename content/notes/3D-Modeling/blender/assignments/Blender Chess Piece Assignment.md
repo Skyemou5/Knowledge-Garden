@@ -3,7 +3,7 @@ title: "Blender Chess Piece Assignment"
 tags: [blender,assignment,3d modeling]
 ---
 
-![[Pasted image 20230829175550.png]]
+![[attachments/Pasted image 20230829175550.png]]
 
 10 Points
 

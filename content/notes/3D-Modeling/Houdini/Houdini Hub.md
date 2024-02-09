@@ -8,7 +8,7 @@ Houdini is a procedural 3D Development Enviornment.
 #todo 
 - [ ] organize houdini notes by main concept
 
-
+[[notes/3D-Modeling/Houdini/Fundimentals/Houdini Lesson|Houdini Lesson]]
 
 [[notes/3D-Modeling/Houdini/Houdini Scratchpad|Unorganized Houdini Notes]]
 
@@ -32,6 +32,7 @@ Houdini is a procedural 3D Development Enviornment.
 
 [[notes/3D-Modeling/Houdini/lessons/Houdini Procedural Bookshelf Tutorial|Houdini Procedural Bookshelf Tutorial]]
 
+[[notes/3D-Modeling/Houdini/Fundimentals/Houdini Lesson|Houdini Lesson]]
 
 ---
 # Vex

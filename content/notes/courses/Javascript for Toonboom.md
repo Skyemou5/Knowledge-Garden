@@ -46,17 +46,17 @@ QtScript has a number of features and capabilities that make it well-suited for 
 
 Navigate to the *Scripting* workspace:
 
-![[Pasted image 20230210123223.png]]
+![[attachments/Pasted image 20230210123223.png]]
 
 The scripting window shows a list of scripts you can use.
 
 The *Sandbox* script is a special script that is discarded after use. Good for testing things out.
 
-![[Pasted image 20230210123333.png]]
+![[attachments/Pasted image 20230210123333.png]]
 
 To create a new script use the hamburger menu at the top left of the scripting window and select: File -> new script:
 
-![[Pasted image 20230210123430.png]]
+![[attachments/Pasted image 20230210123430.png]]
 
 Then enter the name of your script. After that select where you wish it to be stored. 
 
@@ -93,31 +93,31 @@ You may want to utilize git to save your tools.
 
 Once you write something in the editor, you can quickly check your syntax with the *verify* button:
 
-![[Pasted image 20230210124324.png]]
+![[attachments/Pasted image 20230210124324.png]]
 
 To run a script, do the one of the following:
 
 - From the *script editor toolbar* click the run script button: 
 
-![[Pasted image 20230210124432.png]]
+![[attachments/Pasted image 20230210124432.png]]
 
 - From the *script editor menu*, select **Play/Debug > Run**
 
-> [!NOTE] To avoid selecting the function every time you want to run your script, you can set a target function. In the Script Editor toolbar, click the Set Target!![[Pasted image 20230210124853.png]] button or select **Play/Debug > Set Target** from the Script Editor menu. In the Function column, select the function to target and press **OK**.
+> [!NOTE] To avoid selecting the function every time you want to run your script, you can set a target function. In the Script Editor toolbar, click the Set Target!![[attachments/Pasted image 20230210124853.png]] button or select **Play/Debug > Set Target** from the Script Editor menu. In the Function column, select the function to target and press **OK**.
 
 Now your script will appear in the menu:
 
-![[Pasted image 20230210125319.png]]
+![[attachments/Pasted image 20230210125319.png]]
 
-To stop the execution of a script click the ![[Pasted image 20230210125538.png]] stop script button.
+To stop the execution of a script click the ![[attachments/Pasted image 20230210125538.png]] stop script button.
 
 ## Debugging QT Scripts
 
-To run the debugger in toonboom click the ![[Pasted image 20230210125900.png]] *debugger* button in the toolbar.
+To run the debugger in toonboom click the ![[attachments/Pasted image 20230210125900.png]] *debugger* button in the toolbar.
 
 This will bring up the the *debugger*:
 
-![[Pasted image 20230210125940.png]]
+![[attachments/Pasted image 20230210125940.png]]
 
 The debugger will allow us to set *breakpoints* and *step through* our code to find problems easier.
 
@@ -133,7 +133,7 @@ Refer back to the script locations: [[#Below are the storage locations:|Script P
 
 You can set and open an external script editor with the respective buttons on the toolbar:
 
-![[Pasted image 20230210130633.png]]
+![[attachments/Pasted image 20230210130633.png]]
 
 >[!NOTE] To set the external script editor copy the path into the field to the exectable or navigate to it.
 
@@ -452,7 +452,7 @@ To get the last argument about the node type we need to open the project `*.xsta
 
 In this file we can find lots of information about modules and general information about your scene.
 
-![[Pasted image 20230212184809.png]]
+![[attachments/Pasted image 20230212184809.png]]
 
 >[!IMPORTANT] Since the backend info doesn't always match the user interface string, it's important to verify it. *(Yes this is an oversight and shoul be fixed by toonboom... but whatever)*
 

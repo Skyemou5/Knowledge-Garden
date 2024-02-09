@@ -49,7 +49,7 @@ Here's what I do as of Feb 2024:
 
 The general guide for order goes like so:
 1. **Cleanse**: Start with the Squalane Cleanser to remove makeup and cleanse the skin. 
-2. Altreno (everyother day, you don't need a lot)
+2. **Altreno** (everyother day, you don't need a lot)
 3. **Water-based serums**: Apply the Ascorbyl Tetraisopalmitate Solution (Vitamin C) to brighten the skin.
 4. **More water-based serums**: Follow with the Amino Acids + B5 for hydration and the Matrixyl 10% + HA for anti-aging benefits.
 5. **Hydration**: Use Natural Moisturizing Factors + HA to provide immediate hydration.
@@ -59,6 +59,7 @@ The general guide for order goes like so:
 9. **SPF** you'll want to get a high quality SPF, to protect your face UV radiation. There are nice ones made for skin care routines on the face. [Amazon.com: CeraVe Moisturizing Lotion SPF 30| Sunscreen and Face Moisturizer with Hyaluronic Acid & Ceramides | Oil Free | 1.7 Ounce : Beauty & Personal Care](https://www.amazon.com/gp/product/B077TQR6ZW/ref=ewc_pr_img_1?smid=ATVPDKIKX0DER&psc=1)
 10. **Shea Butter** to keep everything on [Organic Shea Butter – Sky Organics](https://skyorganics.com/products/organic-unrefined-shea-butter-8oz)
 11. Every few weeks you could do a mud mask to clean out pores. [Amazon.com : Aztec Secret – Indian Healing Clay 1 lb – Deep Pore Cleansing Facial & Body Mask – The Original 100% Natural Calcium Bentonite Clay – New Version 2 : Beauty & Personal Care](https://www.amazon.com/gp/product/B00S7ZPB8Q/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
+
 
 >[!IMPORTANT] Remember to pay attention to your body and alter your routine if you need to, and talk to a dermatologist.
 

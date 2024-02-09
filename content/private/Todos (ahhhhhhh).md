@@ -4,6 +4,8 @@ Work
 - [ ] make assignments for project checkins
 - [ ] make final project assignment
 - [ ] make milestone assignments
+- [ ] prepare houdini lesson
+
 
 job hunt
 
@@ -14,7 +16,8 @@ job hunt
 - [ ] work on rust tool
 - [ ] find any certifications I could do
 - [ ] start looking for work in PNW
-- [ ] 
+- [ ] setup houdini engine
+- [ ] setup unreal
 
 skills
 

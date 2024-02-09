@@ -87,7 +87,7 @@ Below are links to hubs of the different topics I will have on this site.
 
 [[notes/Godot/Godot Hub]]
 
-[[bitwig hub]]
+[[notes/Music Production/bitwig hub]]
 
 ---
 

@@ -17,8 +17,14 @@ tags: [unix, linux, index]
 
 [[notes/Unix/Linux/Linux Hub]]
 
+[[notes/Unix/Linux/NIX/NIX Hub|NIX Hub]]
+
 
 # BSD
 
 [[notes/Unix/BSD/BSD Hub]]
+
+# Other
+
+[[notes/Unix/general/dotfile management|dotfile management]]
 

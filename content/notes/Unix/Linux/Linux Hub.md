@@ -2,6 +2,9 @@
 title: "Linux Hub"
 tags: [linux, unix, index, hub, os]
 ---
+[[notes/Unix/Linux/NIX/NIX Hub|NIX Hub]]
+
+[[notes/Unix/general/dotfile management|dotfile management]]
 
 [[notes/Unix/Linux/Bash go to last dir]]
 

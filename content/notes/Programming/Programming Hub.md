@@ -1,6 +1,9 @@
 ---
-tags: [programming, index]
-title: "Programming Hub"
+tags:
+  - programming
+  - index
+  - hub
+title: Programming Hub
 ---
 
 # General Programming
@@ -26,20 +29,26 @@ title: "Programming Hub"
 
 [[notes/Programming/hugo/Hugo Hub]]
 
----
+## ODIN
+
+[[notes/Programming/ODIN/ODIN hub|ODIN hub]]
+
+## ZIG
+
+[[notes/Programming/ZIG/ZIG Hub|ZIG Hub]]
+
+
 # Game Development
 
 [[notes/Unity/Unity Hub]]
 
 
----
+
 # Other
 
 ## Devops
 
 [[notes/devops/Dev Ops Hub]]
-
-
 
 
 ## Houdini Vex

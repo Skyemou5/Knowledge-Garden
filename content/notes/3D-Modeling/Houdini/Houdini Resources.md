@@ -111,7 +111,6 @@ https://drive.google.com/drive/folders/1rOYNL-0TZE1jq8cpn--kh9umiVLWB1Ws tools
 
 https://learncreategame.com/techart/houdini-environment-setup/
 
-
 https://www.youtube.com/watch?v=Fj17qnVOUvg
 
 https://www.sidefx.com/docs/houdini/ref/env.html

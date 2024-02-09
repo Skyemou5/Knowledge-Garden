@@ -2,7 +2,7 @@
 
 ![[notes/attachments/Pasted image 20230126174151.png]]
 
-[[notes/rust cli apps|cli]]
+[[notes/Programming/rust cli apps|cli]]
 
 >block quote
 
