@@ -76,7 +76,7 @@ was constructed painstakingly by manipulating bezier curves and spreadsheets
 - PRISMS first release in 1998
 - https://www.fxguide.com/fxfeatured/side-effects-software-25-years-on/
 
-![[notes/attachments/Pasted image 20220824110107.png|500]]
+![[notes/attachments/Pasted image 20220824110107.png|600]]
 
 --
 <iframe width="1154" height="649" src="https://www.youtube.com/embed/ULk6pL4MRS0" title="Houdini Software" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

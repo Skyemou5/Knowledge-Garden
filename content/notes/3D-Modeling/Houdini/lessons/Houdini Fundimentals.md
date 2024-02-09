@@ -5,6 +5,7 @@ tags: [houdini, fundimentals, lessons, cg, essentials]
 
 # User Interface
 
+
 Houdini's UI can be overwhelming so let's break it down.
 
 ## Settings

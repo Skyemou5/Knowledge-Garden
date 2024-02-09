@@ -8,6 +8,8 @@ tags:
   - DID
   - tulpas
 ---
+Not sure what to put here. But learning I am somewhat plural has be an interesting journey. 
+
 
 
 
