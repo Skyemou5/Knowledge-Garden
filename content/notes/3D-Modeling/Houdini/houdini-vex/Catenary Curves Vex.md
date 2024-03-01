@@ -4,6 +4,52 @@ tags: [houdini,math,curve, vex]
 ---
 
 
+Better curve code
+
+
+```c
+// Parameter to control the shape of the catenary
+float a = chf("a");
+
+// Retrieve the start and end points in global space
+vector pos_start = point(0, "P", 0);
+vector pos_end = point(0, "P", npoints(0) - 1);
+
+// Calculate the line direction and length
+vector line_dir = normalize(pos_end - pos_start);
+float line_length = length(pos_end - pos_start);
+
+// The distance between the lowest point of the catenary (vertex) and the endpoints along the line
+float half_length = line_length * 0.5;
+float y_offset = a * cosh(half_length / a);
+
+// Adjust each point along the line
+for (int i = 0; i < npoints(0); i++) {
+    // Get the original position of the point
+    vector pos = point(0, "P", i);
+    
+    // Calculate the parameter t along the line's length
+    float t = float(i) / (float(npoints(0)) - 1);
+    
+    // Find the point's projection along the line's length
+    float proj_length = lerp(-half_length, half_length, t);
+    
+    // Apply the catenary formula to calculate the sag in Y
+    float sag = a * cosh(proj_length / a) - y_offset;
+    
+    // Apply the sag to the Y-coordinate
+    pos.y -= sag;
+    
+    // Update the point position
+    setpointattrib(0, "P", i, pos, "set");
+}
+
+// Ensure the endpoints remain at their original positions
+setpointattrib(0, "P", 0, pos_start, "set");
+setpointattrib(0, "P", npoints(0) - 1, pos_end, "set");
+
+```
+
 
 ```c
 #include <math.h>
