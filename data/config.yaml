@@ -1,4 +1,4 @@
-name: Ben Shurts
+name: Skye
 enableToc: true
 openToc: true
 enableLinkPreview: true
@@ -11,7 +11,7 @@ enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: false
 enableGitHubEdit: true
-GitHubLink: https://github.com/benshurts/Knowledge-Garden
+GitHubLink: https://github.com/skyemou5/Knowledge-Garden
 enableSemanticSearch: false
 operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
 description:
@@ -19,7 +19,5 @@ description:
 page_title:
   "Knowledge Garden"
 links:
-  - link_name: Twitter
-    link: https://twitter.com/artofbenshurts
   - link_name: Github
-    link: https://github.com/benshurts
+    link: https://github.com/skyemou5

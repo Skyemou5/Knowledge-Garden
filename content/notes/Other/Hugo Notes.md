@@ -13,7 +13,7 @@ https://www.youtube.com/watch?v=c7vpcqA6SEQ decent hugo guide
 these need to be in .bashrc
 ```
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=/home/ben/go
+export GOPATH=/home/skye/go
 export PATH=$GOPATH/bin:$PATH
 
 ```

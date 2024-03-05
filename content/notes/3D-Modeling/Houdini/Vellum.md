@@ -21,7 +21,6 @@ Vellum is similar to Houdini "grains" -PBD (Position based dynamics) - Vellum is
 # Simple Vellum Setup
 
 
-
 Vellum has many different *constraint* types. These all use slightly different mathematics across the graph structure.
 
 ![[notes/attachments/Pasted image 20221209170241.png]]
